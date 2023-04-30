@@ -10,11 +10,10 @@ public class Solider : MonoBehaviour
     private void OnMouseDown()
     {
         selected = true;
-        Debug.Log("Ben");
     }
     private void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonUp(0))
         {
             selected = false;
         }

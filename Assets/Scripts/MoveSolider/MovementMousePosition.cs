@@ -9,6 +9,8 @@ public class MovementMousePosition : MonoBehaviour
     public Vector3 worldPosition;
     public LayerMask layersToHit;
 
+    public Collider trackingArea; // takip edilecek bölgenin Collider bileþeni
+
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").gameObject.GetComponent<Solider>();
@@ -20,14 +22,20 @@ public class MovementMousePosition : MonoBehaviour
 
         Ray ray = Camera.main.ScreenPointToRay(screenPosition);
 
-        if (Physics.Raycast(ray, out RaycastHit hitdata,100,layersToHit))
-        {
-            worldPosition = hitdata.point;
+        RaycastHit hit;
+
+        if (Physics.Raycast(ray, out hit) && hit.collider == trackingArea)
+        { // Collider'a týklama kontrolü
+            worldPosition = hit.point;
         }
 
-        if (player.selected==true)
+        if (player.selected == true)
         {
-            player.transform.position = new Vector3(worldPosition.x, 1, worldPosition.z);
+            player.transform.position = new Vector3(
+                Mathf.Round(worldPosition.x),
+                1,
+                Mathf.Round(worldPosition.z)
+                );
         }
 
     }
