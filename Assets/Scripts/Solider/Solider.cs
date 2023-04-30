@@ -1,11 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class Solider : MonoBehaviour
 {
     public bool selected;
     public int id;
+
+    public Transform Enemy;
+    public NavMeshAgent agent;
 
     private void OnMouseDown()
     {
@@ -17,5 +21,13 @@ public class Solider : MonoBehaviour
         {
             selected = false;
         }
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            AttackTime();
+        }
+    }
+    public void AttackTime()
+    {
+        agent.destination = Enemy.position;
     }
 }
