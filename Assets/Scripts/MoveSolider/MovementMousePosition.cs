@@ -23,9 +23,9 @@ public class MovementMousePosition : MonoBehaviour
         Ray ray = Camera.main.ScreenPointToRay(screenPosition);
 
         RaycastHit hit;
-
+        
         if (Physics.Raycast(ray, out hit) && hit.collider == trackingArea)
-        { // Collider'a týklama kontrolü
+        { 
             worldPosition = hit.point;
         }
 
