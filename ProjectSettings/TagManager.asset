@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - AskerManager
+  - Enemy
   layers:
   - Default
   - TransparentFX
