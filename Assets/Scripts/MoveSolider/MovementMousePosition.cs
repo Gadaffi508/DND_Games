@@ -26,13 +26,13 @@ public abstract class MovementMousePosition : MonoBehaviour
     private void OnMouseDown()
     {
         selected = true;
+        position = transform.position;
     }
     private void Update()
     {
         if (Input.GetMouseButtonUp(0))
         {
             selected = false;
-            position = transform.position;
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
