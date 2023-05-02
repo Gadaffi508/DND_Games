@@ -61,7 +61,6 @@ public class MovementController : MonoBehaviour
 
         }
     }
-
     public void MoveObject()
     {
         if (Input.GetMouseButton(0))
