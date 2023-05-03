@@ -6,7 +6,10 @@ public class SoldierController : MonoBehaviour
 {
     CellController cellController;
 
-    public List<GameObject> soldierPrefabs = new List<GameObject>();
+    public GameObject soldierPrefabs;
+    public GameObject MagicPrefabs;
+
+    
 
     private void Start()
     {
@@ -15,8 +18,8 @@ public class SoldierController : MonoBehaviour
 
     public void SpawnSoldier()
     {
-        int index = Random.Range(0,soldierPrefabs.Count);
-        GameObject soldier = Instantiate(soldierPrefabs[index]);
+
+        GameObject soldier = Instantiate(soldierPrefabs);
 
         if (cellController.AddSoldier(soldier))
         {
@@ -28,4 +31,20 @@ public class SoldierController : MonoBehaviour
             Destroy(soldier);
         }
     }
+    public void SpawnMagic()
+    {
+
+        GameObject Magic = Instantiate(MagicPrefabs);
+
+        if (cellController.AddSoldier(Magic))
+        {
+
+        }
+        else
+        {
+            Debug.Log("Cells is full!");
+            Destroy(Magic);
+        }
+    }
+    
 }
