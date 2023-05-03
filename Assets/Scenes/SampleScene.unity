@@ -236,7 +236,7 @@ GameObject:
   - component: {fileID: 90163243}
   m_Layer: 7
   m_Name: Cube3 (2)
-  m_TagString: Untagged
+  m_TagString: Cells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,7 +414,7 @@ GameObject:
   - component: {fileID: 228219248}
   m_Layer: 7
   m_Name: Cube4 (1)
-  m_TagString: Untagged
+  m_TagString: Cells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 416195616}
   m_Layer: 7
   m_Name: Cube3 (1)
-  m_TagString: Untagged
+  m_TagString: Cells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1015,7 +1015,7 @@ GameObject:
   - component: {fileID: 1193954688}
   m_Layer: 7
   m_Name: Cube4 (2)
-  m_TagString: Untagged
+  m_TagString: Cells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1303,7 +1303,7 @@ GameObject:
   - component: {fileID: 1482925866}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: Gamemanager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1336,7 +1336,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gold: 0
-  maxFrontSoldierCount: 5
+  maxFrontSoldierCount: 3
 --- !u!1 &1575325454
 GameObject:
   m_ObjectHideFlags: 0
@@ -1352,7 +1352,7 @@ GameObject:
   - component: {fileID: 1575325456}
   m_Layer: 7
   m_Name: Cube2 (2)
-  m_TagString: Untagged
+  m_TagString: Cells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1462,7 +1462,7 @@ GameObject:
   - component: {fileID: 1663777200}
   m_Layer: 7
   m_Name: Cube2 (1)
-  m_TagString: Untagged
+  m_TagString: Cells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1706,7 +1706,7 @@ GameObject:
   - component: {fileID: 1911100861}
   m_Layer: 7
   m_Name: Cube2
-  m_TagString: Untagged
+  m_TagString: Cells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1816,7 +1816,7 @@ GameObject:
   - component: {fileID: 1924766877}
   m_Layer: 7
   m_Name: Cube4
-  m_TagString: Untagged
+  m_TagString: Cells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1966,7 +1966,7 @@ GameObject:
   - component: {fileID: 2004900537}
   m_Layer: 7
   m_Name: Cube3
-  m_TagString: Untagged
+  m_TagString: Cells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -13,7 +13,7 @@ public class CellController : MonoBehaviour
 
     private void Awake()
     {
-        gameManager = GameManager.Instance;
+        gameManager = GameObject.FindGameObjectWithTag("Gamemanager").gameObject.GetComponent<GameManager>();
     }
 
     public bool SoldierLimit()

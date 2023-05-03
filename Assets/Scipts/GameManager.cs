@@ -12,5 +12,5 @@ public class GameManager : MonoBehaviour
 
     public int gold;
 
-    public int maxFrontSoldierCount = 5;
+    public int maxFrontSoldierCount = 3;
 }

@@ -18,6 +18,6 @@ public class Cells : MonoBehaviour
 
     public Vector3 CellPosition()
     {
-        return new Vector3(transform.position.x, 1.18f, transform.position.z);
+        return new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z);
     }
 }
