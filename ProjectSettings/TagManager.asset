@@ -8,6 +8,7 @@ TagManager:
   - Enemy
   - Gamemanager
   - Cells
+  - PlayerM
   layers:
   - Default
   - TransparentFX
@@ -20,7 +21,7 @@ TagManager:
   - Solider
   - Gamemanager
   - Enemy
-  - 
+  - PlayerM
   - 
   - 
   - 

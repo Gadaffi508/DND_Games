@@ -9,7 +9,7 @@ public abstract class Soliders : MonoBehaviour
     [Header("Attack")]
     public float OverlapRadius = 10.0f;
 
-    private Transform nearestEnemy;
+    public Transform nearestEnemy;
     private int enemyLayer;
 
     public abstract void Attack();
@@ -40,7 +40,6 @@ public abstract class Soliders : MonoBehaviour
         if (nearestEnemy != null)
         {
             nearestEnemy.GetComponent<MeshRenderer>().material.color = Color.red;
-            Debug.Log("Nearest Enemy: " + nearestEnemy + "; Distance: " + minimumDistance);
         }
         else
         {

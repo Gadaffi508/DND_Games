@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Melee : Soliders
+public class Magic : Soliders
 {
     public float _speed;
-    bool _attack=false;
+    bool _attack = false;
 
     public override void Attack()
     {
         if (nearestEnemy != null)
         {
-            _attack=true;
+            _attack = true;
         }
-        
+
     }
     private void FixedUpdate()
     {
@@ -23,7 +23,7 @@ public class Melee : Soliders
 
             transform.position = Vector3.MoveTowards(transform.position, enemy.position, _speed * Time.deltaTime);
             Vector3 distances = transform.position - enemy.position;
-            if (distances.z<0.5f && distances.x<0.5f)
+            if (distances.z < 0.5f && distances.x < 0.5f)
             {
                 _attack = false;
             }

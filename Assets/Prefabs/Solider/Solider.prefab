@@ -112,5 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 0
-  Player: {fileID: 0}
   OverlapRadius: 10
+  nearestEnemy: {fileID: 0}
+  rb: {fileID: 0}
+  _speed: 5

@@ -8,7 +8,7 @@ public class SoldierController : MonoBehaviour
 
     public GameObject soldierPrefabs;
     public GameObject MagicPrefabs;
-
+    public GameObject AttackCOntroller;
     
 
     private void Start()
@@ -45,6 +45,10 @@ public class SoldierController : MonoBehaviour
             Debug.Log("Cells is full!");
             Destroy(Magic);
         }
+    }
+    public void SetActiveAttackController()
+    {
+        AttackCOntroller.SetActive(true);
     }
     
 }
