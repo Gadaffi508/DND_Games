@@ -23,10 +23,19 @@ public class Melee : Soliders
 
             transform.position = Vector3.MoveTowards(transform.position, enemy.position, _speed * Time.deltaTime);
             Vector3 distances = transform.position - enemy.position;
-            if (distances.z<0.5f && distances.x<0.5f)
+            /*if (distances.z<0.5f && distances.x<0.5f)
             {
                 _attack = false;
-            }
+            }*/
+        }
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+            _attack = true;
+            Debug.Log(other.gameObject);
         }
     }
 }
