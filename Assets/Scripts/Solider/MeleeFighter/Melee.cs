@@ -19,14 +19,13 @@ public class Melee : Soliders
     {
         if (_attack == true)
         {
-            Transform enemy = nearestEnemy.GetComponent<Transform>();
-
-            transform.position = Vector3.MoveTowards(transform.position, enemy.position, _speed * Time.deltaTime);
-            Vector3 distances = transform.position - enemy.position;
-            /*if (distances.z<0.5f && distances.x<0.5f)
+            if (nearestEnemy != null)
             {
-                _attack = false;
-            }*/
+                Transform enemy = nearestEnemy.GetComponent<Transform>();
+                transform.position = Vector3.MoveTowards(transform.position, enemy.position, _speed * Time.deltaTime);
+            }
+
+            
         }
     }
     private void OnCollisionEnter(Collision other)
@@ -35,7 +34,6 @@ public class Melee : Soliders
         {
             Destroy(other.gameObject);
             _attack = true;
-            Debug.Log(other.gameObject);
         }
     }
 }

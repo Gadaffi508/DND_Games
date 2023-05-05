@@ -43,7 +43,7 @@ public abstract class Soliders : MonoBehaviour
         }
         else
         {
-            Debug.Log("There is no enemy in the given radius");
+            //enemys died
         }
     }
 }
