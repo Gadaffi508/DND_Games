@@ -9,17 +9,10 @@ public class Melee : Soliders
 
     public override void Attack()
     {
-        for (int i = 0; i < cellController.startingCells.Count; i++)
+        if (nearestEnemy != null)
         {
-            var a = cellController.startingCells[i];
-            Debug.Log(a.transform.position);
-            if (nearestEnemy != null && movementController.lastCell == null && transform.position != a.transform.position)
-            {
-                _attack = true;
-            }
+            _attack = true;
         }
-
-
     }
 
     private void FixedUpdate()
