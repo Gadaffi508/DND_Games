@@ -18,15 +18,27 @@ public class ButtonController : MonoBehaviour
     {
         StartCoroutine(DelayAcitve());   
     }
+    public void AttackButtonActive()
+    {
+        StartCoroutine(DelayAcitveAttackButton());
+    }
+    public void ButtonPasive()
+    {
+        _spawnButton.transform.DOMoveY(0, 0.2f);
+    }
     IEnumerator DelayAcitve()
     {
         yield return new WaitForSeconds(2);
         _spawnButton.SetActive(true);
         _spawnButton.transform.DOMoveY(400, 1);
-        _attackButton.SetActive(true);
-        _attackButton.transform.DOMoveX(680, 1);
         _direButton.transform.DOMoveX(-80, 1);
         yield return new WaitForSeconds(1);
         _direButton.SetActive(false);
+    }
+    IEnumerator DelayAcitveAttackButton()
+    {
+        yield return new WaitForSeconds(2);
+        _attackButton.SetActive(true);
+        _attackButton.transform.DOMoveX(680, 1);
     }
 }

@@ -5,13 +5,20 @@ public class Magic : Soliders
 {
     public float _speed;
     bool _attack = false;
+    
 
     public override void Attack()
     {
-        if (nearestEnemy != null && movementController.lastCell == null)
+        for (int i = 0; i < cellController.startingCells.Count; i++)
         {
-            _attack = true;
+            var a = cellController.startingCells[i];
+            Debug.Log(a.transform.position);
+            if (nearestEnemy != null && movementController.lastCell == null && transform.position != a.transform.position)
+            {
+                _attack = true;
+            }
         }
+
 
     }
 
@@ -19,10 +26,13 @@ public class Magic : Soliders
     {
         if (_attack == true)
         {
-            Transform enemy = nearestEnemy.GetComponent<Transform>();
+            if (nearestEnemy != null)
+            {
+                Transform enemy = nearestEnemy.GetComponent<Transform>();
+                transform.position = Vector3.MoveTowards(transform.position, enemy.position, _speed * Time.deltaTime);
+            }
 
-            transform.position = Vector3.MoveTowards(transform.position, enemy.position, _speed * Time.deltaTime);
-            
+
         }
     }
     private void OnCollisionEnter(Collision other)
@@ -31,7 +41,6 @@ public class Magic : Soliders
         {
             Destroy(other.gameObject);
             _attack = true;
-            Debug.Log(other.gameObject);
         }
     }
 }

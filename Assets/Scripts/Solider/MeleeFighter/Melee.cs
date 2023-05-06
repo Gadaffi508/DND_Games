@@ -5,23 +5,25 @@ using UnityEngine;
 public class Melee : Soliders
 {
     public float _speed;
-    bool _attack=false;
+    bool _attack = false;
 
     public override void Attack()
     {
-        if (nearestEnemy != null && movementController.lastCell == null)//cells.CurrentSoldier == cellController.startingCells[cells.CurrentSoldier.]
+        for (int i = 0; i < cellController.startingCells.Count; i++)
         {
-            _attack=true;
+            var a = cellController.startingCells[i];
+            Debug.Log(a.transform.position);
+            if (nearestEnemy != null && movementController.lastCell == null && transform.position != a.transform.position)
+            {
+                _attack = true;
+            }
         }
-        
+
+
     }
 
     private void FixedUpdate()
     {
-        /*for (int i = 0; i < cellController.startingCells.Count; i++)
-        {
-            cellController.startingCells[i].CellPosition = 
-        }*/
         if (_attack == true)
         {
             if (nearestEnemy != null)
@@ -30,7 +32,7 @@ public class Melee : Soliders
                 transform.position = Vector3.MoveTowards(transform.position, enemy.position, _speed * Time.deltaTime);
             }
 
-            
+
         }
     }
     private void OnCollisionEnter(Collision other)
