@@ -114,5 +114,8 @@ MonoBehaviour:
   level: 0
   OverlapRadius: 10
   nearestEnemy: {fileID: 0}
-  rb: {fileID: 0}
+  startingCells:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   _speed: 5

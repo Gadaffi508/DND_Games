@@ -9,14 +9,19 @@ public class Melee : Soliders
 
     public override void Attack()
     {
-        if (nearestEnemy != null)
+        if (nearestEnemy != null && movementController.lastCell == null)//cells.CurrentSoldier == cellController.startingCells[cells.CurrentSoldier.]
         {
             _attack=true;
         }
         
     }
+
     private void FixedUpdate()
     {
+        /*for (int i = 0; i < cellController.startingCells.Count; i++)
+        {
+            cellController.startingCells[i].CellPosition = 
+        }*/
         if (_attack == true)
         {
             if (nearestEnemy != null)

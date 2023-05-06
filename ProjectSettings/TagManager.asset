@@ -10,6 +10,7 @@ TagManager:
   - Cells
   - PlayerM
   - ground
+  - Controller
   layers:
   - Default
   - TransparentFX

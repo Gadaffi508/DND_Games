@@ -13,10 +13,7 @@ public class DiceController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         _rolling = true;
     }
-    void Comploted()
-    {
-        Destroy(gameObject, 2f);
-    }
+
     public void Dire()
     {
         if (_rolling)
@@ -33,7 +30,8 @@ public class DiceController : MonoBehaviour
 
             rb.AddForce(transform.up * 300);
             rb.AddTorque(dirX, dirY, dirZ);
-            Invoke("Comploted", 2f);
+
+            Destroy(gameObject, 2.5f);
         }
     }
 }

@@ -1,7 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Magic : Soliders
 {
@@ -10,12 +8,13 @@ public class Magic : Soliders
 
     public override void Attack()
     {
-        if (nearestEnemy != null)
+        if (nearestEnemy != null && movementController.lastCell == null)
         {
             _attack = true;
         }
 
     }
+
     private void FixedUpdate()
     {
         if (_attack == true)
@@ -23,7 +22,6 @@ public class Magic : Soliders
             Transform enemy = nearestEnemy.GetComponent<Transform>();
 
             transform.position = Vector3.MoveTowards(transform.position, enemy.position, _speed * Time.deltaTime);
-            Vector3 distances = transform.position - enemy.position;
             
         }
     }

@@ -14,9 +14,16 @@ public abstract class Soliders : MonoBehaviour
 
     public abstract void Attack();
 
+    public MovementController movementController;
+    public CellController cellController;
+    public Cells cells;
+
     private void Start()
     {
         enemyLayer = LayerMask.NameToLayer("Enemy");
+        movementController = GameObject.FindGameObjectWithTag("Controller").gameObject.GetComponent<MovementController>();
+        cellController = GameObject.FindGameObjectWithTag("Controller").gameObject.GetComponent<CellController>();
+        cells = GameObject.FindGameObjectWithTag("Cells").gameObject.GetComponent<Cells>();
     }
 
     private void Update()
