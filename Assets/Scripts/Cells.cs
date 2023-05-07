@@ -20,4 +20,12 @@ public class Cells : MonoBehaviour
     {
         return new Vector3(transform.position.x, 1.055f, transform.position.z);
     }
+    public void Atack()
+    {
+        if (currentObject != null)
+        {
+            Soliders soliders = currentObject.GetComponent<Soliders>();
+            soliders.Attack();
+        }
+    }
 }
