@@ -24,9 +24,13 @@ public class Magic : Soliders
             if (nearestEnemy != null)
             {
                 Transform enemy = nearestEnemy.GetComponent<Transform>();
-                transform.position = Vector3.MoveTowards(transform.position, enemy.position, _speed * Time.deltaTime);
-            }
+                Vector3 enemypos = new Vector3(enemy.position.x,transform.position.y,enemy.position.z);
+                transform.position = Vector3.MoveTowards(transform.position, enemypos, _speed * Time.deltaTime);
 
+                Vector3 direction = enemy.position - transform.position;
+                direction.y = 0;
+                transform.LookAt(transform.position + direction);
+            }
 
         }
     }

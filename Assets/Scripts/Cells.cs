@@ -18,7 +18,7 @@ public class Cells : MonoBehaviour
 
     public Vector3 CellPosition()
     {
-        return new Vector3(transform.position.x, 1.055f, transform.position.z);
+        return new Vector3(transform.position.x, currentObject.transform.position.y, transform.position.z);
     }
     public void Atack()
     {

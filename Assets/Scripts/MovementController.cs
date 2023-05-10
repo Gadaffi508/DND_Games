@@ -71,7 +71,7 @@ public class MovementController : MonoBehaviour
             {
                 if (hit.collider != null && moveObject != null)
                 {
-                    Vector3 movePosition = new Vector3(hit.point.x, 1.16f, hit.point.z);
+                    Vector3 movePosition = new Vector3(hit.point.x, moveObject.transform.position.y, hit.point.z);
 
                     moveObject.transform.position = movePosition;
                 }
