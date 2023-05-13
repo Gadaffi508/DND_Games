@@ -5,7 +5,9 @@ using UnityEngine;
 public class Cells : MonoBehaviour
 {
     private GameObject currentObject;
-    public GameObject CurrentSoldier { get {  return currentObject; } 
+    public GameObject CurrentSoldier
+    {
+        get { return currentObject; }
         set
         {
             currentObject = value;
@@ -13,12 +15,13 @@ public class Cells : MonoBehaviour
             {
                 currentObject.transform.position = CellPosition();
             }
-        } 
+        }
     }
 
     public Vector3 CellPosition()
     {
-        return new Vector3(transform.position.x, currentObject.transform.position.y, transform.position.z);
+        return new Vector3(transform.position.x, transform.position.y+0.5f, transform.position.z);
+
     }
     public void Atack()
     {
