@@ -7,7 +7,8 @@ public class Melee : Soliders
 {
     public float _speed;
     bool _attack = false;
-    private float timeCount = 0.0f;
+    public float movementSpeedThreshold = 0.1f;
+    bool attack = false;
 
     public override void Attack()
     {
@@ -19,6 +20,8 @@ public class Melee : Soliders
 
     private void FixedUpdate()
     {
+        
+
         if (_attack == true)
         {
             if (nearestEnemy != null)
@@ -26,6 +29,7 @@ public class Melee : Soliders
                 Transform enemy = nearestEnemy.GetComponent<Transform>();
                 Vector3 enemypos = new Vector3(enemy.position.x, transform.position.y, enemy.position.z);
                 transform.position = Vector3.MoveTowards(transform.position, enemypos, _speed * Time.deltaTime);
+                anim.SetBool("IsWalk",_attack);
 
                 Vector3 direction = enemy.position - transform.position;
                 direction.y = 0;
@@ -39,8 +43,14 @@ public class Melee : Soliders
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
-            Destroy(other.gameObject);
-            _attack = true;
+            _speed = 0;
+            anim.SetTrigger("Attack");
+            _attack = false;
+
         }
+    }
+    public void Attacked()
+    {
+        anim.SetTrigger("Attack");
     }
 }

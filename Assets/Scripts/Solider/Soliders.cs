@@ -12,21 +12,24 @@ public abstract class Soliders : MonoBehaviour
     public Transform nearestEnemy;
     private int enemyLayer;
 
+    [Space]
+    [Header("Controller")]
+    public Animator anim;
+    public Rigidbody rb;
+
     public abstract void Attack();
 
 
     private void Start()
     {
         enemyLayer = LayerMask.NameToLayer("Enemy");
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody>();
         
     }
 
     private void Update()
     {
-        if (nearestEnemy != null)
-        {
-            nearestEnemy.GetComponent<MeshRenderer>().material.color = Color.green;
-        }
 
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, OverlapRadius, 1 << enemyLayer);
         float minimumDistance = Mathf.Infinity;
@@ -38,14 +41,6 @@ public abstract class Soliders : MonoBehaviour
                 minimumDistance = distance;
                 nearestEnemy = collider.transform;
             }
-        }
-        if (nearestEnemy != null)
-        {
-            nearestEnemy.GetComponent<MeshRenderer>().material.color = Color.red;
-        }
-        else
-        {
-            //enemys died
         }
     }
 }
