@@ -1391,7 +1391,7 @@ GameObject:
   - component: {fileID: -6662517953201565661}
   m_Layer: 0
   m_Name: DogPolyart 1
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1449,8 +1449,10 @@ MonoBehaviour:
   OverlapRadius: 10
   nearestEnemy: {fileID: 0}
   anim: {fileID: 5924007567069153955}
-  rb: {fileID: 0}
+  rb: {fileID: -6662517953201565661}
+  Collider: {fileID: 5924007567069153954}
   _speed: 1.5
+  movementSpeedThreshold: 0.1
 --- !u!136 &5924007567069153954
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1459,7 +1461,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5924007567061907743}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.31803966
   m_Height: 1.2445889

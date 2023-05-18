@@ -16,6 +16,7 @@ public abstract class Soliders : MonoBehaviour
     [Header("Controller")]
     public Animator anim;
     public Rigidbody rb;
+    public Collider Collider;
 
     public abstract void Attack();
 
@@ -25,6 +26,7 @@ public abstract class Soliders : MonoBehaviour
         enemyLayer = LayerMask.NameToLayer("Enemy");
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        Collider = GetComponent<Collider>();  
         
     }
 

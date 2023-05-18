@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4624293293453486061}
   - component: {fileID: 4624293293453486060}
   - component: {fileID: -6312055185215858963}
+  - component: {fileID: -7714206500150351267}
   m_Layer: 10
   m_Name: PolyArtWizardMesh
   m_TagString: Enemy
@@ -46,7 +47,7 @@ Animator:
   m_GameObject: {fileID: 4624293293446222881}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: bed7a092d53e7c748bd65db98cebf9d6, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8e1ed7e1a723dce478bccb1f735d61f4, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -86,6 +87,21 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &-7714206500150351267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4624293293446222881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70fcc87058ce6c644b768834953a69ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OverlapRadius: 10
+  nearestPlayer: {fileID: 0}
+  _speed: 2
 --- !u!1 &4624293293446222883
 GameObject:
   m_ObjectHideFlags: 0

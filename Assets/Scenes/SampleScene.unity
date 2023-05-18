@@ -696,6 +696,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 189916758}
   m_CullTransparentMesh: 1
+--- !u!95 &227673395 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4624293293453486061, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
+  m_PrefabInstance: {fileID: 1322255738}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &228219246
 GameObject:
   m_ObjectHideFlags: 0
@@ -971,6 +976,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 852744827033283525, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 227673395}
     - target: {fileID: 1020408916217244820, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: m_Constraints
       value: 112
@@ -979,6 +988,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PolyArtWizardMesh (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7705015139054747625, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8e1ed7e1a723dce478bccb1f735d61f4, type: 2}
     - target: {fileID: 7705015139054747626, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -1831,10 +1844,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7828460743802623398, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 227673395}
     - target: {fileID: 8568112900292604648, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
       propertyPath: m_Name
       value: PolyArtWizardMesh (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8568112900292604649, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8e1ed7e1a723dce478bccb1f735d61f4, type: 2}
     - target: {fileID: 8568112900292604650, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -1970,7 +1991,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soldierPrefabs: {fileID: 5924007567061907743, guid: 9c51ac9b92acbe540ae9731b5c811bd1, type: 3}
-  MagicPrefabs: {fileID: 7930517341818970159, guid: 67e877192e272fe4181a15d80c9033be, type: 3}
+  MagicPrefabs: {fileID: 6757896473020643251, guid: f7063858feb9e274a9b795159a027708, type: 3}
   AttackCOntroller: {fileID: 269816442}
 --- !u!4 &1186500638
 Transform:
@@ -2176,6 +2197,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -7714206500150351267, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 227673395}
     - target: {fileID: 4624293293446055937, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -2224,6 +2249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PolyArtWizardMesh
       objectReference: {fileID: 0}
+    - target: {fileID: 4624293293453486061, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 8e1ed7e1a723dce478bccb1f735d61f4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
 --- !u!1 &1355229745

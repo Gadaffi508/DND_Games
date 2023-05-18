@@ -26,6 +26,7 @@ public class Melee : Soliders
         {
             if (nearestEnemy != null)
             {
+                Collider.isTrigger = false;
                 Transform enemy = nearestEnemy.GetComponent<Transform>();
                 Vector3 enemypos = new Vector3(enemy.position.x, transform.position.y, enemy.position.z);
                 transform.position = Vector3.MoveTowards(transform.position, enemypos, _speed * Time.deltaTime);

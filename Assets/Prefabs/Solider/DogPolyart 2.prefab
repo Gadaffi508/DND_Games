@@ -202,9 +202,10 @@ GameObject:
   - component: {fileID: 6757896473020643250}
   - component: {fileID: 6757896473020643255}
   - component: {fileID: 6757896473020643248}
+  - component: {fileID: 90010859544197555}
   m_Layer: 0
   m_Name: DogPolyart 2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,7 +237,7 @@ Animator:
   m_GameObject: {fileID: 6757896473020643251}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a58d63122b09e9144938cd6a1ece4824, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a43b2f489fd573a4cb893734a867affb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -261,7 +262,11 @@ MonoBehaviour:
   level: 0
   OverlapRadius: 10
   nearestEnemy: {fileID: 0}
+  anim: {fileID: 6757896473020643250}
+  rb: {fileID: 90010859544197555}
+  Collider: {fileID: 6757896473020643248}
   _speed: 2
+  movementSpeedThreshold: 0.1
 --- !u!136 &6757896473020643248
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -270,12 +275,28 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6757896473020643251}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.31803966
   m_Height: 1.2445889
   m_Direction: 1
   m_Center: {x: 0.012130737, y: 0.58701307, z: 0}
+--- !u!54 &90010859544197555
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757896473020643251}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 116
+  m_CollisionDetection: 0
 --- !u!1 &6757896473038109749
 GameObject:
   m_ObjectHideFlags: 0

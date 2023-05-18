@@ -266,7 +266,7 @@ GameObject:
   - component: {fileID: 3367889914217317004}
   m_Layer: 0
   m_Name: TurtleShellMeshPBR
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -323,7 +323,11 @@ MonoBehaviour:
   level: 0
   OverlapRadius: 10
   nearestEnemy: {fileID: 0}
+  anim: {fileID: 0}
+  rb: {fileID: 0}
+  Collider: {fileID: 0}
   _speed: 1
+  movementSpeedThreshold: 0.1
 --- !u!136 &3367889914217317004
 CapsuleCollider:
   m_ObjectHideFlags: 0

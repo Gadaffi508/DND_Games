@@ -1032,7 +1032,7 @@ Animator:
   m_GameObject: {fileID: 7711929593692558727}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: a58d63122b09e9144938cd6a1ece4824, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a43b2f489fd573a4cb893734a867affb, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
@@ -1057,7 +1057,11 @@ MonoBehaviour:
   level: 0
   OverlapRadius: 10
   nearestEnemy: {fileID: 0}
+  anim: {fileID: 0}
+  rb: {fileID: 0}
+  Collider: {fileID: 0}
   _speed: 2
+  movementSpeedThreshold: 0.1
 --- !u!136 &3472398618230616215
 CapsuleCollider:
   m_ObjectHideFlags: 0
