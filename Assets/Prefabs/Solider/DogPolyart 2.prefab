@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 6757896473020643255}
   - component: {fileID: 6757896473020643248}
   - component: {fileID: 90010859544197555}
+  - component: {fileID: 229032645124332271}
   m_Layer: 0
   m_Name: DogPolyart 2
   m_TagString: Player
@@ -266,6 +267,7 @@ MonoBehaviour:
   rb: {fileID: 90010859544197555}
   Collider: {fileID: 6757896473020643248}
   _speed: 2
+  _attack: 0
   movementSpeedThreshold: 0.1
 --- !u!136 &6757896473020643248
 CapsuleCollider:
@@ -297,6 +299,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 116
   m_CollisionDetection: 0
+--- !u!114 &229032645124332271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6757896473020643251}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f63cf745468eaa4993033c4d1da5fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: 100
 --- !u!1 &6757896473038109749
 GameObject:
   m_ObjectHideFlags: 0

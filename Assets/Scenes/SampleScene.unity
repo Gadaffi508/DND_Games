@@ -829,7 +829,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &269816443
 RectTransform:
   m_ObjectHideFlags: 0
@@ -848,7 +848,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 90, y: -45}
+  m_AnchoredPosition: {x: -95, y: 35}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &269816444
@@ -910,18 +910,6 @@ MonoBehaviour:
       - m_Target: {fileID: 1186500639}
         m_TargetAssemblyTypeName: AttackController, Assembly-CSharp
         m_MethodName: Attack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1437658801}
-        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
-        m_MethodName: ButtonPasive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1900,7 +1888,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -7379321033342306112, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
 --- !u!1 &1186500634
 GameObject:
@@ -2253,7 +2242,8 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8e1ed7e1a723dce478bccb1f735d61f4, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -6314497575014857441, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
 --- !u!1 &1355229745
 GameObject:

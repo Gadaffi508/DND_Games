@@ -6,9 +6,10 @@ using UnityEngine;
 public class Melee : Soliders
 {
     public float _speed;
-    bool _attack = false;
+    public bool _attack = false;
     public float movementSpeedThreshold = 0.1f;
-    bool attack = false;
+
+    public int attackDamage = 20;
 
     public override void Attack()
     {
@@ -20,7 +21,7 @@ public class Melee : Soliders
 
     private void FixedUpdate()
     {
-        
+
 
         if (_attack == true)
         {
@@ -30,7 +31,7 @@ public class Melee : Soliders
                 Transform enemy = nearestEnemy.GetComponent<Transform>();
                 Vector3 enemypos = new Vector3(enemy.position.x, transform.position.y, enemy.position.z);
                 transform.position = Vector3.MoveTowards(transform.position, enemypos, _speed * Time.deltaTime);
-                anim.SetBool("IsWalk",_attack);
+                anim.SetBool("IsWalk", _attack);
 
                 Vector3 direction = enemy.position - transform.position;
                 direction.y = 0;
@@ -39,19 +40,37 @@ public class Melee : Soliders
             }
 
         }
+        else
+        {
+            anim.SetBool("IsWalk", _attack);
+        }
+        
     }
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
             _speed = 0;
-            anim.SetTrigger("Attack");
-            _attack = false;
-
+            if (other.gameObject.GetComponent<EnemyHealth>()._health>0)
+            {
+                StartCoroutine(Attacked());
+                _attack = false;
+            }
+            if(other.gameObject.GetComponent<EnemyHealth>()._health > 0)
+            {
+                StopCoroutine(Attacked());
+                _attack = true;
+            }
         }
     }
-    public void Attacked()
+    IEnumerator Attacked()
     {
         anim.SetTrigger("Attack");
+        yield return new WaitForSeconds(1);
+        StartCoroutine(Attacked());
+    }
+    public void Damage()
+    {
+        nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage);
     }
 }

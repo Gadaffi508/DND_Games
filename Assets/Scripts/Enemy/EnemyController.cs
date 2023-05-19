@@ -51,7 +51,13 @@ public class EnemyController : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            anim.SetTrigger("Attack");
+            StartCoroutine(Attacked());
         }
+    }
+    IEnumerator Attacked()
+    {
+        anim.SetTrigger("Attack");
+        yield return new WaitForSeconds(1);
+        StartCoroutine(Attacked());
     }
 }
