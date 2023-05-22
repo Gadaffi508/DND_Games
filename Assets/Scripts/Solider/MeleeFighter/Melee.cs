@@ -25,52 +25,57 @@ public class Melee : Soliders
 
         if (_attack == true)
         {
-            if (nearestEnemy != null)
-            {
-                Collider.isTrigger = false;
-                Transform enemy = nearestEnemy.GetComponent<Transform>();
-                Vector3 enemypos = new Vector3(enemy.position.x, transform.position.y, enemy.position.z);
-                transform.position = Vector3.MoveTowards(transform.position, enemypos, _speed * Time.deltaTime);
-                anim.SetBool("IsWalk", _attack);
-
-                Vector3 direction = enemy.position - transform.position;
-                direction.y = 0;
-                transform.LookAt(transform.position + direction);
-
-            }
+            AttackFind();
 
         }
         else
         {
             anim.SetBool("IsWalk", _attack);
         }
-        
+
     }
     private void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
             _speed = 0;
-            if (other.gameObject.GetComponent<EnemyHealth>()._health>0)
+            if (other.gameObject.GetComponent<EnemyHealth>()._health < 0)
             {
-                StartCoroutine(Attacked());
-                _attack = false;
-            }
-            if(other.gameObject.GetComponent<EnemyHealth>()._health > 0)
-            {
-                StopCoroutine(Attacked());
                 _attack = true;
+                AttackFind();
+                StopCoroutine(AttackRetry());
+            }
+            if (other.gameObject.GetComponent<EnemyHealth>()._health > 0)
+            {
+                _attack = false;
+                anim.SetTrigger("Attack");
+                StartCoroutine(AttackRetry());
             }
         }
     }
-    IEnumerator Attacked()
+    IEnumerator AttackRetry()
     {
-        anim.SetTrigger("Attack");
         yield return new WaitForSeconds(1);
-        StartCoroutine(Attacked());
+        anim.SetTrigger("Attack");
     }
     public void Damage()
     {
         nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage);
+    }
+    public void AttackFind()
+    {
+        if (nearestEnemy != null)
+        {
+            Collider.isTrigger = false;
+            Transform enemy = nearestEnemy.GetComponent<Transform>();
+            Vector3 enemypos = new Vector3(enemy.position.x, transform.position.y, enemy.position.z);
+            transform.position = Vector3.MoveTowards(transform.position, enemypos, _speed * Time.deltaTime);
+            anim.SetBool("IsWalk", _attack);
+
+            Vector3 direction = enemy.position - transform.position;
+            direction.y = 0;
+            transform.LookAt(transform.position + direction);
+
+        }
     }
 }

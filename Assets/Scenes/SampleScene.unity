@@ -964,6 +964,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4801968137457490926, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
+      propertyPath: _health
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 852744827033283525, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: anim
       value: 
