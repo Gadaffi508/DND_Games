@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyHealth : Health
 {
+    public bool IsDead;
     public override void Takedamage(int damage)
     {
         _health -= damage;
@@ -11,6 +12,7 @@ public class EnemyHealth : Health
         if (_health <= 0)
         {
             Die();
+            IsDead = true;
         }
     }
     public override void Die()
