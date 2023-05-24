@@ -16,6 +16,6 @@ public class SoliderHealth : Health
     }
     public override void Die()
     {
-
+        Destroy(gameObject);
     }
 }

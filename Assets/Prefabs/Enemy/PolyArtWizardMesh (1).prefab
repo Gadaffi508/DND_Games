@@ -672,7 +672,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7705015139054747624}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.386, y: 0.848, z: 1.7431736}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -745,8 +745,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   OverlapRadius: 10
   nearestPlayer: {fileID: 0}
-  _speed: 2
   anim: {fileID: 0}
+  attackDamage: 15
 --- !u!114 &-4801968137457490926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -760,6 +760,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
+  IsDead: 0
 --- !u!1 &7705015139056661266
 GameObject:
   m_ObjectHideFlags: 0

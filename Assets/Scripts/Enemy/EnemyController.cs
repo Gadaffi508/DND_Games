@@ -1,32 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
     [Header("Attack")]
     public float OverlapRadius = 10.0f;
+    bool _attack = false;
 
     public Transform nearestPlayer;
-    private int playerLayer;
-    public float _speed;
+    private int PlayerLayer;
 
     [Space]
     [Header("Controller")]
     public Animator anim;
+    private float distance;
+    public int attackDamage = 15;
+
     void Start()
     {
         anim = GetComponent<Animator>();
+        PlayerLayer = LayerMask.NameToLayer("Solider");
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
-    }
-    private void FixedUpdate()
-    {
-        Collider[] hitColliders = Physics.OverlapSphere(transform.position, OverlapRadius, 1 << playerLayer);
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, OverlapRadius, 1 << PlayerLayer);
         float minimumDistance = Mathf.Infinity;
         foreach (Collider collider in hitColliders)
         {
@@ -37,27 +37,51 @@ public class EnemyController : MonoBehaviour
                 nearestPlayer = collider.transform;
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
         if (nearestPlayer != null)
         {
             Transform Player = nearestPlayer.GetComponent<Transform>();
-
-            Vector3 direction = Player.position - transform.position;
-            direction.y = 0;
-            transform.LookAt(transform.position + direction);
-
+            distance = Vector3.Distance(transform.position, Player.position);
+            if (Attackable())
+            {
+                anim.SetBool("Attack", true);
+            }
+            else
+            {
+                AttackFindEnemy();
+            }
         }
     }
-    private void OnCollisionEnter(Collision collision)
+
+    public void AttackFindEnemy()
     {
-        if (collision.gameObject.CompareTag("Player"))
+        anim.SetBool("Attack", false);
+        Vector3 direction = PlayerPos() - transform.position;
+        direction.y = 0;
+        transform.LookAt(transform.position + direction);
+    }
+
+    public void Damage()
+    {
+        if (nearestPlayer != null)
         {
-            StartCoroutine(Attacked());
+            nearestPlayer.GetComponent<SoliderHealth>().Takedamage(attackDamage);
         }
     }
-    IEnumerator Attacked()
+
+    private bool Attackable()
     {
-        anim.SetTrigger("Attack");
-        yield return new WaitForSeconds(1);
-        StartCoroutine(Attacked());
+        distance = Vector3.Distance(transform.position, PlayerPos());
+
+        return distance < 0.25f;
+    }
+    public Vector3 PlayerPos()
+    {
+        Transform player = nearestPlayer.GetComponent<Transform>();
+        Vector3 playerpos = new Vector3(player.position.x, transform.position.y, player.position.z);
+        return playerpos;
     }
 }

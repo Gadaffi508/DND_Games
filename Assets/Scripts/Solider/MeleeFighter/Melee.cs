@@ -77,8 +77,7 @@ public class Melee : Soliders
     }
     private bool Attackable()
     {
-        Transform enemy = nearestEnemy.GetComponent<Transform>();
-        distance = Vector3.Distance(transform.position, enemy.position);
+        distance = Vector3.Distance(transform.position, EnemyPos());
 
         return distance < 0.25f;
     }
