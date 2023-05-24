@@ -28,7 +28,7 @@ public class Melee : Soliders
             {
                 Transform enemy = nearestEnemy.GetComponent<Transform>();
                 distance = Vector3.Distance(transform.position, enemy.position);
-                if (distance < 0.25)
+                if (Attackable())
                 {
                     _speed = 0;
                     anim.SetBool("IsWalk", false);
@@ -53,12 +53,11 @@ public class Melee : Soliders
         anim.SetBool("IsWalk", true);
         _speed = 1.5f;
         Collider.isTrigger = false;
-        Transform enemy = nearestEnemy.GetComponent<Transform>();
-        Vector3 enemypos = new Vector3(enemy.position.x, transform.position.y, enemy.position.z);
-        transform.position = Vector3.MoveTowards(transform.position, enemypos, _speed * Time.deltaTime);
+        
+        transform.position = Vector3.MoveTowards(transform.position, EnemyPos(), _speed * Time.deltaTime);
         anim.SetBool("IsWalk", _attack);
 
-        Vector3 direction = enemy.position - transform.position;
+        Vector3 direction = EnemyPos() - transform.position;
         direction.y = 0;
         transform.LookAt(transform.position + direction);
     }
@@ -68,5 +67,19 @@ public class Melee : Soliders
         {
             nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage);
         }
+    }
+
+    public Vector3 EnemyPos()
+    {
+        Transform enemy = nearestEnemy.GetComponent<Transform>();
+        Vector3 enemypos = new Vector3(enemy.position.x, transform.position.y, enemy.position.z);
+        return enemypos;
+    }
+    private bool Attackable()
+    {
+        Transform enemy = nearestEnemy.GetComponent<Transform>();
+        distance = Vector3.Distance(transform.position, enemy.position);
+
+        return distance < 0.25f;
     }
 }

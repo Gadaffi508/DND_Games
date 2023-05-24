@@ -1,18 +1,21 @@
 using System.Collections;
 using UnityEngine;
 using DG.Tweening;
+using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
     public GameObject _spawnButton;
     public GameObject _attackButton;
     public GameObject _direButton;
+    public Text goldText;
 
     private void Start()
     {
         _direButton.transform.DOMoveX(120,1);
         _spawnButton.SetActive(false);
         _attackButton.SetActive(false);
+        goldText.gameObject.SetActive(false);
     }
     public void ButtonActive()
     {
@@ -30,11 +33,18 @@ public class ButtonController : MonoBehaviour
         _direButton.transform.DOMoveX(-80, 1);
         yield return new WaitForSeconds(1);
         _direButton.SetActive(false);
+        goldText.gameObject.SetActive(true);
+        goldText.transform.DOMoveY(700,1);
     }
     IEnumerator DelayAcitveAttackButton()
     {
         _attackButton.transform.DOMoveY(760, 1);
         yield return new WaitForSeconds(2);
         _attackButton.SetActive(true);
+    }
+
+    private void FixedUpdate()
+    {
+        goldText.text = "Gold : " + GameManager.Instance.gold.ToString();
     }
 }

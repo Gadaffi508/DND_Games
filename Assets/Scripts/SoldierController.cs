@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class SoldierController : MonoBehaviour
 {
@@ -9,7 +11,9 @@ public class SoldierController : MonoBehaviour
     public GameObject soldierPrefabs;
     public GameObject MagicPrefabs;
     public GameObject AttackCOntroller;
-    
+
+    public Text NoMoney;
+
 
     private void Start()
     {
@@ -21,13 +25,20 @@ public class SoldierController : MonoBehaviour
 
         GameObject soldier = Instantiate(soldierPrefabs);
 
-        if (cellController.AddSoldier(soldier))
+        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= 50)
         {
-
+            GameManager.Instance.gold -= 50;
+        }
+        else if (GameManager.Instance.gold < 50)
+        {
+            TextAnim();
+            NoMoney.text = "No Money";
+            Destroy(soldier);
         }
         else
         {
-            Debug.Log("Cells is full!");
+            TextAnim();
+            NoMoney.text = "Cell is full";
             Destroy(soldier);
         }
     }
@@ -36,13 +47,20 @@ public class SoldierController : MonoBehaviour
 
         GameObject Magic = Instantiate(MagicPrefabs);
 
-        if (cellController.AddSoldier(Magic))
+        if (cellController.AddSoldier(Magic) && GameManager.Instance.gold >= 40)
         {
-
+            GameManager.Instance.gold -= 40;
+        }
+        else if (GameManager.Instance.gold < 40)
+        {
+            TextAnim();
+            NoMoney.text = "No Money";
+            Destroy(Magic);
         }
         else
         {
-            Debug.Log("Cells is full!");
+            TextAnim();
+            NoMoney.text = "Cell is full";
             Destroy(Magic);
         }
     }
@@ -50,5 +68,12 @@ public class SoldierController : MonoBehaviour
     {
         AttackCOntroller.SetActive(true);
     }
-    
+    public void TextAnim()
+    {
+        NoMoney.transform.DOMoveY(50, 1).OnComplete(() =>
+        {
+            NoMoney.transform.DOMoveY(-25, 1);
+        });
+    }
+
 }
