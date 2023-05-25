@@ -524,6 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4fa1d6196e231498eb48dc23868b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "t\xFCr": DogPolyart 1(Clone)
 --- !u!65 &90163244
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -846,6 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4fa1d6196e231498eb48dc23868b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "t\xFCr": DogPolyart 1(Clone)
 --- !u!65 &228219249
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2650,6 +2652,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4fa1d6196e231498eb48dc23868b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "t\xFCr": DogPolyart 1(Clone)
 --- !u!65 &416195617
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5366,6 +5369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4fa1d6196e231498eb48dc23868b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "t\xFCr": DogPolyart 1(Clone)
 --- !u!65 &1193954689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7328,6 +7332,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4fa1d6196e231498eb48dc23868b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "t\xFCr": DogPolyart 1(Clone)
 --- !u!65 &1575325457
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7438,6 +7443,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4fa1d6196e231498eb48dc23868b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "t\xFCr": DogPolyart 1(Clone)
 --- !u!65 &1663777201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8127,6 +8133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4fa1d6196e231498eb48dc23868b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "t\xFCr": DogPolyart 1(Clone)
 --- !u!1 &1924766872
 GameObject:
   m_ObjectHideFlags: 0
@@ -8237,6 +8244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4fa1d6196e231498eb48dc23868b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "t\xFCr": DogPolyart 1(Clone)
 --- !u!1 &1968940812
 GameObject:
   m_ObjectHideFlags: 0
@@ -8446,6 +8454,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d4fa1d6196e231498eb48dc23868b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  "t\xFCr": DogPolyart 1(Clone)
 --- !u!1001 &2018604819
 PrefabInstance:
   m_ObjectHideFlags: 0

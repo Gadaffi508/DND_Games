@@ -107,8 +107,17 @@ public class MovementController : MonoBehaviour
                     else ////Eger mouse pozisyonundaki hucre bos degil ise yer degis
                     {
                         GameObject cellSoldier = cell.CurrentSoldier;
-                        cell.CurrentSoldier = moveObject;
-                        lastCell.CurrentSoldier = cellSoldier;
+                        if (cell.CurrentSoldier.name == moveObject.name)
+                        {
+                            Destroy(cell.CurrentSoldier);
+                            cell.CurrentSoldier = moveObject;
+                            moveObject.GetComponent<Soliders>().level += 1;
+                        }
+                        else
+                        {
+                            cell.CurrentSoldier = moveObject;
+                            lastCell.CurrentSoldier = cellSoldier;
+                        }
                     }
                 }
             }

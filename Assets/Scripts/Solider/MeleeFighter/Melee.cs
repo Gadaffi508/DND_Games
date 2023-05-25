@@ -65,7 +65,7 @@ public class Melee : Soliders
     {
         if (nearestEnemy != null)
         {
-            nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage);
+            nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage + (level * 5));
         }
     }
 

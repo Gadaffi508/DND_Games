@@ -4,10 +4,16 @@ using UnityEngine;
 
 public class SoliderHealth : Health
 {
+    Melee solider;
+
+    private void Start()
+    {
+        solider = GetComponent<Melee>();
+    }
 
     public override void Takedamage(int damage)
     {
-        _health -= damage;
+        _health -= damage - (solider.level * 3);
 
         if (_health <= 0)
         {

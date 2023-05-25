@@ -20,7 +20,6 @@ public abstract class Soliders : MonoBehaviour
 
     public abstract void Attack();
 
-
     private void Start()
     {
         enemyLayer = LayerMask.NameToLayer("Enemy");
