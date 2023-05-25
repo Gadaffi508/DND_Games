@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class DiceCheckZone : MonoBehaviour
 {
-    Vector3 diceVelocity;
     public int myNumber;
 
     private void FixedUpdate()

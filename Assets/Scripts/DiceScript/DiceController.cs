@@ -31,7 +31,11 @@ public class DiceController : MonoBehaviour
             rb.AddForce(transform.up * 300);
             rb.AddTorque(dirX, dirY, dirZ);
 
-            Destroy(gameObject, 2.5f);
+            
         }
+    }
+    public void DestroyGameObject()
+    {
+        _rolling = true;
     }
 }

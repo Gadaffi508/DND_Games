@@ -17,4 +17,8 @@ public class DiceNumberText : MonoBehaviour
         text.text = diceNumber.ToString();
         GameManager.Instance.maxFrontSoldierCount = diceNumber;
     }
+    public void RetryDice()
+    {
+        GameManager.Instance.gold -= 100;
+    }
 }
