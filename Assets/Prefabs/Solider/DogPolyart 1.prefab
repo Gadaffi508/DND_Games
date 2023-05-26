@@ -1454,7 +1454,7 @@ MonoBehaviour:
   Collider: {fileID: 5924007567069153954}
   _speed: 1.5
   _attack: 0
-  attackDamage: 20
+  attackDamage: 25
 --- !u!136 &5924007567069153954
 CapsuleCollider:
   m_ObjectHideFlags: 0
