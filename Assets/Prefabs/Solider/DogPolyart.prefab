@@ -1062,9 +1062,9 @@ MonoBehaviour:
   anim: {fileID: 7711929593683207739}
   rb: {fileID: 3271933698652799587}
   Collider: {fileID: 3472398618230616215}
-  _speed: 1
+  _speed: 2.5
   _attack: 0
-  attackDamage: 30
+  attackDamage: 10
 --- !u!136 &3472398618230616215
 CapsuleCollider:
   m_ObjectHideFlags: 0

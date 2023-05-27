@@ -54,6 +54,10 @@ public class EnemyController : MonoBehaviour
                 AttackFindEnemy();
             }
         }
+        else
+        {
+            anim.SetBool("Attack", false);
+        }
     }
 
     public void AttackFindEnemy()

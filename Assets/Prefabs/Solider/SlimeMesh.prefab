@@ -76,9 +76,9 @@ MonoBehaviour:
   anim: {fileID: 4066525358599205467}
   rb: {fileID: 1464303952698031429}
   Collider: {fileID: 4066525358599205469}
-  _speed: 3
+  _speed: 1.5
   _attack: 0
-  attackDamage: 15
+  attackDamage: 35
 --- !u!136 &4066525358599205469
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f63cf745468eaa4993033c4d1da5fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 100
+  _health: 50
 --- !u!1 &4066525358608679307
 GameObject:
   m_ObjectHideFlags: 0

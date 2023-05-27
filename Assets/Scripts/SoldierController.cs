@@ -27,11 +27,11 @@ public class SoldierController : MonoBehaviour
 
         GameObject soldier = Instantiate(soldierPrefabs);
 
-        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= 50)
+        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= 100)
         {
-            GameManager.Instance.gold -= 50;
+            GameManager.Instance.gold -= 100;
         }
-        else if (GameManager.Instance.gold < 50)
+        else if (GameManager.Instance.gold < 100)
         {
             TextAnim();
             NoMoney.text = "No Money";
@@ -50,11 +50,11 @@ public class SoldierController : MonoBehaviour
 
         GameObject soldier = Instantiate(soldierPrefabsTwo);
 
-        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= 50)
+        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= 90)
         {
-            GameManager.Instance.gold -= 50;
+            GameManager.Instance.gold -= 90;
         }
-        else if (GameManager.Instance.gold < 50)
+        else if (GameManager.Instance.gold < 90)
         {
             TextAnim();
             NoMoney.text = "No Money";
@@ -73,11 +73,11 @@ public class SoldierController : MonoBehaviour
 
         GameObject soldier = Instantiate(SlimePrefab);
 
-        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= 50)
+        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= 150)
         {
-            GameManager.Instance.gold -= 50;
+            GameManager.Instance.gold -= 150;
         }
-        else if (GameManager.Instance.gold < 50)
+        else if (GameManager.Instance.gold < 150)
         {
             TextAnim();
             NoMoney.text = "No Money";
@@ -96,11 +96,11 @@ public class SoldierController : MonoBehaviour
 
         GameObject Magic = Instantiate(MagicPrefabs);
 
-        if (cellController.AddSoldier(Magic) && GameManager.Instance.gold >= 40)
+        if (cellController.AddSoldier(Magic) && GameManager.Instance.gold >= 200)
         {
-            GameManager.Instance.gold -= 40;
+            GameManager.Instance.gold -= 200;
         }
-        else if (GameManager.Instance.gold < 40)
+        else if (GameManager.Instance.gold < 200)
         {
             TextAnim();
             NoMoney.text = "No Money";
