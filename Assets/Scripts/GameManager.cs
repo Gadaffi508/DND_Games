@@ -28,6 +28,11 @@ public class GameManager : MonoBehaviour
             GameTime -= Time.deltaTime;
         }
         TimeText.text = "Time : " + GameTime.ToString("00.0");
+
+        if (GameTime <= 0)
+        {
+
+        }
     }
     public void Started()
     {
