@@ -243,6 +243,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2018604825}
+        m_TargetAssemblyTypeName: DiceController, Assembly-CSharp
+        m_MethodName: DestroyMe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1437658801}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: BackRetry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &65816250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -334,7 +358,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 259fa767c4c3b5840b3cc71f3f9f3645, type: 2}
+  - {fileID: 2100000, guid: e4b2c03e354431e499e020fecb3a990e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -372,7 +396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 77531465}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.84, z: -2.02}
+  m_LocalPosition: {x: 0, y: 0.84, z: -3.16}
   m_LocalScale: {x: 0.5, y: 1, z: 0.107465}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -459,7 +483,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07613353ee5a8f84b917555a0e4ec448, type: 2}
+  - {fileID: 2100000, guid: e4052045c57d31b448d9c82644955b55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -781,7 +805,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07613353ee5a8f84b917555a0e4ec448, type: 2}
+  - {fileID: 2100000, guid: e4052045c57d31b448d9c82644955b55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1060,6 +1084,10 @@ PrefabInstance:
       propertyPath: _health
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: -4801968137457490926, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
+      propertyPath: DieParticle
+      value: 
+      objectReference: {fileID: 2312934031400120666, guid: d3b045d9dc8e7624abf93bc462d5019f, type: 3}
     - target: {fileID: 852744827033283525, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: anim
       value: 
@@ -1462,7 +1490,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7705015139054747626, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -3.14
       objectReference: {fileID: 0}
     - target: {fileID: 7705015139054747626, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2677,7 +2705,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07613353ee5a8f84b917555a0e4ec448, type: 2}
+  - {fileID: 2100000, guid: e4052045c57d31b448d9c82644955b55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2707,25 +2735,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 416195614}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &536466428 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-  m_PrefabInstance: {fileID: 1244920005}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &536466432
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 536466428}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 2534964839176971238, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
 --- !u!1 &553440145
 GameObject:
   m_ObjectHideFlags: 0
@@ -3054,6 +3063,30 @@ MonoBehaviour:
       - m_Target: {fileID: 1186500637}
         m_TargetAssemblyTypeName: SoldierController, Assembly-CSharp
         m_MethodName: SliderSpawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2018604825}
+        m_TargetAssemblyTypeName: DiceController, Assembly-CSharp
+        m_MethodName: DestroyMe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1437658801}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: BackRetry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3589,7 +3622,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 259fa767c4c3b5840b3cc71f3f9f3645, type: 2}
+  - {fileID: 2100000, guid: e4b2c03e354431e499e020fecb3a990e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -3886,6 +3919,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2594068445634035911, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
+      propertyPath: DieParticle
+      value: 
+      objectReference: {fileID: 2312934031400120666, guid: d3b045d9dc8e7624abf93bc462d5019f, type: 3}
     - target: {fileID: 7828460743802623398, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
       propertyPath: anim
       value: 
@@ -5236,7 +5273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8568112900292604650, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -3.14
       objectReference: {fileID: 0}
     - target: {fileID: 8568112900292604650, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5273,6 +5310,63 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: -7379321033342306112, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
+--- !u!1001 &1122362022
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.98
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.79
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_Name
+      value: Arena
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
 --- !u!1 &1142407716
 GameObject:
   m_ObjectHideFlags: 0
@@ -5705,7 +5799,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07613353ee5a8f84b917555a0e4ec448, type: 2}
+  - {fileID: 2100000, guid: e4052045c57d31b448d9c82644955b55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5735,87 +5829,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1193954686}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &1244920005
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 30
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.493
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.57
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -90
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 259fa767c4c3b5840b3cc71f3f9f3645, type: 2}
-    - target: {fileID: 919132149155446097, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_Name
-      value: Mount
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_Layer
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 1e4140076876c9a4b999076cd24aa1de, type: 3}
 --- !u!1001 &1322255738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5841,7 +5854,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4624293293446055937, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -2
+      value: -3.14
       objectReference: {fileID: 0}
     - target: {fileID: 4624293293446055937, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
       propertyPath: m_LocalRotation.w
@@ -7219,6 +7232,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 8e1ed7e1a723dce478bccb1f735d61f4, type: 2}
+    - target: {fileID: 6667971473233019610, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
+      propertyPath: DieParticle
+      value: 
+      objectReference: {fileID: 2312934031400120666, guid: d3b045d9dc8e7624abf93bc462d5019f, type: 3}
     m_RemovedComponents:
     - {fileID: -6314497575014857441, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
@@ -7378,6 +7395,30 @@ MonoBehaviour:
       - m_Target: {fileID: 1186500637}
         m_TargetAssemblyTypeName: SoldierController, Assembly-CSharp
         m_MethodName: SpawnMagic
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2018604825}
+        m_TargetAssemblyTypeName: DiceController, Assembly-CSharp
+        m_MethodName: DestroyMe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1437658801}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: BackRetry
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7842,7 +7883,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07613353ee5a8f84b917555a0e4ec448, type: 2}
+  - {fileID: 2100000, guid: e4052045c57d31b448d9c82644955b55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7952,7 +7993,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07613353ee5a8f84b917555a0e4ec448, type: 2}
+  - {fileID: 2100000, guid: e4052045c57d31b448d9c82644955b55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8460,6 +8501,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2018604825}
+        m_TargetAssemblyTypeName: DiceController, Assembly-CSharp
+        m_MethodName: DestroyMe
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1437658801}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: BackRetry
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1834151846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8566,7 +8631,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07613353ee5a8f84b917555a0e4ec448, type: 2}
+  - {fileID: 2100000, guid: e4052045c57d31b448d9c82644955b55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8676,7 +8741,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07613353ee5a8f84b917555a0e4ec448, type: 2}
+  - {fileID: 2100000, guid: e4052045c57d31b448d9c82644955b55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8885,7 +8950,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 07613353ee5a8f84b917555a0e4ec448, type: 2}
+  - {fileID: 2100000, guid: e4052045c57d31b448d9c82644955b55, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

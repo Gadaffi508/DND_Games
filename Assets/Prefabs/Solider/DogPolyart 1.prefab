@@ -1506,6 +1506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 120
+  DieParticle: {fileID: 2312934031400120666, guid: d3b045d9dc8e7624abf93bc462d5019f, type: 3}
 --- !u!222 &5529986013413696514
 CanvasRenderer:
   m_ObjectHideFlags: 0

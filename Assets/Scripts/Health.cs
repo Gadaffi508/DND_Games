@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Health : MonoBehaviour
 {
     public int _health;
+    public GameObject DieParticle;
 
     public static Health health;
 

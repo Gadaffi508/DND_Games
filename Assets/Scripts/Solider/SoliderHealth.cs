@@ -22,6 +22,7 @@ public class SoliderHealth : Health
     }
     public override void Die()
     {
+        Instantiate(DieParticle,transform.position,Quaternion.identity);
         Destroy(gameObject);
     }
 }

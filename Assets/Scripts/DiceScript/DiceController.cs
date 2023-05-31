@@ -38,4 +38,8 @@ public class DiceController : MonoBehaviour
     {
         _rolling = true;
     }
+    public void DestroyMe()
+    {
+        Destroy(gameObject);
+    }
 }
