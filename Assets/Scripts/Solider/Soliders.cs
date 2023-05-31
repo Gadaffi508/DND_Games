@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Soliders : MonoBehaviour
 {
     public int level;
+    public TextMesh TextLevel;
 
     [Header("Attack")]
     public float OverlapRadius = 10.0f;

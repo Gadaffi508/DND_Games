@@ -44,7 +44,14 @@ public class Melee : Soliders
                 anim.SetBool("Attack", false);
                 anim.SetBool("IsWalk", false);
             }
+            TextLevel.text = "";
         }
+        else
+        {
+            TextLevel.text = level.ToString();
+        }
+
+        
 
     }
     public void AttackFindEnemy()

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class EnemyController : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class EnemyController : MonoBehaviour
     public Animator anim;
     private float distance;
     public int attackDamage = 15;
+
+    public float rotationSpeed = 5f;
 
     void Start()
     {
@@ -45,6 +48,9 @@ public class EnemyController : MonoBehaviour
         {
             Transform Player = nearestPlayer.GetComponent<Transform>();
             distance = Vector3.Distance(transform.position, Player.position);
+
+            transform.rotation = Rotate();
+
             if (Attackable())
             {
                 anim.SetBool("Attack", true);
@@ -63,9 +69,15 @@ public class EnemyController : MonoBehaviour
     public void AttackFindEnemy()
     {
         anim.SetBool("Attack", false);
+        transform.rotation = Rotate();
+    }
+
+    public Quaternion Rotate()
+    {
         Vector3 direction = PlayerPos() - transform.position;
-        direction.y = 0;
-        transform.LookAt(transform.position + direction);
+        direction.y = 0f;
+        Quaternion targetRotation = Quaternion.LookRotation(direction);
+        return Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
     }
 
     public void Damage()
