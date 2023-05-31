@@ -4,36 +4,15 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    bool zoomCurrent = false;
+    private Animator animator;
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        if (zoomCurrent)
-        {
-            transform.position = new Vector3(transform.position.x,
-            transform.position.y - Time.deltaTime,
-            transform.position.z - Time.deltaTime
-            );
-        }
-        if (transform.position.y <= 4)
-        {
-            transform.position = new Vector3(transform.position.x,
-            4,
-            transform.position.z
-            );
-        }
-        if (transform.position.z <= 5.8)
-        {
-            transform.position = new Vector3(transform.position.x,
-            transform.position.y,
-            5.8f
-            );
-        }
+        animator = GetComponent<Animator>();
     }
 
-    public void CameraZoom()
+    public void MoveCameraForward()
     {
-        zoomCurrent = true;
+        animator.SetBool("MoveForward", true);
     }
 }

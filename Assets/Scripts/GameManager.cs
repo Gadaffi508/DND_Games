@@ -2,12 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     bool started = false;
     public Text TimeText;
+
+    public GameObject LevelPanel;
 
     private void Awake()
     {
@@ -31,7 +34,8 @@ public class GameManager : MonoBehaviour
 
         if (GameTime <= 0)
         {
-
+            GameTime = 0;
+            LevelPanel.transform.DOMoveY(500, 1).OnComplete(() => Time.timeScale = 0);
         }
     }
     public void Started()
