@@ -12,6 +12,7 @@ public class ButtonController : MonoBehaviour
     public Text TimeText;
     public float _Time = 5;
     public Text goldText;
+    public Image goldImage;
     public GameObject dire;
     public bool startRetyTime = false;
 
@@ -21,7 +22,7 @@ public class ButtonController : MonoBehaviour
         _spawnButton.SetActive(false);
         _attackButton.SetActive(false);
         _direRetry.SetActive(false);
-        goldText.gameObject.SetActive(false);
+        goldImage.gameObject.SetActive(false);
     }
     public void ButtonActive()
     {
@@ -41,8 +42,8 @@ public class ButtonController : MonoBehaviour
         _direRetry.transform.DOMoveX(120,1);
         startRetyTime = true;
         yield return new WaitForSeconds(1);
-        goldText.gameObject.SetActive(true);
-        goldText.transform.DOMoveY(700,1);
+        goldImage.gameObject.SetActive(true);
+        goldImage.transform.DOMoveY(840,1);
     }
     IEnumerator DelayAcitveAttackButton()
     {

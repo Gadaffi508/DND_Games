@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     bool started = false;
     public Text TimeText;
 
+    public Image butonTextImage;
+
     public GameObject LevelPanel;
 
     private void Awake()
@@ -30,7 +32,16 @@ public class GameManager : MonoBehaviour
         {
             GameTime -= Time.deltaTime;
         }
-        TimeText.text = "Time : " + GameTime.ToString("00.0");
+        TimeText.text = "Time : " + GameTime.ToString("00");
+
+        if (GameTime <= 5)
+        {
+            butonTextImage.color = Color.red;
+        }
+        else
+        {
+            butonTextImage.color = Color.white;
+        }
 
         if (GameTime <= 0)
         {
