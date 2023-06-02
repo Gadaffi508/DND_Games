@@ -6,9 +6,12 @@ public class SoliderHealth : Health
 {
     Melee solider;
 
-    private void Start()
+    IEnumerator Start()
     {
         solider = GetComponent<Melee>();
+        manager = FindObjectOfType<GameManager>();
+        yield return new WaitForSeconds(1);
+        manager.AddSoliderToList(gameObject);
     }
 
     public override void Takedamage(int damage)
@@ -22,7 +25,8 @@ public class SoliderHealth : Health
     }
     public override void Die()
     {
-        Instantiate(DieParticle,transform.position,Quaternion.identity);
+        manager.SoliderDestroyed(gameObject);
+        Instantiate(DieParticle, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }

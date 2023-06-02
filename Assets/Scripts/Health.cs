@@ -7,6 +7,8 @@ public abstract class Health : MonoBehaviour
     public int _health;
     public GameObject DieParticle;
 
+    public GameManager manager;
+
     public static Health health;
 
     private void Awake()

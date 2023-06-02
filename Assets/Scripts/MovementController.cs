@@ -109,9 +109,20 @@ public class MovementController : MonoBehaviour
                         GameObject cellSoldier = cell.CurrentSoldier;
                         if (cell.CurrentSoldier.name == moveObject.name)
                         {
-                            Destroy(cell.CurrentSoldier);
-                            cell.CurrentSoldier = moveObject;
-                            moveObject.GetComponent<Soliders>().level += 1;
+                            if (cell.CurrentSoldier.GetComponent<Melee>().level >= moveObject.GetComponent<Melee>().level)
+                            {
+                                moveObject.GetComponent<SoliderHealth>().Die();
+                                cell.CurrentSoldier.GetComponent<Melee>().level += moveObject.GetComponent<Melee>().level;
+                            }
+                            else
+                            {
+                                cell.CurrentSoldier.GetComponent<SoliderHealth>().Die();
+                                moveObject.GetComponent<Melee>().level += cell.CurrentSoldier.GetComponent<Melee>().level;
+                                cell.CurrentSoldier = moveObject;
+
+                            }
+
+                            
                         }
                         else
                         {

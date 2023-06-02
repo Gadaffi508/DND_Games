@@ -51,8 +51,6 @@ public class Melee : Soliders
             TextLevel.text = level.ToString();
         }
 
-        
-
     }
     public void AttackFindEnemy()
     {

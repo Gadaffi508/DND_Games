@@ -5,6 +5,14 @@ using UnityEngine;
 public class EnemyHealth : Health
 {
     public bool IsDead;
+
+    IEnumerator Start()
+    {
+        manager = FindObjectOfType<GameManager>();
+        yield return new WaitForSeconds(1);
+        manager.AddEnemyToList(gameObject);
+    }
+
     public override void Takedamage(int damage)
     {
         _health -= damage;
@@ -19,6 +27,7 @@ public class EnemyHealth : Health
     public override void Die()
     {
         Instantiate(DieParticle, transform.position, Quaternion.identity);
+        manager.EnemyDestroyed(gameObject);
         Destroy(gameObject);
     }
 }

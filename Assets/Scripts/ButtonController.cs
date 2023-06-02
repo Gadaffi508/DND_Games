@@ -68,6 +68,7 @@ public class ButtonController : MonoBehaviour
     public void BackRetry()
     {
         _direRetry.transform.DOMoveX(-100, 1);
+        goldImage.transform.DOMoveY(900, 1);
         Destroy(dire,2f);
     }
 }
