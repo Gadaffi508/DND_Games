@@ -1460,6 +1460,7 @@ MonoBehaviour:
   anim: {fileID: 5924007567069153955}
   rb: {fileID: -6662517953201565661}
   Collider: {fileID: 5924007567069153954}
+  gold: 100
   _speed: 3
   _attack: 0
   attackDamage: 5
@@ -1507,6 +1508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 120
   DieParticle: {fileID: 2312934031400120666, guid: d3b045d9dc8e7624abf93bc462d5019f, type: 3}
+  manager: {fileID: 0}
 --- !u!222 &5529986013413696514
 CanvasRenderer:
   m_ObjectHideFlags: 0

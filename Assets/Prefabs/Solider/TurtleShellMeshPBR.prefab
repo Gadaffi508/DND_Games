@@ -427,6 +427,7 @@ MonoBehaviour:
   anim: {fileID: 3367889914209906957}
   rb: {fileID: -4913104214267689930}
   Collider: {fileID: 3367889914217317004}
+  gold: 200
   _speed: 1
   _attack: 0
   attackDamage: 45
@@ -438,7 +439,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3367889914217317041}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.40564108
   m_Height: 1.3173867
@@ -474,6 +475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 35
   DieParticle: {fileID: 2312934031400120666, guid: d3b045d9dc8e7624abf93bc462d5019f, type: 3}
+  manager: {fileID: 0}
 --- !u!1 &3367889914217317043
 GameObject:
   m_ObjectHideFlags: 0

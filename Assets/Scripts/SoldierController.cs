@@ -27,7 +27,7 @@ public class SoldierController : MonoBehaviour
 
         GameObject soldier = Instantiate(soldierPrefabs);
 
-        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= 100)
+        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= soldier.GetComponent<Melee>().gold)
         {
             GameManager.Instance.gold -= 100;
         }
@@ -50,7 +50,7 @@ public class SoldierController : MonoBehaviour
 
         GameObject soldier = Instantiate(soldierPrefabsTwo);
 
-        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= 90)
+        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= soldier.GetComponent<Melee>().gold)
         {
             GameManager.Instance.gold -= 90;
         }
@@ -73,7 +73,7 @@ public class SoldierController : MonoBehaviour
 
         GameObject soldier = Instantiate(SlimePrefab);
 
-        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= 150)
+        if (cellController.AddSoldier(soldier) && GameManager.Instance.gold >= soldier.GetComponent<Melee>().gold)
         {
             GameManager.Instance.gold -= 150;
         }
@@ -96,7 +96,7 @@ public class SoldierController : MonoBehaviour
 
         GameObject Magic = Instantiate(MagicPrefabs);
 
-        if (cellController.AddSoldier(Magic) && GameManager.Instance.gold >= 200)
+        if (cellController.AddSoldier(Magic) && GameManager.Instance.gold >= Magic.GetComponent<Melee>().gold)
         {
             GameManager.Instance.gold -= 200;
         }

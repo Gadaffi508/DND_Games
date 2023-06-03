@@ -18,6 +18,7 @@ public abstract class Soliders : MonoBehaviour
     public Animator anim;
     public Rigidbody rb;
     public Collider Collider;
+    public int gold;
 
     public abstract void Attack();
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.UIElements;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,6 +46,24 @@ public class GameManager : MonoBehaviour
         if (enemyL.Count <= 0 || SoliderL.Count <= 0)
         {
             LevelPanel.transform.DOMoveY(500, 1);
+            yield return new WaitForSeconds(1);
+            if (SoliderL.Count > 0)
+            {
+                for (int i = 0; i < SoliderL.Count; i++)
+                {
+                    gold += SoliderL[i].GetComponent<Melee>().gold;
+                    SoliderL[i].GetComponent<SoliderHealth>().Die();
+                }
+            }
+            if (enemyL.Count > 0)
+            {
+                for (int i = 0; i < enemyL.Count; i++)
+                {
+                    enemyL[i].GetComponent<EnemyHealth>().Die();
+                }
+            }
+
+
         }
     }
 
