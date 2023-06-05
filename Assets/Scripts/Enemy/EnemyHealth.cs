@@ -20,6 +20,7 @@ public class EnemyHealth : Health
         if (_health <= 0)
         {
             GameManager.Instance.gold += 50;
+            GameManager.Instance._earnedGold += 50;
             Die();
             IsDead = true;
         }

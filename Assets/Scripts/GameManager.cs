@@ -9,6 +9,9 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public Text earnedGold;
+    public int _earnedGold;
+
     public GameObject LevelPanel;
 
     public List<GameObject> enemyL;
@@ -25,6 +28,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         enemyL = new List<GameObject>();
+        _earnedGold = 0;
 
     }
 
@@ -42,6 +46,7 @@ public class GameManager : MonoBehaviour
     IEnumerator FinishedGame()
     {
         yield return new WaitForSeconds(1);
+        earnedGold.text = "Earned Gold : " + _earnedGold;
 
         if (enemyL.Count <= 0 || SoliderL.Count <= 0)
         {
@@ -64,6 +69,7 @@ public class GameManager : MonoBehaviour
             }
 
 
+            
         }
     }
 
