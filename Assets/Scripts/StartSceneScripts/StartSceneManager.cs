@@ -1,48 +1,66 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
-using UnityEditor.SearchService;
+using UnityEngine.UI;
+using static UnityEngine.GraphicsBuffer;
+using System;
 
 public class StartSceneManager : MonoBehaviour
 {
-    public GameObject Camera;
-    public GameObject text;
-    public GameObject UpButton;
-    public GameObject OkImage;
-    public GameObject[] Buttons;
-    bool up;
-    public void ChangeScene(int sceneID)
-    {
-        Camera.transform.DOMoveY(-2, 1);
-        text.SetActive(true);
-        foreach (var button in Buttons)
-        {
-            button.SetActive(false);
-        }
-        OkImage.SetActive(false);
-        UpButton.SetActive(true);
+    public RectTransform[] menuImages;
+    int currentIndex = 0;
+    bool changed = true;
 
-        if (up == true)
-        {
-            SceneManager.LoadScene(sceneID);
-        }
-        up = true;
-    }
-    public void UpCamera()
+    private void Update()
     {
-        up = false;
-        Camera.transform.DOMoveY(6, 1).OnComplete(() =>
+        if (Input.touchCount > 0)
         {
-            foreach (var button in Buttons)
+            Touch touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Moved)
             {
-                button.SetActive(true);
+                float touchDelta = touch.deltaPosition.x;
+
+                if (touchDelta > 0 && changed)
+                {
+                    ChangeImageRight();
+                    changed = false;
+                }
+                else if (touchDelta < 0 && changed)
+                {
+                    ChangeImageLeft();
+                    changed = false;
+                }
             }
-        });
-        OkImage.SetActive(true);
-        text.SetActive(false);
-        UpButton.SetActive(false);
+        }
+    }
+
+    public void ChangeImageRight()
+    {
+        if (currentIndex > 0)
+        {
+            menuImages[currentIndex].DOAnchorPosX(800, 1);
+            currentIndex--;
+            menuImages[currentIndex].DOAnchorPosX(0, 1); // Yeni görüntünün ekrana gelmesini saðlar
+        }
+        StartCoroutine(ChangedBool());
+    }
+
+    public void ChangeImageLeft()
+    {
+        if (currentIndex < menuImages.Length - 1)
+        {
+            menuImages[currentIndex].DOAnchorPosX(-800, 1);
+            currentIndex++;
+            menuImages[currentIndex].DOAnchorPosX(0, 1); // Yeni görüntünün ekrana gelmesini saðlar
+        }
+        StartCoroutine(ChangedBool());
+    }
+
+    IEnumerator ChangedBool()
+    {
+        yield return new WaitForSeconds(.5f);
+        changed = true;
     }
 }
 
