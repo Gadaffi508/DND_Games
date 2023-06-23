@@ -16,28 +16,6 @@ public class CellController : MonoBehaviour
         gameManager = GameObject.FindGameObjectWithTag("Gamemanager").gameObject.GetComponent<GameManager>();
     }
 
-    public bool SoldierLimit()
-    {
-        int count = 0;
-
-        for (int i = 0; i < frontCells.Count; i++)
-        {
-            if(frontCells[i].CurrentSoldier != null)
-            {
-                count++;
-            }
-        }
-
-        if(count < gameManager.maxFrontSoldierCount)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
-    }
-
     public bool AddSoldier(GameObject soldier) //Asker Spawn
     {
         for (int i = 0; i < startingCells.Count; i++)

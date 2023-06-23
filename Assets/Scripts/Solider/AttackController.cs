@@ -16,7 +16,7 @@ public class AttackController : MonoBehaviour
     public void Attack()
     {
 
-        for (int j = 0; j < cellController.frontCells.Count; j++)
+        for (int j = 0; j < cellController.allCells.Count; j++)
         {
             cellsList[j].GetComponent<Cells>().Atack();
         }

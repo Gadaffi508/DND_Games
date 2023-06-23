@@ -25,7 +25,7 @@ public class MovementController : MonoBehaviour
 
     public void SelectObject()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
@@ -41,9 +41,9 @@ public class MovementController : MonoBehaviour
             }
 
             RaycastHit cellHit;
-            if(Physics.Raycast(ray, out cellHit, float.MaxValue, cellLayer)) //Eger hit hucreye degerse
+            if (Physics.Raycast(ray, out cellHit, float.MaxValue, cellLayer)) //Eger hit hucreye degerse
             {
-                if(cellHit.collider != null)
+                if (cellHit.collider != null)
                 {
                     lastCell = cellHit.collider?.GetComponent<Cells>();
                     moveObject = lastCell.CurrentSoldier;
@@ -52,10 +52,10 @@ public class MovementController : MonoBehaviour
             }
             else
             {
-                if(moveObject != null)
+                if (moveObject != null)
                 {
                     lastCell = cellController.ContainsCell(moveObject);
-                    lastCell.CurrentSoldier = null; 
+                    lastCell.CurrentSoldier = null;
                 }
             }
 
@@ -93,16 +93,8 @@ public class MovementController : MonoBehaviour
                 {
                     if (cell.CurrentSoldier == null) //Eger mouse pozisyonundaki hucre bos ise askeri koy
                     {
-                        //Asker Limiti asilmadi ise
-                        if (cellController.SoldierLimit()) 
-                        {
-                            lastCell.CurrentSoldier = null;
-                            cell.CurrentSoldier = moveObject;
-                        }
-                        else //Limit dolu ise asker son hucreye donsun
-                        {
-                            lastCell.CurrentSoldier = moveObject;
-                        }
+                        lastCell.CurrentSoldier = null;
+                        cell.CurrentSoldier = moveObject;
                     }
                     else ////Eger mouse pozisyonundaki hucre bos degil ise yer degis
                     {
@@ -122,7 +114,7 @@ public class MovementController : MonoBehaviour
 
                             }
 
-                            
+
                         }
                         else
                         {

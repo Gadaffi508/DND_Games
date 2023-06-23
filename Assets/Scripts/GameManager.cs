@@ -34,8 +34,6 @@ public class GameManager : MonoBehaviour
 
     public int gold;
 
-    public int maxFrontSoldierCount = 3;
-
     private void FixedUpdate()
     {
         if (finished == true)
