@@ -10184,7 +10184,7 @@ MonoBehaviour:
         m_MethodName: SpawnSoilders
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 6573491462880650246, guid: ea310ac3af67bfa4995aa8b64d06faab, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -10446,7 +10446,7 @@ MonoBehaviour:
         m_MethodName: SpawnSoilders
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 4364438932592212524, guid: e934d531fa1c6a644afa5ed48f640eec, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

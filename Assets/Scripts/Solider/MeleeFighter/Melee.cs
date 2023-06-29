@@ -12,6 +12,8 @@ public class Melee : Soliders
     public int attackDamage = 20;
     private float distance;
 
+    public bool ÝsThief = false;
+
     public override void Attack()
     {
         if (nearestEnemy != null)
@@ -71,6 +73,12 @@ public class Melee : Soliders
         if (nearestEnemy != null)
         {
             nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage + (level * 5));
+        }
+
+        if (ÝsThief == true)
+        {
+            GameManager.Instance.gold += 10;
+            GameManager.Instance._earnedGold += 10;
         }
     }
 
