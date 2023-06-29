@@ -5,7 +5,10 @@ using UnityEngine.UI;
 
 public class ButtonController : MonoBehaviour
 {
-    public GameObject _spawnButton;
+    public GameObject _spawnButtonFighter;
+    public GameObject _spawnButtonWizard;
+    public GameObject _spawnButtonThief;
+    public GameObject SpawnBG;
     public GameObject _attackButton;
     public GameObject _direButton;
     public GameObject _direRetry;
@@ -18,15 +21,13 @@ public class ButtonController : MonoBehaviour
 
     private void Start()
     {
-        _direButton.transform.DOMoveX(120,1);
-        _spawnButton.SetActive(false);
         _attackButton.SetActive(false);
         _direRetry.SetActive(false);
         goldImage.gameObject.SetActive(false);
     }
     public void ButtonActive()
     {
-        StartCoroutine(DelayAcitve());   
+        StartCoroutine(DelayAcitve());
     }
     public void AttackButtonActive()
     {
@@ -36,14 +37,15 @@ public class ButtonController : MonoBehaviour
     {
         _direRetry.SetActive(true);
         yield return new WaitForSeconds(2);
-        _spawnButton.SetActive(true);
-        _spawnButton.transform.DOMoveY(400, 1);
+        _spawnButtonFighter.transform.DOMoveY(400, 1);
+        _spawnButtonWizard.transform.DOMoveY(400, 1);
+        _spawnButtonThief.transform.DOMoveY(400, 1);
         _direButton.transform.DOMoveX(-80, 1);
-        _direRetry.transform.DOMoveX(120,1);
+        _direRetry.transform.DOMoveX(120, 1);
         startRetyTime = true;
         yield return new WaitForSeconds(1);
         goldImage.gameObject.SetActive(true);
-        goldImage.transform.DOMoveY(840,1);
+        goldImage.transform.DOMoveY(840, 1);
     }
     IEnumerator DelayAcitveAttackButton()
     {
@@ -69,6 +71,17 @@ public class ButtonController : MonoBehaviour
     {
         _direRetry.transform.DOMoveX(-100, 1);
         goldImage.transform.DOMoveY(900, 1);
-        Destroy(dire,2f);
+        Destroy(dire, 2f);
+    }
+
+    public void ActiveSolider(GameObject SpawnSolider)
+    {
+        SpawnSolider.SetActive(true);
+    }
+
+    public void DeActiveButton()
+    {
+        _direButton.transform.DOMoveX(120, 1);
+        SpawnBG.SetActive(false);
     }
 }
