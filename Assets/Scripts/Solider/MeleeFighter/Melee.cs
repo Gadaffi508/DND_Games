@@ -12,13 +12,16 @@ public class Melee : Soliders
     public int attackDamage = 20;
     private float distance;
 
-    public bool ÝsThief = false;
+    [SerializeField] private bool ÝsThief = false;
+    [SerializeField] private bool ÝsWizard = false;
+    [SerializeField] private bool isFighter = false;
 
     public override void Attack()
     {
         if (nearestEnemy != null)
         {
             _attack = true;
+            HealtBG.SetActive(true);
         }
     }
 
@@ -52,14 +55,13 @@ public class Melee : Soliders
         {
             TextLevel.text = level.ToString();
         }
-
     }
     public void AttackFindEnemy()
     {
         anim.SetBool("Attack", false);
         anim.SetBool("IsWalk", true);
         _speed = 1.5f;
-        Collider.isTrigger = false;
+        //Collider.isTrigger = false;
         
         transform.position = Vector3.MoveTowards(transform.position, EnemyPos(), _speed * Time.deltaTime);
         anim.SetBool("IsWalk", _attack);
@@ -75,10 +77,23 @@ public class Melee : Soliders
             nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage + (level * 5));
         }
 
+        if (isFighter == true)
+        {
+            attackDamage = (level * 5) + attackDamage;
+        }
+
         if (ÝsThief == true)
         {
             GameManager.Instance.gold += 10;
             GameManager.Instance._earnedGold += 10;
+        }
+        if (ÝsWizard == true)
+        {
+            nearestEnemy.GetComponent<Animator>().speed = .5f;
+        }
+        else
+        {
+            nearestEnemy.GetComponent<Animator>().speed = 1f;
         }
     }
 

@@ -1187,6 +1187,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1482925866}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: EnemyAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &269816445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1324,6 +1336,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 227673395}
+    - target: {fileID: 852744827033283525, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
+      propertyPath: _speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1020408916217244820, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: m_Constraints
       value: 126
@@ -1754,7 +1770,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7705015139054747627, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: m_Radius
-      value: 0.1
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 7705015139056661267, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: m_LocalRotation.w
@@ -5302,6 +5318,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 227673395}
+    - target: {fileID: 7828460743802623398, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
+      propertyPath: _speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8568112898336308093, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
       propertyPath: m_LocalPosition.x
       value: 16.47001
@@ -6680,7 +6700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8568112900292604651, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
       propertyPath: m_Radius
-      value: 0.1
+      value: 0.44
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: -7379321033342306112, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
@@ -7393,6 +7413,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 227673395}
+    - target: {fileID: -7714206500150351267, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
+      propertyPath: _speed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4624293293446055937, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -8779,7 +8803,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4624293293453486060, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
       propertyPath: m_Radius
-      value: 0.1
+      value: 0.44
       objectReference: {fileID: 0}
     - target: {fileID: 4624293293453486061, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
       propertyPath: m_Controller

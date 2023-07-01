@@ -1,21 +1,35 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public abstract class Health : MonoBehaviour
 {
-    public int _health;
+    public float _health;
     public GameObject DieParticle;
 
     public GameManager manager;
 
     public static Health health;
 
+
+    [SerializeField] private Image _healtbar;
+    [SerializeField] private float maxHealth;
+
     private void Awake()
     {
         health = this;
+        maxHealth = _health;
+
     }
 
     public abstract void Takedamage(int damage);
     public abstract void Die();
+
+
+
+    public void UpdateHealthBar()
+    {
+        _healtbar.fillAmount = _health / maxHealth;
+    }
 }

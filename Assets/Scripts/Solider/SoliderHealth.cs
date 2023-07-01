@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SoliderHealth : Health
 {
     Melee solider;
+    public GameObject levelUpEffect;
 
     IEnumerator Start()
     {
@@ -16,6 +18,8 @@ public class SoliderHealth : Health
 
     public override void Takedamage(int damage)
     {
+        UpdateHealthBar();
+
         _health -= damage - (solider.level * 3);
 
         if (_health <= 0)
@@ -28,5 +32,13 @@ public class SoliderHealth : Health
         manager.SoliderDestroyed(gameObject);
         Instantiate(DieParticle, transform.position, Quaternion.identity);
         Destroy(gameObject);
+    }
+
+    public void levelUp()
+    {
+        manager.SoliderDestroyed(gameObject);
+        GameObject effect = Instantiate(levelUpEffect, transform.position, Quaternion.identity);
+        Destroy(gameObject);
+        Destroy(effect,2f);
     }
 }

@@ -103,7 +103,7 @@ public class MovementController : MonoBehaviour
                         {
                             if (cell.CurrentSoldier.GetComponent<Melee>().level >= moveObject.GetComponent<Melee>().level)
                             {
-                                moveObject.GetComponent<SoliderHealth>().Die();
+                                moveObject.GetComponent<SoliderHealth>().levelUp();
                                 cell.CurrentSoldier.GetComponent<Melee>().level += moveObject.GetComponent<Melee>().level;
                             }
                             else

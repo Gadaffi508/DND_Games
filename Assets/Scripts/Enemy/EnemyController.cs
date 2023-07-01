@@ -8,8 +8,8 @@ public class EnemyController : MonoBehaviour
 {
     [Header("Attack")]
     public float OverlapRadius = 10.0f;
-    bool _attack = false;
-
+    public bool _attack = false;
+    public float _speed;
     public Transform nearestPlayer;
     private int PlayerLayer;
 
@@ -44,40 +44,44 @@ public class EnemyController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (nearestPlayer != null)
+        if (_attack)
         {
-            Transform Player = nearestPlayer.GetComponent<Transform>();
-            distance = Vector3.Distance(transform.position, Player.position);
-
-            transform.rotation = Rotate();
-
-            if (Attackable())
+            if (nearestPlayer != null)
             {
-                anim.SetBool("Attack", true);
+                Transform Player = nearestPlayer.GetComponent<Transform>();
+                distance = Vector3.Distance(transform.position, Player.position);
+
+                if (Attackable())
+                {
+                    _speed = 0;
+                    anim.SetBool("IsWalk", false);
+                    anim.SetBool("Attack", true);
+                }
+                else
+                {
+                    AttackFindEnemy();
+                }
             }
             else
             {
-                AttackFindEnemy();
+                anim.SetBool("Attack", false);
             }
-        }
-        else
-        {
-            anim.SetBool("Attack", false);
         }
     }
 
     public void AttackFindEnemy()
     {
         anim.SetBool("Attack", false);
-        transform.rotation = Rotate();
-    }
+        anim.SetBool("IsWalk", true);
 
-    public Quaternion Rotate()
-    {
+        transform.position = Vector3.MoveTowards(transform.position, PlayerPos(), _speed * Time.deltaTime);
+        anim.SetBool("IsWalk", _attack);
+
         Vector3 direction = PlayerPos() - transform.position;
-        direction.y = 0f;
-        Quaternion targetRotation = Quaternion.LookRotation(direction);
-        return Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * rotationSpeed);
+        direction.y = 0;
+        transform.LookAt(transform.position + direction);
+
+
     }
 
     public void Damage()

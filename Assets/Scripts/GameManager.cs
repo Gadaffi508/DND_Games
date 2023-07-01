@@ -118,4 +118,11 @@ public class GameManager : MonoBehaviour
     {
         finished = true;
     }
+    public void EnemyAttack()
+    {
+        foreach (var enemy in enemyL)
+        {
+            enemy.GetComponent<EnemyController>()._attack = true;
+        }
+    }
 }

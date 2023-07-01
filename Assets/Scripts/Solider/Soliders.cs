@@ -6,6 +6,7 @@ public abstract class Soliders : MonoBehaviour
 {
     public int level;
     public TextMesh TextLevel;
+    public GameObject HealtBG;
 
     [Header("Attack")]
     public float OverlapRadius = 10.0f;
@@ -27,8 +28,10 @@ public abstract class Soliders : MonoBehaviour
         enemyLayer = LayerMask.NameToLayer("Enemy");
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
-        Collider = GetComponent<Collider>();  
-        
+        Collider = GetComponent<Collider>();
+        HealtBG.SetActive(false);
+
+
     }
 
     private void Update()
