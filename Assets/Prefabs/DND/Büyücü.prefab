@@ -1143,6 +1143,7 @@ MonoBehaviour:
   attackDamage: 20
   "\u0130sThief": 0
   "\u0130sWizard": 1
+  isFighter: 0
 --- !u!114 &7349675610564844441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1156,11 +1157,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
-  DieParticle: {fileID: 2312934031400120666, guid: d3b045d9dc8e7624abf93bc462d5019f, type: 3}
+  DieParticle: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
   manager: {fileID: 0}
   _healtbar: {fileID: 4119110771969997259}
   maxHealth: 100
-  levelUpEffect: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+  levelUpEffect: {fileID: 1727626132299242, guid: b0bc1b6b391734647b9bb142bafc0819, type: 3}
+  LevelTime: 1
 --- !u!1 &7366519318100588742
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,6 +7,7 @@ public class SoliderHealth : Health
 {
     Melee solider;
     public GameObject levelUpEffect;
+    public float LevelTime = 1;
 
     IEnumerator Start()
     {
@@ -20,7 +21,7 @@ public class SoliderHealth : Health
     {
         UpdateHealthBar();
 
-        _health -= damage - (solider.level * 3);
+        _health = (_health - damage) + (solider.level * 3);
 
         if (_health <= 0)
         {
@@ -37,8 +38,8 @@ public class SoliderHealth : Health
     public void levelUp()
     {
         manager.SoliderDestroyed(gameObject);
-        GameObject effect = Instantiate(levelUpEffect, transform.position, Quaternion.identity);
+        GameObject effect = Instantiate(levelUpEffect, transform.position, levelUpEffect.transform.rotation);
         Destroy(gameObject);
-        Destroy(effect,2f);
+        Destroy(effect, LevelTime);
     }
 }

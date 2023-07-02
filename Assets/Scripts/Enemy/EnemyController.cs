@@ -18,13 +18,14 @@ public class EnemyController : MonoBehaviour
     public Animator anim;
     private float distance;
     public int attackDamage = 15;
-
+    public GameObject HealtBG;
     public float rotationSpeed = 5f;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         PlayerLayer = LayerMask.NameToLayer("Solider");
+        HealtBG.SetActive(false);
     }
 
     private void Update()
@@ -71,6 +72,8 @@ public class EnemyController : MonoBehaviour
 
     public void AttackFindEnemy()
     {
+        HealtBG.SetActive(true);
+
         anim.SetBool("Attack", false);
         anim.SetBool("IsWalk", true);
 

@@ -15,6 +15,8 @@ public class EnemyHealth : Health
 
     public override void Takedamage(int damage)
     {
+        UpdateHealthBar();
+
         _health -= damage;
 
         if (_health <= 0)
