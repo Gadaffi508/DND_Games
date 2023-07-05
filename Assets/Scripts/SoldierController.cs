@@ -39,10 +39,6 @@ public class SoldierController : MonoBehaviour
         }
     }
 
-    public void SetActiveAttackController()
-    {
-        AttackCOntroller.SetActive(true);
-    }
     public void TextAnim()
     {
         NoMoney.transform.DOMoveY(50, 1).OnComplete(() =>

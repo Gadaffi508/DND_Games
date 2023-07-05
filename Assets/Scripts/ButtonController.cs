@@ -21,7 +21,6 @@ public class ButtonController : MonoBehaviour
 
     private void Start()
     {
-        _attackButton.SetActive(false);
         _direRetry.SetActive(false);
         goldImage.gameObject.SetActive(false);
     }
@@ -41,17 +40,16 @@ public class ButtonController : MonoBehaviour
         _spawnButtonWizard.transform.DOMoveY(400, 1);
         _spawnButtonThief.transform.DOMoveY(400, 1);
         _direButton.transform.DOMoveX(-80, 1);
-        _direRetry.transform.DOMoveX(120, 1);
+        _direRetry.transform.DOMoveX(60, 1);
         startRetyTime = true;
         yield return new WaitForSeconds(1);
         goldImage.gameObject.SetActive(true);
-        goldImage.transform.DOMoveY(840, 1);
+        goldImage.transform.DOMoveY(630, 1);
     }
     IEnumerator DelayAcitveAttackButton()
     {
-        _attackButton.transform.DOMoveY(760, 1);
+        _attackButton.transform.DOMoveY(590, 1);
         yield return new WaitForSeconds(2);
-        _attackButton.SetActive(true);
     }
 
     private void FixedUpdate()
@@ -70,7 +68,7 @@ public class ButtonController : MonoBehaviour
     public void BackRetry()
     {
         _direRetry.transform.DOMoveX(-100, 1);
-        goldImage.transform.DOMoveY(900, 1);
+        goldImage.transform.DOMoveY(700, 1);
         Destroy(dire, 2f);
     }
 
@@ -81,7 +79,7 @@ public class ButtonController : MonoBehaviour
 
     public void DeActiveButton()
     {
-        _direButton.transform.DOMoveX(120, 1);
+        _direButton.transform.DOMoveX(60, 1);
         SpawnBG.SetActive(false);
     }
 }
