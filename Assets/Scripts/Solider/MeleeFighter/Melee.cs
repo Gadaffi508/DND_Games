@@ -16,6 +16,8 @@ public class Melee : Soliders
     [SerializeField] private bool ÝsWizard = false;
     [SerializeField] private bool isFighter = false;
 
+    [SerializeField] private GameObject FightParticle;
+
     public override void Attack()
     {
         if (nearestEnemy != null)
@@ -74,6 +76,9 @@ public class Melee : Soliders
     {
         if (nearestEnemy != null)
         {
+            GameObject particle = Instantiate(FightParticle,transform.position,Quaternion.identity);
+            Destroy(particle,1f);
+
             nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage + (level * 5));
         }
 

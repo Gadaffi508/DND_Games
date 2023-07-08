@@ -304,7 +304,7 @@ MonoBehaviour:
         m_MethodName: SpawnSoilders
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 4364438932592212524, guid: 954a7f41f9fdbf247a785c401b2fc649, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -384,7 +384,6 @@ GameObject:
   - component: {fileID: 77531469}
   - component: {fileID: 77531468}
   - component: {fileID: 77531467}
-  - component: {fileID: 77531466}
   m_Layer: 3
   m_Name: Plane (1)
   m_TagString: ground
@@ -392,20 +391,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &77531466
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 77531465}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &77531467
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1303,7 +1288,7 @@ PrefabInstance:
     - target: {fileID: -4801968137457490926, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: DieParticle
       value: 
-      objectReference: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+      objectReference: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
     - target: {fileID: 852744827033283525, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: anim
       value: 
@@ -2014,7 +1999,7 @@ MonoBehaviour:
         m_MethodName: SpawnSoilders
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 6573491462880650246, guid: 88f9e45842a0cec4a87d9986ebb1349e, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3031,7 +3016,6 @@ GameObject:
   - component: {fileID: 884325011}
   - component: {fileID: 884325010}
   - component: {fileID: 884325009}
-  - component: {fileID: 884325008}
   m_Layer: 6
   m_Name: Plane (2)
   m_TagString: ground
@@ -3039,20 +3023,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!64 &884325008
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 884325007}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &884325009
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3312,7 +3282,7 @@ MonoBehaviour:
         m_MethodName: SpawnSoilders
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 6573491462880650246, guid: 171e193f2ca730141abcc579ba52a246, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -3921,7 +3891,7 @@ PrefabInstance:
     - target: {fileID: 2594068445634035911, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
       propertyPath: DieParticle
       value: 
-      objectReference: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+      objectReference: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
     - target: {fileID: 7828460743802623398, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
       propertyPath: anim
       value: 
@@ -4592,7 +4562,7 @@ MonoBehaviour:
         m_MethodName: SpawnSoilders
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 7349675610564844445, guid: ac32e39634572a04e8da36a5840780d9, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -4719,7 +4689,7 @@ PrefabInstance:
     - target: {fileID: 6667971473233019610, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
       propertyPath: DieParticle
       value: 
-      objectReference: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+      objectReference: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
 --- !u!1 &1327205110
@@ -4798,6 +4768,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1327205110}
   m_CullTransparentMesh: 1
+--- !u!1 &1345480113 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+  m_PrefabInstance: {fileID: 1122362022}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1345480117
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1345480113}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 8563135981553767809, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
 --- !u!1 &1355229745
 GameObject:
   m_ObjectHideFlags: 0
@@ -4944,7 +4933,7 @@ MonoBehaviour:
         m_MethodName: SpawnSoilders
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 4364438932592212524, guid: 04a7c5c4d165bdd4f881b2395e6861ce, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -6757,7 +6746,7 @@ MonoBehaviour:
         m_MethodName: SpawnSoilders
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 7349675610564844445, guid: 7119b9b0081cb3c47a02bddf412228ce, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0

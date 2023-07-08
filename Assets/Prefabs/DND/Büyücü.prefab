@@ -1144,6 +1144,7 @@ MonoBehaviour:
   "\u0130sThief": 0
   "\u0130sWizard": 1
   isFighter: 0
+  FightParticle: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
 --- !u!114 &7349675610564844441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1157,7 +1158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
-  DieParticle: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+  DieParticle: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
   manager: {fileID: 0}
   _healtbar: {fileID: 4119110771969997259}
   maxHealth: 100
