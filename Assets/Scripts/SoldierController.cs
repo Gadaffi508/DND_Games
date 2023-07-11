@@ -7,8 +7,6 @@ using DG.Tweening;
 public class SoldierController : MonoBehaviour
 {
     CellController cellController;
-    public GameObject AttackCOntroller;
-
     public Text NoMoney;
 
 
@@ -17,9 +15,9 @@ public class SoldierController : MonoBehaviour
         cellController = GetComponent<CellController>();
     }
 
-    public void SpawnSoilders(GameObject solider) // all soilder spawn
+    public void SpawnSoilders(GameObject Soldier) // all soilder spawn
     {
-        GameObject soliderPos = Instantiate(solider);
+        GameObject soliderPos = Instantiate(Soldier);
 
         if (cellController.AddSoldier(soliderPos) && GameManager.Instance.gold >= soliderPos.GetComponent<Melee>().gold)
         {
@@ -41,9 +39,9 @@ public class SoldierController : MonoBehaviour
 
     public void TextAnim()
     {
-        NoMoney.transform.DOMoveY(50, 1).OnComplete(() =>
+        NoMoney.transform.DOMoveY(60, 1).OnComplete(() =>
         {
-            NoMoney.transform.DOMoveY(-25, 1);
+            NoMoney.transform.DOMoveY(-70, 1);
         });
     }
 

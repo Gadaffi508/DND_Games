@@ -2,54 +2,48 @@ using System.Collections;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.UI;
+using Unity.VisualScripting;
 
 public class ButtonController : MonoBehaviour
 {
-    public GameObject _spawnButtonFighter;
-    public GameObject _spawnButtonWizard;
-    public GameObject _spawnButtonThief;
-    public GameObject SpawnBG;
-    public GameObject _attackButton;
     public GameObject _direButton;
     public GameObject _direRetry;
     public Text TimeText;
     public float _Time = 5;
     public Text goldText;
-    public Image goldImage;
+    public GameObject goldImage;
     public GameObject dire;
     public bool startRetyTime = false;
 
-    private void Start()
-    {
-        _direRetry.SetActive(false);
-        goldImage.gameObject.SetActive(false);
-    }
+    [Space]
+    [Header("Solider")]
+    public GameObject Thierd, wizard, fighter;
+    public bool _Thierd, _wizard, _fighter;
+
     public void ButtonActive()
     {
         StartCoroutine(DelayAcitve());
-    }
-    public void AttackButtonActive()
-    {
-        StartCoroutine(DelayAcitveAttackButton());
+        _direButton.transform.DOMoveX(-300, 1);
+
+        if (_Thierd)
+        {
+            Thierd.SetActive(true);
+        }
+        else if(_wizard)
+        {
+            wizard.SetActive(true);
+        }
+        else if(_fighter)
+        {
+            fighter.SetActive(true);
+        }
     }
     IEnumerator DelayAcitve()
     {
-        _direRetry.SetActive(true);
-        yield return new WaitForSeconds(2);
-        _spawnButtonFighter.transform.DOMoveY(400, 1);
-        _spawnButtonWizard.transform.DOMoveY(400, 1);
-        _spawnButtonThief.transform.DOMoveY(400, 1);
-        _direButton.transform.DOMoveX(-80, 1);
-        _direRetry.transform.DOMoveX(60, 1);
         startRetyTime = true;
-        yield return new WaitForSeconds(1);
-        goldImage.gameObject.SetActive(true);
-        goldImage.transform.DOMoveY(630, 1);
-    }
-    IEnumerator DelayAcitveAttackButton()
-    {
-        _attackButton.transform.DOMoveY(590, 1);
         yield return new WaitForSeconds(2);
+        goldImage.SetActive(true);
+        yield return new WaitForSeconds(1);
     }
 
     private void FixedUpdate()
@@ -67,19 +61,23 @@ public class ButtonController : MonoBehaviour
     }
     public void BackRetry()
     {
-        _direRetry.transform.DOMoveX(-100, 1);
-        goldImage.transform.DOMoveY(700, 1);
+        _direRetry.transform.DOMoveX(-300, 1);
         Destroy(dire, 2f);
     }
 
-    public void ActiveSolider(GameObject SpawnSolider)
+    public void ActiveChangeObject(string activeObjectName)
     {
-        SpawnSolider.SetActive(true);
-    }
-
-    public void DeActiveButton()
-    {
-        _direButton.transform.DOMoveX(60, 1);
-        SpawnBG.SetActive(false);
+        if (activeObjectName == "Savaþcý")
+        {
+            _fighter = true;
+        }
+        else if(activeObjectName == "Büyücü")
+        {
+            _wizard = true;
+        }
+        else if(activeObjectName == "Hýrsýz")
+        {
+            _Thierd = true;
+        }
     }
 }

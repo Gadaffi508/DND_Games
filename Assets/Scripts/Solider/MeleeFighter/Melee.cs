@@ -76,9 +76,6 @@ public class Melee : Soliders
     {
         if (nearestEnemy != null)
         {
-            GameObject particle = Instantiate(FightParticle,transform.position,Quaternion.identity);
-            Destroy(particle,1f);
-
             nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage + (level * 5));
         }
 
@@ -92,11 +89,11 @@ public class Melee : Soliders
             GameManager.Instance.gold += 10;
             GameManager.Instance._earnedGold += 10;
         }
-        if (ÝsWizard == true)
+        if (ÝsWizard == true && nearestEnemy != null)
         {
             nearestEnemy.GetComponent<Animator>().speed = .5f;
         }
-        else
+        else if(nearestEnemy != null)
         {
             nearestEnemy.GetComponent<Animator>().speed = 1f;
         }
@@ -113,5 +110,11 @@ public class Melee : Soliders
         distance = Vector3.Distance(transform.position, EnemyPos());
 
         return distance < 0.25f;
+    }
+
+    public void PartcileFighter()
+    {
+        GameObject particle = Instantiate(FightParticle, transform.position, Quaternion.identity);
+        Destroy(particle, 1f);
     }
 }
