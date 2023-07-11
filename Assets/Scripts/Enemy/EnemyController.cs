@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
 using static UnityEngine.GraphicsBuffer;
 
 public class EnemyController : MonoBehaviour
@@ -60,6 +61,7 @@ public class EnemyController : MonoBehaviour
                 }
                 else
                 {
+                    _speed = 1;
                     AttackFindEnemy();
                 }
             }
@@ -78,13 +80,13 @@ public class EnemyController : MonoBehaviour
         anim.SetBool("IsWalk", true);
 
         transform.position = Vector3.MoveTowards(transform.position, PlayerPos(), _speed * Time.deltaTime);
+
         anim.SetBool("IsWalk", _attack);
 
         Vector3 direction = PlayerPos() - transform.position;
         direction.y = 0;
+
         transform.LookAt(transform.position + direction);
-
-
     }
 
     public void Damage()
@@ -99,7 +101,7 @@ public class EnemyController : MonoBehaviour
     {
         distance = Vector3.Distance(transform.position, PlayerPos());
 
-        return distance < 0.25f;
+        return distance < 0.75f;
     }
     public Vector3 PlayerPos()
     {

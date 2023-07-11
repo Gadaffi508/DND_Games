@@ -11,8 +11,8 @@ public class CameraController : MonoBehaviour
         animator = GetComponent<Animator>();
     }
 
-    public void MoveCameraForward()
+    public void CameAnimChange(string AnimName)
     {
-        animator.SetBool("MoveForward", true);
+        animator.SetBool(AnimName, true);
     }
 }

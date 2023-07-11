@@ -105,11 +105,13 @@ public class MovementController : MonoBehaviour
                             {
                                 moveObject.GetComponent<SoliderHealth>().levelUp();
                                 cell.CurrentSoldier.GetComponent<Melee>().level += moveObject.GetComponent<Melee>().level;
+                                cell.CurrentSoldier.GetComponent<Melee>().Growth(0.1f);
                             }
                             else
                             {
                                 cell.CurrentSoldier.GetComponent<SoliderHealth>().levelUp();
                                 moveObject.GetComponent<Melee>().level += cell.CurrentSoldier.GetComponent<Melee>().level;
+                                moveObject.GetComponent<Melee>().Growth(0.1f);
                                 cell.CurrentSoldier = moveObject;
 
                             }

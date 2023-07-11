@@ -538,7 +538,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8568112898528439201}
   m_LocalRotation: {x: -0.10782424, y: 0.6912126, z: 0.15394533, w: 0.6977821}
-  m_LocalPosition: {x: 0.012874603, y: 0.23109715, z: 70.61634}
+  m_LocalPosition: {x: 0.012874603, y: 0.23109715, z: 70.61632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2526,10 +2526,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8568112900292604650}
   - component: {fileID: 8568112900292604649}
-  - component: {fileID: 8568112900292604651}
   - component: {fileID: -7568409759427994336}
   - component: {fileID: 7828460743802623398}
   - component: {fileID: 2594068445634035911}
+  - component: {fileID: 1135435952}
   m_Layer: 10
   m_Name: PolyArtWizardMesh (2)
   m_TagString: Enemy
@@ -2575,20 +2575,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!136 &8568112900292604651
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8568112900292604648}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.44
-  m_Height: 1.8547834
-  m_Direction: 1
-  m_Center: {x: 0.00000019868214, y: 0.927469, z: 0.0029071171}
 --- !u!54 &-7568409759427994336
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2638,8 +2624,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
-  DieParticle: {fileID: 2312934031400120666, guid: d3b045d9dc8e7624abf93bc462d5019f, type: 3}
+  DieParticle: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
   manager: {fileID: 0}
   _healtbar: {fileID: 6681273286365768157}
   maxHealth: 0
   IsDead: 0
+--- !u!136 &1135435952
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8568112900292604648}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.32
+  m_Height: 1.6679225
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.91975397, z: 0}

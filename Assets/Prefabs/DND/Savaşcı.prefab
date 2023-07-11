@@ -815,9 +815,9 @@ GameObject:
   - component: {fileID: 4024611376641826966}
   - component: {fileID: 4024611376641826969}
   - component: {fileID: 4024611376641826971}
-  - component: {fileID: 4024611376641826968}
   - component: {fileID: 4024611376641826970}
-  - component: {fileID: 4024611376641826973}
+  - component: {fileID: -8004971031587447383}
+  - component: {fileID: 479487694913697056}
   m_Layer: 8
   m_Name: "Sava\u015Fc\u0131"
   m_TagString: Player
@@ -882,8 +882,8 @@ MonoBehaviour:
   OverlapRadius: 10
   nearestEnemy: {fileID: 0}
   anim: {fileID: 4024611376641826969}
-  rb: {fileID: 4024611376641826973}
-  Collider: {fileID: 4024611376641826968}
+  rb: {fileID: 479487694913697056}
+  Collider: {fileID: -8004971031587447383}
   gold: 100
   _speed: 3
   _attack: 0
@@ -892,20 +892,6 @@ MonoBehaviour:
   "\u0130sWizard": 0
   isFighter: 1
   FightParticle: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
---- !u!136 &4024611376641826968
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4364438932592212524}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 0.09738606
-  m_Height: 0.7684539
-  m_Direction: 1
-  m_Center: {x: -0.0017279983, y: 0.38533422, z: 0.003455937}
 --- !u!114 &4024611376641826970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -925,7 +911,21 @@ MonoBehaviour:
   maxHealth: 0
   levelUpEffect: {fileID: 1727626132299242, guid: b0bc1b6b391734647b9bb142bafc0819, type: 3}
   LevelTime: 1
---- !u!54 &4024611376641826973
+--- !u!136 &-8004971031587447383
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4364438932592212524}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  m_Radius: 0.3776491
+  m_Height: 0.7580558
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.371275, z: 0}
+--- !u!54 &479487694913697056
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

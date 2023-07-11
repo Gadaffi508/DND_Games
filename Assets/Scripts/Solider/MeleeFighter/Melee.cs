@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -12,8 +12,8 @@ public class Melee : Soliders
     public int attackDamage = 20;
     private float distance;
 
-    [SerializeField] private bool ÝsThief = false;
-    [SerializeField] private bool ÝsWizard = false;
+    [SerializeField] private bool Ä°sThief = false;
+    [SerializeField] private bool Ä°sWizard = false;
     [SerializeField] private bool isFighter = false;
 
     [SerializeField] private GameObject FightParticle;
@@ -64,7 +64,7 @@ public class Melee : Soliders
         anim.SetBool("IsWalk", true);
         _speed = 1.5f;
         //Collider.isTrigger = false;
-        
+
         transform.position = Vector3.MoveTowards(transform.position, EnemyPos(), _speed * Time.deltaTime);
         anim.SetBool("IsWalk", _attack);
 
@@ -84,16 +84,16 @@ public class Melee : Soliders
             attackDamage = (level * 5) + attackDamage;
         }
 
-        if (ÝsThief == true)
+        if (Ä°sThief == true)
         {
             GameManager.Instance.gold += 10;
             GameManager.Instance._earnedGold += 10;
         }
-        if (ÝsWizard == true && nearestEnemy != null)
+        if (Ä°sWizard == true && nearestEnemy != null)
         {
             nearestEnemy.GetComponent<Animator>().speed = .5f;
         }
-        else if(nearestEnemy != null)
+        else if (nearestEnemy != null)
         {
             nearestEnemy.GetComponent<Animator>().speed = 1f;
         }
@@ -109,12 +109,21 @@ public class Melee : Soliders
     {
         distance = Vector3.Distance(transform.position, EnemyPos());
 
-        return distance < 0.25f;
+        return distance < 0.55f;
     }
 
     public void PartcileFighter()
     {
         GameObject particle = Instantiate(FightParticle, transform.position, Quaternion.identity);
         Destroy(particle, 1f);
+    }
+
+    public void Growth(float _variable)
+    {
+        transform.localScale = new Vector3(
+            transform.localScale.x + _variable,
+            transform.localScale.y + _variable,
+            transform.localScale.z + _variable
+            );
     }
 }

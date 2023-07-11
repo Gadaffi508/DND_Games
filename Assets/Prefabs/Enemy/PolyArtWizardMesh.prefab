@@ -223,7 +223,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
-  DieParticle: {fileID: 2312934031400120666, guid: d3b045d9dc8e7624abf93bc462d5019f, type: 3}
+  DieParticle: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
   manager: {fileID: 0}
   _healtbar: {fileID: 268981283155347661}
   maxHealth: 0
@@ -1467,7 +1467,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4624293293446222959}
   m_LocalRotation: {x: -0.10782424, y: 0.6912126, z: 0.15394533, w: 0.6977821}
-  m_LocalPosition: {x: 0.012875302, y: 0.23109715, z: 70.61634}
+  m_LocalPosition: {x: 0.012874603, y: 0.23109715, z: 70.61632}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

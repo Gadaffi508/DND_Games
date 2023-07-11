@@ -1278,6 +1278,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 963194230}
+        m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
+        m_MethodName: CameAnimChange
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Attack
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 269816442}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &269816445
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1472,6 +1496,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 227673395}
+    - target: {fileID: 852744827033283525, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
+      propertyPath: _navMeshAgent
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7705015139054747624, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: m_Name
       value: PolyArtWizardMesh (1)
@@ -1519,6 +1547,10 @@ PrefabInstance:
     - target: {fileID: 7705015139054747626, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7705015139059602031, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.012875302
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
@@ -2983,14 +3015,14 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 963194230}
         m_TargetAssemblyTypeName: CameraController, Assembly-CSharp
-        m_MethodName: MoveCameraForward
-        m_Mode: 1
+        m_MethodName: CameAnimChange
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: MoveForward
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1142407716}
@@ -3197,7 +3229,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!4 &651438790
 Transform:
@@ -4591,10 +4623,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2594068445634035911, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
-      propertyPath: DieParticle
-      value: 
-      objectReference: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
     - target: {fileID: 7828460743802623398, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
       propertyPath: anim
       value: 
@@ -4707,6 +4735,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
       propertyPath: m_Layer
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 2147483647
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2aa41ff2a4e09d4469956b58219379a2, type: 3}
@@ -5400,6 +5432,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1244887447}
   m_CullTransparentMesh: 1
+--- !u!1 &1268596581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7705015139054747624, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
+  m_PrefabInstance: {fileID: 290335465}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1268596588
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268596581}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.32
+  m_Height: 1.6679225
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.91975397, z: 0}
 --- !u!1001 &1322255738
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5455,11 +5506,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PolyArtWizardMesh
       objectReference: {fileID: 0}
-    - target: {fileID: 6667971473233019610, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
-      propertyPath: DieParticle
-      value: 
-      objectReference: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4624293293453486060, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
 --- !u!1 &1327205110
 GameObject:
@@ -7802,6 +7850,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1939004050}
   m_CullTransparentMesh: 1
+--- !u!1 &1950089507 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4624293293446222881, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
+  m_PrefabInstance: {fileID: 1322255738}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1950089513
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1950089507}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.32
+  m_Height: 1.6679225
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.91975397, z: 0}
 --- !u!1 &1968940812
 GameObject:
   m_ObjectHideFlags: 0
