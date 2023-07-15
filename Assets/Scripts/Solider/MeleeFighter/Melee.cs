@@ -35,9 +35,11 @@ public class Melee : Soliders
             {
                 Transform enemy = nearestEnemy.GetComponent<Transform>();
                 distance = Vector3.Distance(transform.position, enemy.position);
+                
                 if (Attackable())
                 {
                     _speed = 0;
+                    anim.SetFloat("RandomValue", random);
                     anim.SetBool("IsWalk", false);
                     anim.SetBool("Attack", true);
                 }
@@ -108,7 +110,6 @@ public class Melee : Soliders
     private bool Attackable()
     {
         distance = Vector3.Distance(transform.position, EnemyPos());
-
         return distance < 0.55f;
     }
 
@@ -125,5 +126,10 @@ public class Melee : Soliders
             transform.localScale.y + _variable,
             transform.localScale.z + _variable
             );
+    }
+
+    public void NewRandom()
+    {
+        random = Random.Range(0,3);
     }
 }

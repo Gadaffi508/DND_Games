@@ -7868,7 +7868,7 @@ AnimationClip:
     m_CycleOffset: 0
     m_HasAdditiveReferencePose: 0
     m_LoopTime: 1
-    m_LoopBlend: 0
+    m_LoopBlend: 1
     m_LoopBlendOrientation: 0
     m_LoopBlendPositionY: 0
     m_LoopBlendPositionXZ: 0
@@ -60416,6 +60416,13 @@ AnimationClip:
     messageOptions: 0
   - time: 1.3333334
     functionName: Damage
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 2.5166667
+    functionName: NewRandom
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

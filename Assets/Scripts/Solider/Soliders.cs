@@ -13,6 +13,7 @@ public abstract class Soliders : MonoBehaviour
     public float OverlapRadius = 10.0f;
     public Transform nearestEnemy;
     private int enemyLayer;
+    public int random;
 
     [Space]
     [Header("Controller")]
@@ -30,7 +31,7 @@ public abstract class Soliders : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         Collider = GetComponent<Collider>();
         HealtBG.SetActive(false);
-
+        random = Random.Range(0, 3);
     }
 
     private void Update()
