@@ -3526,12 +3526,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Dice:
-  - {fileID: 7052837499856761596}
-  - {fileID: 5908371357830709454}
   - {fileID: 5266622516706667920}
   - {fileID: 8386045469219982245}
   - {fileID: 1036718718867307418}
+  - {fileID: 7052837499856761596}
   - {fileID: 9174640963378344903}
+  - {fileID: 5908371357830709454}
   CurrentDice: 0
 --- !u!1 &881802008
 GameObject:
@@ -8041,7 +8041,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1083913860161544069, guid: 52b276e74af628647abe70bd02dc9ea4, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1083913860161544069, guid: 52b276e74af628647abe70bd02dc9ea4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8085,7 +8085,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6924075825294133288, guid: 52b276e74af628647abe70bd02dc9ea4, type: 3}
       propertyPath: m_Name
-      value: Cone
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6924075825294133288, guid: 52b276e74af628647abe70bd02dc9ea4, type: 3}
       propertyPath: m_TagString
@@ -8162,12 +8162,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1080056834859984209}
-  - {fileID: 5184961091643900355}
   - {fileID: 147393788302890316}
   - {fileID: 1058260081403861063}
   - {fileID: 5262477779671415341}
+  - {fileID: 1080056834859984209}
   - {fileID: 1724569237818802478}
+  - {fileID: 5184961091643900355}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -8180,7 +8180,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2421694293260267607, guid: 786229158549ecd4da9b5d098877db93, type: 3}
       propertyPath: m_Name
-      value: Solid.003
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2421694293260267607, guid: 786229158549ecd4da9b5d098877db93, type: 3}
       propertyPath: m_TagString
@@ -8188,7 +8188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7417621718979080672, guid: 786229158549ecd4da9b5d098877db93, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7417621718979080672, guid: 786229158549ecd4da9b5d098877db93, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8230,6 +8230,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7417621718979080675, guid: 786229158549ecd4da9b5d098877db93, type: 3}
+      propertyPath: DiceCount
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 786229158549ecd4da9b5d098877db93, type: 3}
 --- !u!1001 &3701096327879850116
@@ -8241,7 +8245,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3555392201223794120, guid: 38a691c1cb710454597012feb090154d, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3555392201223794120, guid: 38a691c1cb710454597012feb090154d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8285,11 +8289,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8811893855987701012, guid: 38a691c1cb710454597012feb090154d, type: 3}
       propertyPath: m_Name
-      value: Solid.001
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8811893855987701012, guid: 38a691c1cb710454597012feb090154d, type: 3}
       propertyPath: m_TagString
       value: Dice
+      objectReference: {fileID: 0}
+    - target: {fileID: 8811893855987701013, guid: 38a691c1cb710454597012feb090154d, type: 3}
+      propertyPath: DiceCount
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38a691c1cb710454597012feb090154d, type: 3}
@@ -8300,9 +8308,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1980721782795937114}
     m_Modifications:
+    - target: {fileID: 6604694683420317417, guid: 8622e60d9bf102b43a482f49319a061e, type: 3}
+      propertyPath: DiceCount
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7541189091719388210, guid: 8622e60d9bf102b43a482f49319a061e, type: 3}
       propertyPath: m_Name
-      value: Solid
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7541189091719388210, guid: 8622e60d9bf102b43a482f49319a061e, type: 3}
       propertyPath: m_TagString
@@ -8310,7 +8322,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9128164570614177087, guid: 8622e60d9bf102b43a482f49319a061e, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9128164570614177087, guid: 8622e60d9bf102b43a482f49319a061e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8381,9 +8393,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1980721782795937114}
     m_Modifications:
+    - target: {fileID: 3028901455002721616, guid: 092c1ac294a72804db2820815eb84a50, type: 3}
+      propertyPath: DiceCount
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3028901455002721631, guid: 092c1ac294a72804db2820815eb84a50, type: 3}
       propertyPath: m_Name
-      value: Solid.004
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3028901455002721631, guid: 092c1ac294a72804db2820815eb84a50, type: 3}
       propertyPath: m_TagString
@@ -8391,7 +8407,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4806721918733496246, guid: 092c1ac294a72804db2820815eb84a50, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4806721918733496246, guid: 092c1ac294a72804db2820815eb84a50, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8447,9 +8463,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1980721782795937114}
     m_Modifications:
+    - target: {fileID: 1593773678131955453, guid: c048ebe5cc44ddc489ea7b7e757c00e1, type: 3}
+      propertyPath: DiceCount
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 1593773678131955454, guid: c048ebe5cc44ddc489ea7b7e757c00e1, type: 3}
       propertyPath: m_Name
-      value: Solid.002
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1593773678131955454, guid: c048ebe5cc44ddc489ea7b7e757c00e1, type: 3}
       propertyPath: m_TagString
@@ -8457,7 +8477,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7840976635686835484, guid: c048ebe5cc44ddc489ea7b7e757c00e1, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7840976635686835484, guid: c048ebe5cc44ddc489ea7b7e757c00e1, type: 3}
       propertyPath: m_LocalPosition.x
