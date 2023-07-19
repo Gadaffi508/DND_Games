@@ -9,6 +9,7 @@ using System;
 public class StartSceneManager : MonoBehaviour
 {
     public RectTransform[] menuImages;
+    [SerializeField] private GameObject[] Circle;
     int currentIndex = 0;
     bool changed = true;
 
@@ -40,8 +41,10 @@ public class StartSceneManager : MonoBehaviour
         if (currentIndex > 0)
         {
             menuImages[currentIndex].DOAnchorPosX(800, 1);
+            Circle[currentIndex].SetActive(false);
             currentIndex--;
             menuImages[currentIndex].DOAnchorPosX(0, 1); // Yeni görüntünün ekrana gelmesini saðlar
+            Circle[currentIndex].SetActive(true);
         }
         StartCoroutine(ChangedBool());
     }
@@ -51,8 +54,10 @@ public class StartSceneManager : MonoBehaviour
         if (currentIndex < menuImages.Length - 1)
         {
             menuImages[currentIndex].DOAnchorPosX(-800, 1);
+            Circle[currentIndex].SetActive(false);
             currentIndex++;
             menuImages[currentIndex].DOAnchorPosX(0, 1); // Yeni görüntünün ekrana gelmesini saðlar
+            Circle[currentIndex].SetActive(true);
         }
         StartCoroutine(ChangedBool());
     }

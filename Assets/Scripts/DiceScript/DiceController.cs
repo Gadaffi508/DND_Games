@@ -4,35 +4,12 @@ using UnityEngine;
 
 public class DiceController : MonoBehaviour
 {
-    static Rigidbody rb;
-    public static Vector3 diceVelocity;
-    private bool _rolling = false;
+    public bool _rolling = false;
+    public int DiceCount;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
-        _rolling = true;
-    }
-
-    public void Dire()
-    {
-        if (_rolling)
-        {
-            diceVelocity = rb.velocity;
-            _rolling = false;
-            transform.rotation = Quaternion.identity;
-            DiceNumberText.diceNumber = 0;
-            float dirX = Random.Range(-500, 500);
-            float dirY = Random.Range(-500, 500);
-            float dirZ = Random.Range(-500, 500);
-
-            transform.position = new Vector3(0, 2, 0);
-
-            rb.AddForce(transform.up * 300);
-            rb.AddTorque(dirX, dirY, dirZ);
-
-            
-        }
+        _rolling = false;
     }
     public void DestroyGameObject()
     {
@@ -41,5 +18,19 @@ public class DiceController : MonoBehaviour
     public void DestroyMe()
     {
         Destroy(gameObject);
+    }
+
+    private void FixedUpdate()
+    {
+        if (_rolling)
+        {
+            transform.rotation = Quaternion.identity;
+            DiceNumberText.diceNumber = 0;
+            float dirX = Random.Range(-90, 90);
+            float dirY = Random.Range(-90, 90);
+            float dirZ = Random.Range(-90, 90);
+
+            transform.Rotate(dirX , dirY , dirZ);
+        }
     }
 }

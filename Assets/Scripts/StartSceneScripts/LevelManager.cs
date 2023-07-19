@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -19,6 +20,10 @@ public class LevelManager : MonoBehaviour
     public GameObject[] dices;
     public int DicesNumber;
     public GameObject DiceUpdateButton;
+
+    [Header("Load Options")]
+    public GameObject LoadScene;
+    public Image LoadingFillImage;
 
     private void Start()
     {
@@ -44,7 +49,7 @@ public class LevelManager : MonoBehaviour
 
     public void PlayGame(int levelScene)
     {
-        SceneManager.LoadScene(levelScene);
+        StartCoroutine(LoadSceneAsync(levelScene));
     }
 
     public void DiceUpdate()
@@ -56,5 +61,23 @@ public class LevelManager : MonoBehaviour
             dices[i].SetActive(false);
         }
         dices[DicesNumber].SetActive(true);
+    }
+
+    IEnumerator LoadSceneAsync(int SceneId)
+    {
+        LoadScene.SetActive(true);
+
+        yield return new WaitForEndOfFrame();
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneId);
+
+        while (!operation.isDone)
+        {
+            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+
+            LoadingFillImage.fillAmount = progressValue;
+
+            yield return null;
+        }
     }
 }

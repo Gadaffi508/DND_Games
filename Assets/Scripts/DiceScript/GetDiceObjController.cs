@@ -1,0 +1,19 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GetDiceObjController : MonoBehaviour
+{
+    [SerializeField] private GameObject[] Dice;
+    [SerializeField] private int CurrentDice;
+
+    private void Start()
+    {
+        foreach (var dice in Dice)
+        {
+            dice.SetActive(false);
+        }
+        Dice[CurrentDice].SetActive(true);
+    }
+
+}

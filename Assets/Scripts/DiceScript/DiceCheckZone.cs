@@ -4,37 +4,27 @@ using UnityEngine;
 
 public class DiceCheckZone : MonoBehaviour
 {
-    public int myNumber;
+    private DiceController DiceObj;
+    [SerializeField] private int Get_DiceNumber;
+    private void Start()
+    {
+        DiceObj = GameObject.FindGameObjectWithTag("Dice").gameObject.GetComponent<DiceController>();
+    }
 
-    private void FixedUpdate()
+    public void DiceNumber()
     {
-        //diceVelocity = DiceController.diceVelocity;
+        DiceObj.gameObject.SetActive(true);
+        DiceObj._rolling = true;
+        StartCoroutine(DiceCheck());
     }
-    private void OnTriggerEnter(Collider other)
+
+    IEnumerator DiceCheck()
     {
-        if (other.gameObject.CompareTag("ground"))
-        {
-            switch (myNumber)
-            {
-                case 1:
-                    DiceNumberText.diceNumber = 6;
-                    break;
-                case 2:
-                    DiceNumberText.diceNumber = 5;
-                    break;
-                case 3:
-                    DiceNumberText.diceNumber = 4;
-                    break;
-                case 4:
-                    DiceNumberText.diceNumber = 3;
-                    break;
-                case 5:
-                    DiceNumberText.diceNumber = 2;
-                    break;
-                case 6:
-                    DiceNumberText.diceNumber = 1;
-                    break;
-            }
-        }
+        yield return new WaitForSeconds(2);
+        DiceObj.gameObject.SetActive(false);
+        Get_DiceNumber = Random.Range(1, DiceObj.DiceCount);
+        DiceNumberText.diceNumber = Get_DiceNumber;
     }
+
+
 }

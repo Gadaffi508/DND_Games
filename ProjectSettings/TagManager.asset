@@ -11,6 +11,8 @@ TagManager:
   - PlayerM
   - ground
   - Controller
+  - FxTemporaire
+  - Dice
   layers:
   - Default
   - TransparentFX
