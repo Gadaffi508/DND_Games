@@ -1432,7 +1432,7 @@ PrefabInstance:
     - target: {fileID: -4801968137457490926, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: DieParticle
       value: 
-      objectReference: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
+      objectReference: {fileID: 118250, guid: a79f8048fa75d6c449d730e96bb836fa, type: 3}
     - target: {fileID: 852744827033283525, guid: c3aacfe0db48f9d489be661d00689982, type: 3}
       propertyPath: anim
       value: 
@@ -4571,6 +4571,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2594068445634035911, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
+      propertyPath: DieParticle
+      value: 
+      objectReference: {fileID: 118250, guid: a79f8048fa75d6c449d730e96bb836fa, type: 3}
     - target: {fileID: 7828460743802623398, guid: 2a98d7bb1ee2b724f8add210ea9cfc99, type: 3}
       propertyPath: anim
       value: 
@@ -5383,6 +5387,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PolyArtWizardMesh
       objectReference: {fileID: 0}
+    - target: {fileID: 6667971473233019610, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
+      propertyPath: DieParticle
+      value: 
+      objectReference: {fileID: 118250, guid: a79f8048fa75d6c449d730e96bb836fa, type: 3}
     m_RemovedComponents:
     - {fileID: 4624293293453486060, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 87ec0a1a3d2d46242ab8a0c61832d7bd, type: 3}

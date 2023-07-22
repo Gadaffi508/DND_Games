@@ -48,6 +48,7 @@ public class GameManager : MonoBehaviour
 
         if (enemyL.Count <= 0 || SoliderL.Count <= 0)
         {
+            yield return new WaitForSeconds(1.2f);
             LevelPanel.SetActive(true);
             yield return new WaitForSeconds(1);
             if (SoliderL.Count > 0)

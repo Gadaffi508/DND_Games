@@ -3546,6 +3546,7 @@ MonoBehaviour:
   HealtBG: {fileID: 3501186963740695983}
   OverlapRadius: 10
   nearestEnemy: {fileID: 0}
+  random: 0
   anim: {fileID: 5796813338551795391}
   rb: {fileID: -20503809791872561}
   Collider: {fileID: 7543069503931990036}
@@ -3570,7 +3571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 80
-  DieParticle: {fileID: 1892078723244562, guid: 46876a2780737ec45a19d62f88e5ce56, type: 3}
+  DieParticle: {fileID: 118250, guid: a79f8048fa75d6c449d730e96bb836fa, type: 3}
   manager: {fileID: 0}
   _healtbar: {fileID: 3167915543011680746}
   maxHealth: 0
