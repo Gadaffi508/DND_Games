@@ -3557,7 +3557,8 @@ MonoBehaviour:
   "\u0130sThief": 1
   "\u0130sWizard": 0
   isFighter: 0
-  FightParticle: {fileID: 100018, guid: a40b64bf23366dc42a892af2c6ff6140, type: 3}
+  FightParticleR: {fileID: 0}
+  FightParticleL: {fileID: 0}
 --- !u!114 &5796813338551795384
 MonoBehaviour:
   m_ObjectHideFlags: 0

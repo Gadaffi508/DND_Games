@@ -16,7 +16,8 @@ public class Melee : Soliders
     [SerializeField] private bool İsWizard = false;
     [SerializeField] private bool isFighter = false;
 
-    [SerializeField] private GameObject FightParticle;
+    [SerializeField] private GameObject FightParticleR;
+    [SerializeField] private GameObject FightParticleL;
 
     public override void Attack()
     {
@@ -35,7 +36,7 @@ public class Melee : Soliders
             {
                 Transform enemy = nearestEnemy.GetComponent<Transform>();
                 distance = Vector3.Distance(transform.position, enemy.position);
-                
+
                 if (Attackable())
                 {
                     _speed = 0;
@@ -115,8 +116,9 @@ public class Melee : Soliders
 
     public void PartcileFighter()
     {
-        GameObject particle = Instantiate(FightParticle, transform.position, Quaternion.identity);
-        Destroy(particle, 1f);
+        FightParticleR.SetActive(true);
+        FightParticleL.SetActive(true);
+        StartCoroutine(fightClose());
     }
 
     public void Growth(float _variable)
@@ -130,6 +132,13 @@ public class Melee : Soliders
 
     public void NewRandom()
     {
-        random = Random.Range(0,3);
+        random = Random.Range(0, 3);
+    }
+
+    IEnumerator fightClose()
+    {
+        yield return new WaitForSeconds(.2f);
+        FightParticleR.SetActive(false);
+        FightParticleL.SetActive(false);
     }
 }
