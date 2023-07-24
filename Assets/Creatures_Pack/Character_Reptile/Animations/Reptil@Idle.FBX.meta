@@ -1,164 +1,455 @@
 fileFormatVersion: 2
 guid: da1a8adf02f49a3428691b95d45f67b0
-timeCreated: 1516176425
-licenseType: Store
 ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName:
-    100000: Body_mesh
-    100002: Bony_growths_mesh
-    100004: CATRigHub004
-    100006: CATRigHub004Bone001
-    100008: CATRigHub005
-    100010: CATRigHub006
-    100012: CATRigHub006Bone001
-    100014: CATRigHub006Bone002
-    100016: CATRigHub006Bone003
-    100018: CATRigLArm1
-    100020: CATRigLArm2
-    100022: CATRigLArmCollarbone
-    100024: CATRigLArmDigit11
-    100026: CATRigLArmDigit12
-    100028: CATRigLArmDigit13
-    100030: CATRigLArmDigit21
-    100032: CATRigLArmDigit22
-    100034: CATRigLArmDigit23
-    100036: CATRigLArmDigit31
-    100038: CATRigLArmDigit32
-    100040: CATRigLArmDigit33
-    100042: CATRigLArmDigit41
-    100044: CATRigLArmDigit42
-    100046: CATRigLArmDigit43
-    100048: CATRigLArmDigit51
-    100050: CATRigLArmDigit52
-    100052: CATRigLArmDigit53
-    100054: CATRigLArmPalm
-    100056: CATRigLLeg1
-    100058: CATRigLLeg2
-    100060: CATRigLLegAnkle
-    100062: CATRigLLegDigit11
-    100064: CATRigLLegPlatform
-    100066: CATRigRArm1
-    100068: CATRigRArm2
-    100070: CATRigRArmCollarbone
-    100072: CATRigRArmDigit11
-    100074: CATRigRArmDigit12
-    100076: CATRigRArmDigit13
-    100078: CATRigRArmDigit21
-    100080: CATRigRArmDigit22
-    100082: CATRigRArmDigit23
-    100084: CATRigRArmDigit31
-    100086: CATRigRArmDigit32
-    100088: CATRigRArmDigit33
-    100090: CATRigRArmDigit41
-    100092: CATRigRArmDigit42
-    100094: CATRigRArmDigit43
-    100096: CATRigRArmDigit51
-    100098: CATRigRArmDigit52
-    100100: CATRigRArmDigit53
-    100102: CATRigRArmPalm
-    100104: CATRigRLeg1
-    100106: CATRigRLeg2
-    100108: CATRigRLegAnkle
-    100110: CATRigRLegDigit11
-    100112: CATRigRLegPlatform
-    100114: CATRigSpine
-    100116: CATRigSpine1
-    100118: CATRigSpine2
-    100120: Character
-    100122: Character001
-    100124: Clutches_mesh
-    100126: Eyes_mesh
-    100128: //RootNode
-    100130: Teeth_mesh
-    400000: Body_mesh
-    400002: Bony_growths_mesh
-    400004: CATRigHub004
-    400006: CATRigHub004Bone001
-    400008: CATRigHub005
-    400010: CATRigHub006
-    400012: CATRigHub006Bone001
-    400014: CATRigHub006Bone002
-    400016: CATRigHub006Bone003
-    400018: CATRigLArm1
-    400020: CATRigLArm2
-    400022: CATRigLArmCollarbone
-    400024: CATRigLArmDigit11
-    400026: CATRigLArmDigit12
-    400028: CATRigLArmDigit13
-    400030: CATRigLArmDigit21
-    400032: CATRigLArmDigit22
-    400034: CATRigLArmDigit23
-    400036: CATRigLArmDigit31
-    400038: CATRigLArmDigit32
-    400040: CATRigLArmDigit33
-    400042: CATRigLArmDigit41
-    400044: CATRigLArmDigit42
-    400046: CATRigLArmDigit43
-    400048: CATRigLArmDigit51
-    400050: CATRigLArmDigit52
-    400052: CATRigLArmDigit53
-    400054: CATRigLArmPalm
-    400056: CATRigLLeg1
-    400058: CATRigLLeg2
-    400060: CATRigLLegAnkle
-    400062: CATRigLLegDigit11
-    400064: CATRigLLegPlatform
-    400066: CATRigRArm1
-    400068: CATRigRArm2
-    400070: CATRigRArmCollarbone
-    400072: CATRigRArmDigit11
-    400074: CATRigRArmDigit12
-    400076: CATRigRArmDigit13
-    400078: CATRigRArmDigit21
-    400080: CATRigRArmDigit22
-    400082: CATRigRArmDigit23
-    400084: CATRigRArmDigit31
-    400086: CATRigRArmDigit32
-    400088: CATRigRArmDigit33
-    400090: CATRigRArmDigit41
-    400092: CATRigRArmDigit42
-    400094: CATRigRArmDigit43
-    400096: CATRigRArmDigit51
-    400098: CATRigRArmDigit52
-    400100: CATRigRArmDigit53
-    400102: CATRigRArmPalm
-    400104: CATRigRLeg1
-    400106: CATRigRLeg2
-    400108: CATRigRLegAnkle
-    400110: CATRigRLegDigit11
-    400112: CATRigRLegPlatform
-    400114: CATRigSpine
-    400116: CATRigSpine1
-    400118: CATRigSpine2
-    400120: Character
-    400122: Character001
-    400124: Clutches_mesh
-    400126: Eyes_mesh
-    400128: //RootNode
-    400130: Teeth_mesh
-    2300000: Eyes_mesh
-    3300000: Eyes_mesh
-    4300000: Eyes_mesh
-    4300002: Teeth_mesh
-    4300004: Clutches_mesh
-    4300006: Bony_growths_mesh
-    4300008: Body_mesh
-    7400000: Take 001
-    9500000: //RootNode
-    13700000: Body_mesh
-    13700002: Bony_growths_mesh
-    13700004: Clutches_mesh
-    13700006: Teeth_mesh
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Body_mesh
+  - first:
+      1: 100002
+    second: Bony_growths_mesh
+  - first:
+      1: 100004
+    second: CATRigHub004
+  - first:
+      1: 100006
+    second: CATRigHub004Bone001
+  - first:
+      1: 100008
+    second: CATRigHub005
+  - first:
+      1: 100010
+    second: CATRigHub006
+  - first:
+      1: 100012
+    second: CATRigHub006Bone001
+  - first:
+      1: 100014
+    second: CATRigHub006Bone002
+  - first:
+      1: 100016
+    second: CATRigHub006Bone003
+  - first:
+      1: 100018
+    second: CATRigLArm1
+  - first:
+      1: 100020
+    second: CATRigLArm2
+  - first:
+      1: 100022
+    second: CATRigLArmCollarbone
+  - first:
+      1: 100024
+    second: CATRigLArmDigit11
+  - first:
+      1: 100026
+    second: CATRigLArmDigit12
+  - first:
+      1: 100028
+    second: CATRigLArmDigit13
+  - first:
+      1: 100030
+    second: CATRigLArmDigit21
+  - first:
+      1: 100032
+    second: CATRigLArmDigit22
+  - first:
+      1: 100034
+    second: CATRigLArmDigit23
+  - first:
+      1: 100036
+    second: CATRigLArmDigit31
+  - first:
+      1: 100038
+    second: CATRigLArmDigit32
+  - first:
+      1: 100040
+    second: CATRigLArmDigit33
+  - first:
+      1: 100042
+    second: CATRigLArmDigit41
+  - first:
+      1: 100044
+    second: CATRigLArmDigit42
+  - first:
+      1: 100046
+    second: CATRigLArmDigit43
+  - first:
+      1: 100048
+    second: CATRigLArmDigit51
+  - first:
+      1: 100050
+    second: CATRigLArmDigit52
+  - first:
+      1: 100052
+    second: CATRigLArmDigit53
+  - first:
+      1: 100054
+    second: CATRigLArmPalm
+  - first:
+      1: 100056
+    second: CATRigLLeg1
+  - first:
+      1: 100058
+    second: CATRigLLeg2
+  - first:
+      1: 100060
+    second: CATRigLLegAnkle
+  - first:
+      1: 100062
+    second: CATRigLLegDigit11
+  - first:
+      1: 100064
+    second: CATRigLLegPlatform
+  - first:
+      1: 100066
+    second: CATRigRArm1
+  - first:
+      1: 100068
+    second: CATRigRArm2
+  - first:
+      1: 100070
+    second: CATRigRArmCollarbone
+  - first:
+      1: 100072
+    second: CATRigRArmDigit11
+  - first:
+      1: 100074
+    second: CATRigRArmDigit12
+  - first:
+      1: 100076
+    second: CATRigRArmDigit13
+  - first:
+      1: 100078
+    second: CATRigRArmDigit21
+  - first:
+      1: 100080
+    second: CATRigRArmDigit22
+  - first:
+      1: 100082
+    second: CATRigRArmDigit23
+  - first:
+      1: 100084
+    second: CATRigRArmDigit31
+  - first:
+      1: 100086
+    second: CATRigRArmDigit32
+  - first:
+      1: 100088
+    second: CATRigRArmDigit33
+  - first:
+      1: 100090
+    second: CATRigRArmDigit41
+  - first:
+      1: 100092
+    second: CATRigRArmDigit42
+  - first:
+      1: 100094
+    second: CATRigRArmDigit43
+  - first:
+      1: 100096
+    second: CATRigRArmDigit51
+  - first:
+      1: 100098
+    second: CATRigRArmDigit52
+  - first:
+      1: 100100
+    second: CATRigRArmDigit53
+  - first:
+      1: 100102
+    second: CATRigRArmPalm
+  - first:
+      1: 100104
+    second: CATRigRLeg1
+  - first:
+      1: 100106
+    second: CATRigRLeg2
+  - first:
+      1: 100108
+    second: CATRigRLegAnkle
+  - first:
+      1: 100110
+    second: CATRigRLegDigit11
+  - first:
+      1: 100112
+    second: CATRigRLegPlatform
+  - first:
+      1: 100114
+    second: CATRigSpine
+  - first:
+      1: 100116
+    second: CATRigSpine1
+  - first:
+      1: 100118
+    second: CATRigSpine2
+  - first:
+      1: 100120
+    second: Character
+  - first:
+      1: 100122
+    second: Character001
+  - first:
+      1: 100124
+    second: Clutches_mesh
+  - first:
+      1: 100126
+    second: Eyes_mesh
+  - first:
+      1: 100128
+    second: //RootNode
+  - first:
+      1: 100130
+    second: Teeth_mesh
+  - first:
+      4: 400000
+    second: Body_mesh
+  - first:
+      4: 400002
+    second: Bony_growths_mesh
+  - first:
+      4: 400004
+    second: CATRigHub004
+  - first:
+      4: 400006
+    second: CATRigHub004Bone001
+  - first:
+      4: 400008
+    second: CATRigHub005
+  - first:
+      4: 400010
+    second: CATRigHub006
+  - first:
+      4: 400012
+    second: CATRigHub006Bone001
+  - first:
+      4: 400014
+    second: CATRigHub006Bone002
+  - first:
+      4: 400016
+    second: CATRigHub006Bone003
+  - first:
+      4: 400018
+    second: CATRigLArm1
+  - first:
+      4: 400020
+    second: CATRigLArm2
+  - first:
+      4: 400022
+    second: CATRigLArmCollarbone
+  - first:
+      4: 400024
+    second: CATRigLArmDigit11
+  - first:
+      4: 400026
+    second: CATRigLArmDigit12
+  - first:
+      4: 400028
+    second: CATRigLArmDigit13
+  - first:
+      4: 400030
+    second: CATRigLArmDigit21
+  - first:
+      4: 400032
+    second: CATRigLArmDigit22
+  - first:
+      4: 400034
+    second: CATRigLArmDigit23
+  - first:
+      4: 400036
+    second: CATRigLArmDigit31
+  - first:
+      4: 400038
+    second: CATRigLArmDigit32
+  - first:
+      4: 400040
+    second: CATRigLArmDigit33
+  - first:
+      4: 400042
+    second: CATRigLArmDigit41
+  - first:
+      4: 400044
+    second: CATRigLArmDigit42
+  - first:
+      4: 400046
+    second: CATRigLArmDigit43
+  - first:
+      4: 400048
+    second: CATRigLArmDigit51
+  - first:
+      4: 400050
+    second: CATRigLArmDigit52
+  - first:
+      4: 400052
+    second: CATRigLArmDigit53
+  - first:
+      4: 400054
+    second: CATRigLArmPalm
+  - first:
+      4: 400056
+    second: CATRigLLeg1
+  - first:
+      4: 400058
+    second: CATRigLLeg2
+  - first:
+      4: 400060
+    second: CATRigLLegAnkle
+  - first:
+      4: 400062
+    second: CATRigLLegDigit11
+  - first:
+      4: 400064
+    second: CATRigLLegPlatform
+  - first:
+      4: 400066
+    second: CATRigRArm1
+  - first:
+      4: 400068
+    second: CATRigRArm2
+  - first:
+      4: 400070
+    second: CATRigRArmCollarbone
+  - first:
+      4: 400072
+    second: CATRigRArmDigit11
+  - first:
+      4: 400074
+    second: CATRigRArmDigit12
+  - first:
+      4: 400076
+    second: CATRigRArmDigit13
+  - first:
+      4: 400078
+    second: CATRigRArmDigit21
+  - first:
+      4: 400080
+    second: CATRigRArmDigit22
+  - first:
+      4: 400082
+    second: CATRigRArmDigit23
+  - first:
+      4: 400084
+    second: CATRigRArmDigit31
+  - first:
+      4: 400086
+    second: CATRigRArmDigit32
+  - first:
+      4: 400088
+    second: CATRigRArmDigit33
+  - first:
+      4: 400090
+    second: CATRigRArmDigit41
+  - first:
+      4: 400092
+    second: CATRigRArmDigit42
+  - first:
+      4: 400094
+    second: CATRigRArmDigit43
+  - first:
+      4: 400096
+    second: CATRigRArmDigit51
+  - first:
+      4: 400098
+    second: CATRigRArmDigit52
+  - first:
+      4: 400100
+    second: CATRigRArmDigit53
+  - first:
+      4: 400102
+    second: CATRigRArmPalm
+  - first:
+      4: 400104
+    second: CATRigRLeg1
+  - first:
+      4: 400106
+    second: CATRigRLeg2
+  - first:
+      4: 400108
+    second: CATRigRLegAnkle
+  - first:
+      4: 400110
+    second: CATRigRLegDigit11
+  - first:
+      4: 400112
+    second: CATRigRLegPlatform
+  - first:
+      4: 400114
+    second: CATRigSpine
+  - first:
+      4: 400116
+    second: CATRigSpine1
+  - first:
+      4: 400118
+    second: CATRigSpine2
+  - first:
+      4: 400120
+    second: Character
+  - first:
+      4: 400122
+    second: Character001
+  - first:
+      4: 400124
+    second: Clutches_mesh
+  - first:
+      4: 400126
+    second: Eyes_mesh
+  - first:
+      4: 400128
+    second: //RootNode
+  - first:
+      4: 400130
+    second: Teeth_mesh
+  - first:
+      23: 2300000
+    second: Eyes_mesh
+  - first:
+      33: 3300000
+    second: Eyes_mesh
+  - first:
+      43: 4300000
+    second: Eyes_mesh
+  - first:
+      43: 4300002
+    second: Teeth_mesh
+  - first:
+      43: 4300004
+    second: Clutches_mesh
+  - first:
+      43: 4300006
+    second: Bony_growths_mesh
+  - first:
+      43: 4300008
+    second: Body_mesh
+  - first:
+      74: 7400000
+    second: Idle
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Body_mesh
+  - first:
+      137: 13700002
+    second: Bony_growths_mesh
+  - first:
+      137: 13700004
+    second: Clutches_mesh
+  - first:
+      137: 13700006
+    second: Teeth_mesh
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -166,6 +457,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 0
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -173,26 +466,69 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Idle
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 445
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -200,10 +536,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -213,14 +552,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
