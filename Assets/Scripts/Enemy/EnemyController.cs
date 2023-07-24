@@ -22,6 +22,8 @@ public class EnemyController : MonoBehaviour
     public GameObject HealtBG;
     public float rotationSpeed = 5f;
 
+    [SerializeField] private int random;
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -56,6 +58,7 @@ public class EnemyController : MonoBehaviour
                 if (Attackable())
                 {
                     _speed = 0;
+                    anim.SetFloat("RandomValue", random);
                     anim.SetBool("IsWalk", false);
                     anim.SetBool("Attack", true);
                 }
@@ -108,5 +111,10 @@ public class EnemyController : MonoBehaviour
         Transform player = nearestPlayer.GetComponent<Transform>();
         Vector3 playerpos = new Vector3(player.position.x, transform.position.y, player.position.z);
         return playerpos;
+    }
+
+    public void NewRandom()
+    {
+        random = Random.Range(0, 3);
     }
 }

@@ -3559,8 +3559,8 @@ MonoBehaviour:
   "\u0130sThief": 1
   "\u0130sWizard": 0
   isFighter: 0
-  FightParticleR: {fileID: 3753158477755782302}
-  FightParticleL: {fileID: 4693624301583528388}
+  FightParticleR: {fileID: 100004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
+  FightParticleL: {fileID: 100004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
 --- !u!114 &5796813338551795384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5264,11 +5264,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
---- !u!1 &3753158477755782302 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
-  m_PrefabInstance: {fileID: 3753158477755748922}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3753158477756139710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
@@ -5366,11 +5361,6 @@ PrefabInstance:
 --- !u!4 &4693624301583166948 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
-  m_PrefabInstance: {fileID: 4693624301583562592}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &4693624301583528388 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
   m_PrefabInstance: {fileID: 4693624301583562592}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8801283029203821492
