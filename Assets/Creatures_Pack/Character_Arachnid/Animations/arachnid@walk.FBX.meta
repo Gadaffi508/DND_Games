@@ -1,203 +1,572 @@
 fileFormatVersion: 2
 guid: b3cc45af7783b0a4ea74d36bd33f8f51
-timeCreated: 1516174793
-licenseType: Store
 ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName:
-    100000: //RootNode
-    100002: CATRigHub001
-    100004: CATRigHub001Bone001
-    100006: CATRigHub001Bone002
-    100008: CATRigHub001Bone002Bone001
-    100010: CATRigHub001Bone002Bone001 1
-    100012: CATRigHub001Bone002Bone001Bone001
-    100014: CATRigHub001Bone002Bone001Bone001 1
-    100016: CATRigHub001Bone003
-    100018: CATRigHub001Bone004
-    100020: CATRigHub001Bone004Bone001
-    100022: CATRigHub001Bone005
-    100024: CATRigLLeg003
-    100026: CATRigLLeg004
-    100028: CATRigLLeg005
-    100030: CATRigLLeg006
-    100032: CATRigLLeg1
-    100034: CATRigLLeg2
-    100036: CATRigLLegAnkle
-    100038: CATRigLLegAnkle001
-    100040: CATRigLLegAnkle002
-    100042: CATRigLLegPlatform
-    100044: CATRigLLegPlatform001
-    100046: CATRigLLegPlatform002
-    100048: CATRigRLeg003
-    100050: CATRigRLeg004
-    100052: CATRigRLeg005
-    100054: CATRigRLeg006
-    100056: CATRigRLeg1
-    100058: CATRigRLeg2
-    100060: CATRigRLegAnkle
-    100062: CATRigRLegAnkle001
-    100064: CATRigRLegAnkle002
-    100066: CATRigRLegPlatform
-    100068: CATRigRLegPlatform001
-    100070: CATRigRLegPlatform002
-    100072: CATRigTail1
-    100074: CATRigTail1 1
-    100076: CATRigTail1 2
-    100078: CATRigTail2
-    100080: CATRigTail2 1
-    100082: CATRigTail2 2
-    100084: CATRigTail3
-    100086: CATRigTail3 1
-    100088: CATRigTail3 2
-    100090: CATRigTail4
-    100092: CATRigTail4 1
-    100094: CATRigTail4 2
-    100096: CATRigTail5
-    100098: CATRigTail5 1
-    100100: CATRigTail5 2
-    100102: Character001
-    100104: Low_mesh
-    100106: Spider001
-    100108: Spider001 1
-    100110: Spider001 2
-    100112: Spider001 3
-    100114: Spider001Hub
-    100116: Spider001LLeg11
-    100118: Spider001LLeg12
-    100120: Spider001LLeg13
-    100122: Spider001LLeg1Platform
-    100124: Spider001LLeg21
-    100126: Spider001LLeg22
-    100128: Spider001LLeg23
-    100130: Spider001LLeg2Platform
-    100132: Spider001LLeg31
-    100134: Spider001LLeg32
-    100136: Spider001LLeg33
-    100138: Spider001LLeg3Platform
-    100140: Spider001LLeg41
-    100142: Spider001LLeg42
-    100144: Spider001LLeg43
-    100146: Spider001LLeg4Platform
-    100148: Spider001RLeg11
-    100150: Spider001RLeg12
-    100152: Spider001RLeg13
-    100154: Spider001RLeg1Platform
-    100156: Spider001RLeg21
-    100158: Spider001RLeg22
-    100160: Spider001RLeg23
-    100162: Spider001RLeg2Platform
-    100164: Spider001RLeg31
-    100166: Spider001RLeg32
-    100168: Spider001RLeg33
-    100170: Spider001RLeg3Platform
-    100172: Spider001RLeg41
-    100174: Spider001RLeg42
-    100176: Spider001RLeg43
-    100178: Spider001RLeg4Platform
-    400000: //RootNode
-    400002: CATRigHub001
-    400004: CATRigHub001Bone001
-    400006: CATRigHub001Bone002
-    400008: CATRigHub001Bone002Bone001
-    400010: CATRigHub001Bone002Bone001 1
-    400012: CATRigHub001Bone002Bone001Bone001
-    400014: CATRigHub001Bone002Bone001Bone001 1
-    400016: CATRigHub001Bone003
-    400018: CATRigHub001Bone004
-    400020: CATRigHub001Bone004Bone001
-    400022: CATRigHub001Bone005
-    400024: CATRigLLeg003
-    400026: CATRigLLeg004
-    400028: CATRigLLeg005
-    400030: CATRigLLeg006
-    400032: CATRigLLeg1
-    400034: CATRigLLeg2
-    400036: CATRigLLegAnkle
-    400038: CATRigLLegAnkle001
-    400040: CATRigLLegAnkle002
-    400042: CATRigLLegPlatform
-    400044: CATRigLLegPlatform001
-    400046: CATRigLLegPlatform002
-    400048: CATRigRLeg003
-    400050: CATRigRLeg004
-    400052: CATRigRLeg005
-    400054: CATRigRLeg006
-    400056: CATRigRLeg1
-    400058: CATRigRLeg2
-    400060: CATRigRLegAnkle
-    400062: CATRigRLegAnkle001
-    400064: CATRigRLegAnkle002
-    400066: CATRigRLegPlatform
-    400068: CATRigRLegPlatform001
-    400070: CATRigRLegPlatform002
-    400072: CATRigTail1
-    400074: CATRigTail1 1
-    400076: CATRigTail1 2
-    400078: CATRigTail2
-    400080: CATRigTail2 1
-    400082: CATRigTail2 2
-    400084: CATRigTail3
-    400086: CATRigTail3 1
-    400088: CATRigTail3 2
-    400090: CATRigTail4
-    400092: CATRigTail4 1
-    400094: CATRigTail4 2
-    400096: CATRigTail5
-    400098: CATRigTail5 1
-    400100: CATRigTail5 2
-    400102: Character001
-    400104: Low_mesh
-    400106: Spider001
-    400108: Spider001 1
-    400110: Spider001 2
-    400112: Spider001 3
-    400114: Spider001Hub
-    400116: Spider001LLeg11
-    400118: Spider001LLeg12
-    400120: Spider001LLeg13
-    400122: Spider001LLeg1Platform
-    400124: Spider001LLeg21
-    400126: Spider001LLeg22
-    400128: Spider001LLeg23
-    400130: Spider001LLeg2Platform
-    400132: Spider001LLeg31
-    400134: Spider001LLeg32
-    400136: Spider001LLeg33
-    400138: Spider001LLeg3Platform
-    400140: Spider001LLeg41
-    400142: Spider001LLeg42
-    400144: Spider001LLeg43
-    400146: Spider001LLeg4Platform
-    400148: Spider001RLeg11
-    400150: Spider001RLeg12
-    400152: Spider001RLeg13
-    400154: Spider001RLeg1Platform
-    400156: Spider001RLeg21
-    400158: Spider001RLeg22
-    400160: Spider001RLeg23
-    400162: Spider001RLeg2Platform
-    400164: Spider001RLeg31
-    400166: Spider001RLeg32
-    400168: Spider001RLeg33
-    400170: Spider001RLeg3Platform
-    400172: Spider001RLeg41
-    400174: Spider001RLeg42
-    400176: Spider001RLeg43
-    400178: Spider001RLeg4Platform
-    4300000: Low_mesh
-    7400000: Take 001
-    9500000: //RootNode
-    13700000: Low_mesh
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: //RootNode
+  - first:
+      1: 100002
+    second: CATRigHub001
+  - first:
+      1: 100004
+    second: CATRigHub001Bone001
+  - first:
+      1: 100006
+    second: CATRigHub001Bone002
+  - first:
+      1: 100008
+    second: CATRigHub001Bone002Bone001
+  - first:
+      1: 100010
+    second: CATRigHub001Bone002Bone001 1
+  - first:
+      1: 100012
+    second: CATRigHub001Bone002Bone001Bone001
+  - first:
+      1: 100014
+    second: CATRigHub001Bone002Bone001Bone001 1
+  - first:
+      1: 100016
+    second: CATRigHub001Bone003
+  - first:
+      1: 100018
+    second: CATRigHub001Bone004
+  - first:
+      1: 100020
+    second: CATRigHub001Bone004Bone001
+  - first:
+      1: 100022
+    second: CATRigHub001Bone005
+  - first:
+      1: 100024
+    second: CATRigLLeg003
+  - first:
+      1: 100026
+    second: CATRigLLeg004
+  - first:
+      1: 100028
+    second: CATRigLLeg005
+  - first:
+      1: 100030
+    second: CATRigLLeg006
+  - first:
+      1: 100032
+    second: CATRigLLeg1
+  - first:
+      1: 100034
+    second: CATRigLLeg2
+  - first:
+      1: 100036
+    second: CATRigLLegAnkle
+  - first:
+      1: 100038
+    second: CATRigLLegAnkle001
+  - first:
+      1: 100040
+    second: CATRigLLegAnkle002
+  - first:
+      1: 100042
+    second: CATRigLLegPlatform
+  - first:
+      1: 100044
+    second: CATRigLLegPlatform001
+  - first:
+      1: 100046
+    second: CATRigLLegPlatform002
+  - first:
+      1: 100048
+    second: CATRigRLeg003
+  - first:
+      1: 100050
+    second: CATRigRLeg004
+  - first:
+      1: 100052
+    second: CATRigRLeg005
+  - first:
+      1: 100054
+    second: CATRigRLeg006
+  - first:
+      1: 100056
+    second: CATRigRLeg1
+  - first:
+      1: 100058
+    second: CATRigRLeg2
+  - first:
+      1: 100060
+    second: CATRigRLegAnkle
+  - first:
+      1: 100062
+    second: CATRigRLegAnkle001
+  - first:
+      1: 100064
+    second: CATRigRLegAnkle002
+  - first:
+      1: 100066
+    second: CATRigRLegPlatform
+  - first:
+      1: 100068
+    second: CATRigRLegPlatform001
+  - first:
+      1: 100070
+    second: CATRigRLegPlatform002
+  - first:
+      1: 100072
+    second: CATRigTail1
+  - first:
+      1: 100074
+    second: CATRigTail1 1
+  - first:
+      1: 100076
+    second: CATRigTail1 2
+  - first:
+      1: 100078
+    second: CATRigTail2
+  - first:
+      1: 100080
+    second: CATRigTail2 1
+  - first:
+      1: 100082
+    second: CATRigTail2 2
+  - first:
+      1: 100084
+    second: CATRigTail3
+  - first:
+      1: 100086
+    second: CATRigTail3 1
+  - first:
+      1: 100088
+    second: CATRigTail3 2
+  - first:
+      1: 100090
+    second: CATRigTail4
+  - first:
+      1: 100092
+    second: CATRigTail4 1
+  - first:
+      1: 100094
+    second: CATRigTail4 2
+  - first:
+      1: 100096
+    second: CATRigTail5
+  - first:
+      1: 100098
+    second: CATRigTail5 1
+  - first:
+      1: 100100
+    second: CATRigTail5 2
+  - first:
+      1: 100102
+    second: Character001
+  - first:
+      1: 100104
+    second: Low_mesh
+  - first:
+      1: 100106
+    second: Spider001
+  - first:
+      1: 100108
+    second: Spider001 1
+  - first:
+      1: 100110
+    second: Spider001 2
+  - first:
+      1: 100112
+    second: Spider001 3
+  - first:
+      1: 100114
+    second: Spider001Hub
+  - first:
+      1: 100116
+    second: Spider001LLeg11
+  - first:
+      1: 100118
+    second: Spider001LLeg12
+  - first:
+      1: 100120
+    second: Spider001LLeg13
+  - first:
+      1: 100122
+    second: Spider001LLeg1Platform
+  - first:
+      1: 100124
+    second: Spider001LLeg21
+  - first:
+      1: 100126
+    second: Spider001LLeg22
+  - first:
+      1: 100128
+    second: Spider001LLeg23
+  - first:
+      1: 100130
+    second: Spider001LLeg2Platform
+  - first:
+      1: 100132
+    second: Spider001LLeg31
+  - first:
+      1: 100134
+    second: Spider001LLeg32
+  - first:
+      1: 100136
+    second: Spider001LLeg33
+  - first:
+      1: 100138
+    second: Spider001LLeg3Platform
+  - first:
+      1: 100140
+    second: Spider001LLeg41
+  - first:
+      1: 100142
+    second: Spider001LLeg42
+  - first:
+      1: 100144
+    second: Spider001LLeg43
+  - first:
+      1: 100146
+    second: Spider001LLeg4Platform
+  - first:
+      1: 100148
+    second: Spider001RLeg11
+  - first:
+      1: 100150
+    second: Spider001RLeg12
+  - first:
+      1: 100152
+    second: Spider001RLeg13
+  - first:
+      1: 100154
+    second: Spider001RLeg1Platform
+  - first:
+      1: 100156
+    second: Spider001RLeg21
+  - first:
+      1: 100158
+    second: Spider001RLeg22
+  - first:
+      1: 100160
+    second: Spider001RLeg23
+  - first:
+      1: 100162
+    second: Spider001RLeg2Platform
+  - first:
+      1: 100164
+    second: Spider001RLeg31
+  - first:
+      1: 100166
+    second: Spider001RLeg32
+  - first:
+      1: 100168
+    second: Spider001RLeg33
+  - first:
+      1: 100170
+    second: Spider001RLeg3Platform
+  - first:
+      1: 100172
+    second: Spider001RLeg41
+  - first:
+      1: 100174
+    second: Spider001RLeg42
+  - first:
+      1: 100176
+    second: Spider001RLeg43
+  - first:
+      1: 100178
+    second: Spider001RLeg4Platform
+  - first:
+      4: 400000
+    second: //RootNode
+  - first:
+      4: 400002
+    second: CATRigHub001
+  - first:
+      4: 400004
+    second: CATRigHub001Bone001
+  - first:
+      4: 400006
+    second: CATRigHub001Bone002
+  - first:
+      4: 400008
+    second: CATRigHub001Bone002Bone001
+  - first:
+      4: 400010
+    second: CATRigHub001Bone002Bone001 1
+  - first:
+      4: 400012
+    second: CATRigHub001Bone002Bone001Bone001
+  - first:
+      4: 400014
+    second: CATRigHub001Bone002Bone001Bone001 1
+  - first:
+      4: 400016
+    second: CATRigHub001Bone003
+  - first:
+      4: 400018
+    second: CATRigHub001Bone004
+  - first:
+      4: 400020
+    second: CATRigHub001Bone004Bone001
+  - first:
+      4: 400022
+    second: CATRigHub001Bone005
+  - first:
+      4: 400024
+    second: CATRigLLeg003
+  - first:
+      4: 400026
+    second: CATRigLLeg004
+  - first:
+      4: 400028
+    second: CATRigLLeg005
+  - first:
+      4: 400030
+    second: CATRigLLeg006
+  - first:
+      4: 400032
+    second: CATRigLLeg1
+  - first:
+      4: 400034
+    second: CATRigLLeg2
+  - first:
+      4: 400036
+    second: CATRigLLegAnkle
+  - first:
+      4: 400038
+    second: CATRigLLegAnkle001
+  - first:
+      4: 400040
+    second: CATRigLLegAnkle002
+  - first:
+      4: 400042
+    second: CATRigLLegPlatform
+  - first:
+      4: 400044
+    second: CATRigLLegPlatform001
+  - first:
+      4: 400046
+    second: CATRigLLegPlatform002
+  - first:
+      4: 400048
+    second: CATRigRLeg003
+  - first:
+      4: 400050
+    second: CATRigRLeg004
+  - first:
+      4: 400052
+    second: CATRigRLeg005
+  - first:
+      4: 400054
+    second: CATRigRLeg006
+  - first:
+      4: 400056
+    second: CATRigRLeg1
+  - first:
+      4: 400058
+    second: CATRigRLeg2
+  - first:
+      4: 400060
+    second: CATRigRLegAnkle
+  - first:
+      4: 400062
+    second: CATRigRLegAnkle001
+  - first:
+      4: 400064
+    second: CATRigRLegAnkle002
+  - first:
+      4: 400066
+    second: CATRigRLegPlatform
+  - first:
+      4: 400068
+    second: CATRigRLegPlatform001
+  - first:
+      4: 400070
+    second: CATRigRLegPlatform002
+  - first:
+      4: 400072
+    second: CATRigTail1
+  - first:
+      4: 400074
+    second: CATRigTail1 1
+  - first:
+      4: 400076
+    second: CATRigTail1 2
+  - first:
+      4: 400078
+    second: CATRigTail2
+  - first:
+      4: 400080
+    second: CATRigTail2 1
+  - first:
+      4: 400082
+    second: CATRigTail2 2
+  - first:
+      4: 400084
+    second: CATRigTail3
+  - first:
+      4: 400086
+    second: CATRigTail3 1
+  - first:
+      4: 400088
+    second: CATRigTail3 2
+  - first:
+      4: 400090
+    second: CATRigTail4
+  - first:
+      4: 400092
+    second: CATRigTail4 1
+  - first:
+      4: 400094
+    second: CATRigTail4 2
+  - first:
+      4: 400096
+    second: CATRigTail5
+  - first:
+      4: 400098
+    second: CATRigTail5 1
+  - first:
+      4: 400100
+    second: CATRigTail5 2
+  - first:
+      4: 400102
+    second: Character001
+  - first:
+      4: 400104
+    second: Low_mesh
+  - first:
+      4: 400106
+    second: Spider001
+  - first:
+      4: 400108
+    second: Spider001 1
+  - first:
+      4: 400110
+    second: Spider001 2
+  - first:
+      4: 400112
+    second: Spider001 3
+  - first:
+      4: 400114
+    second: Spider001Hub
+  - first:
+      4: 400116
+    second: Spider001LLeg11
+  - first:
+      4: 400118
+    second: Spider001LLeg12
+  - first:
+      4: 400120
+    second: Spider001LLeg13
+  - first:
+      4: 400122
+    second: Spider001LLeg1Platform
+  - first:
+      4: 400124
+    second: Spider001LLeg21
+  - first:
+      4: 400126
+    second: Spider001LLeg22
+  - first:
+      4: 400128
+    second: Spider001LLeg23
+  - first:
+      4: 400130
+    second: Spider001LLeg2Platform
+  - first:
+      4: 400132
+    second: Spider001LLeg31
+  - first:
+      4: 400134
+    second: Spider001LLeg32
+  - first:
+      4: 400136
+    second: Spider001LLeg33
+  - first:
+      4: 400138
+    second: Spider001LLeg3Platform
+  - first:
+      4: 400140
+    second: Spider001LLeg41
+  - first:
+      4: 400142
+    second: Spider001LLeg42
+  - first:
+      4: 400144
+    second: Spider001LLeg43
+  - first:
+      4: 400146
+    second: Spider001LLeg4Platform
+  - first:
+      4: 400148
+    second: Spider001RLeg11
+  - first:
+      4: 400150
+    second: Spider001RLeg12
+  - first:
+      4: 400152
+    second: Spider001RLeg13
+  - first:
+      4: 400154
+    second: Spider001RLeg1Platform
+  - first:
+      4: 400156
+    second: Spider001RLeg21
+  - first:
+      4: 400158
+    second: Spider001RLeg22
+  - first:
+      4: 400160
+    second: Spider001RLeg23
+  - first:
+      4: 400162
+    second: Spider001RLeg2Platform
+  - first:
+      4: 400164
+    second: Spider001RLeg31
+  - first:
+      4: 400166
+    second: Spider001RLeg32
+  - first:
+      4: 400168
+    second: Spider001RLeg33
+  - first:
+      4: 400170
+    second: Spider001RLeg3Platform
+  - first:
+      4: 400172
+    second: Spider001RLeg41
+  - first:
+      4: 400174
+    second: Spider001RLeg42
+  - first:
+      4: 400176
+    second: Spider001RLeg43
+  - first:
+      4: 400178
+    second: Spider001RLeg4Platform
+  - first:
+      43: 4300000
+    second: Low_mesh
+  - first:
+      74: 7400000
+    second: walk
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Low_mesh
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -205,6 +574,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -212,26 +583,69 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: walk
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 1
+      lastFrame: 30
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -239,10 +653,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -252,14 +669,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
