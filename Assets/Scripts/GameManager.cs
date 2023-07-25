@@ -57,6 +57,7 @@ public class GameManager : MonoBehaviour
                 {
                     gold += SoliderL[i].GetComponent<Melee>().gold;
                     SoliderL[i].GetComponent<SoliderHealth>().Die();
+                    Debug.Log("Humans Win");
                 }
             }
             if (enemyL.Count > 0)
@@ -64,6 +65,8 @@ public class GameManager : MonoBehaviour
                 for (int i = 0; i < enemyL.Count; i++)
                 {
                     enemyL[i].GetComponent<EnemyHealth>().Die();
+
+                    Debug.Log("Monster Win");
                 }
             }
 
