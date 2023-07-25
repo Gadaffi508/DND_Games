@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -44,7 +45,7 @@ public class GameManager : MonoBehaviour
     IEnumerator FinishedGame()
     {
         yield return new WaitForSeconds(1);
-        earnedGold.text = "Earned Gold : " + _earnedGold;
+        earnedGold.text =  _earnedGold.ToString();
 
         if (enemyL.Count <= 0 || SoliderL.Count <= 0)
         {
@@ -128,5 +129,10 @@ public class GameManager : MonoBehaviour
         {
             enemy.GetComponent<EnemyController>()._attack = true;
         }
+    }
+
+    public void MenuLoad(int Scene›d)
+    {
+        SceneManager.LoadScene(Scene›d);
     }
 }
