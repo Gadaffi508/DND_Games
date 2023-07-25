@@ -1,119 +1,320 @@
 fileFormatVersion: 2
 guid: 8154ee00bbb5c0a45b533111f6545bf5
-timeCreated: 1516178134
-licenseType: Store
 ModelImporter:
-  serializedVersion: 21
-  fileIDToRecycleName:
-    100000: Antenna1_L
-    100002: Antenna1_R
-    100004: Body
-    100006: bottom
-    100008: Chest_M
-    100010: Eye_L
-    100012: Eye_R
-    100014: Eyes
-    100016: Head_M
-    100018: HeadEnd_M
-    100020: //RootNode
-    100022: Jaw
-    100024: Jaw_L
-    100026: Jaw_M
-    100028: Jaw_R
-    100030: left
-    100032: LegD1_L
-    100034: LegD1_R
-    100036: LegD2_L
-    100038: LegD2_R
-    100040: LegD3_L
-    100042: LegD3_R
-    100044: LegD4_L
-    100046: LegD4_R
-    100048: MiddleLeg1_L
-    100050: MiddleLeg1_R
-    100052: MiddleLeg2_L
-    100054: MiddleLeg2_R
-    100056: MiddleLeg3_L
-    100058: MiddleLeg3_R
-    100060: MiddleLeg4_L
-    100062: MiddleLeg4_R
-    100064: Root_M
-    100066: Spine1_M
-    100068: Spine2_M
-    100070: Tail1_M
-    100072: Tail2_M
-    100074: Tail3_M
-    100076: Tail4_M
-    100078: Wing1_L
-    100080: Wing1_R
-    100082: Wing2_L
-    100084: Wing2_R
-    100086: Wings
-    400000: Antenna1_L
-    400002: Antenna1_R
-    400004: Body
-    400006: bottom
-    400008: Chest_M
-    400010: Eye_L
-    400012: Eye_R
-    400014: Eyes
-    400016: Head_M
-    400018: HeadEnd_M
-    400020: //RootNode
-    400022: Jaw
-    400024: Jaw_L
-    400026: Jaw_M
-    400028: Jaw_R
-    400030: left
-    400032: LegD1_L
-    400034: LegD1_R
-    400036: LegD2_L
-    400038: LegD2_R
-    400040: LegD3_L
-    400042: LegD3_R
-    400044: LegD4_L
-    400046: LegD4_R
-    400048: MiddleLeg1_L
-    400050: MiddleLeg1_R
-    400052: MiddleLeg2_L
-    400054: MiddleLeg2_R
-    400056: MiddleLeg3_L
-    400058: MiddleLeg3_R
-    400060: MiddleLeg4_L
-    400062: MiddleLeg4_R
-    400064: Root_M
-    400066: Spine1_M
-    400068: Spine2_M
-    400070: Tail1_M
-    400072: Tail2_M
-    400074: Tail3_M
-    400076: Tail4_M
-    400078: Wing1_L
-    400080: Wing1_R
-    400082: Wing2_L
-    400084: Wing2_R
-    400086: Wings
-    2000000: bottom
-    2000002: left
-    4300000: Body
-    4300002: Eyes
-    4300004: Jaw
-    4300006: Wings
-    7400000: Take 001
-    9500000: //RootNode
-    13700000: Body
-    13700002: Eyes
-    13700004: Jaw
-    13700006: Wings
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Antenna1_L
+  - first:
+      1: 100002
+    second: Antenna1_R
+  - first:
+      1: 100004
+    second: Body
+  - first:
+      1: 100006
+    second: bottom
+  - first:
+      1: 100008
+    second: Chest_M
+  - first:
+      1: 100010
+    second: Eye_L
+  - first:
+      1: 100012
+    second: Eye_R
+  - first:
+      1: 100014
+    second: Eyes
+  - first:
+      1: 100016
+    second: Head_M
+  - first:
+      1: 100018
+    second: HeadEnd_M
+  - first:
+      1: 100020
+    second: //RootNode
+  - first:
+      1: 100022
+    second: Jaw
+  - first:
+      1: 100024
+    second: Jaw_L
+  - first:
+      1: 100026
+    second: Jaw_M
+  - first:
+      1: 100028
+    second: Jaw_R
+  - first:
+      1: 100030
+    second: left
+  - first:
+      1: 100032
+    second: LegD1_L
+  - first:
+      1: 100034
+    second: LegD1_R
+  - first:
+      1: 100036
+    second: LegD2_L
+  - first:
+      1: 100038
+    second: LegD2_R
+  - first:
+      1: 100040
+    second: LegD3_L
+  - first:
+      1: 100042
+    second: LegD3_R
+  - first:
+      1: 100044
+    second: LegD4_L
+  - first:
+      1: 100046
+    second: LegD4_R
+  - first:
+      1: 100048
+    second: MiddleLeg1_L
+  - first:
+      1: 100050
+    second: MiddleLeg1_R
+  - first:
+      1: 100052
+    second: MiddleLeg2_L
+  - first:
+      1: 100054
+    second: MiddleLeg2_R
+  - first:
+      1: 100056
+    second: MiddleLeg3_L
+  - first:
+      1: 100058
+    second: MiddleLeg3_R
+  - first:
+      1: 100060
+    second: MiddleLeg4_L
+  - first:
+      1: 100062
+    second: MiddleLeg4_R
+  - first:
+      1: 100064
+    second: Root_M
+  - first:
+      1: 100066
+    second: Spine1_M
+  - first:
+      1: 100068
+    second: Spine2_M
+  - first:
+      1: 100070
+    second: Tail1_M
+  - first:
+      1: 100072
+    second: Tail2_M
+  - first:
+      1: 100074
+    second: Tail3_M
+  - first:
+      1: 100076
+    second: Tail4_M
+  - first:
+      1: 100078
+    second: Wing1_L
+  - first:
+      1: 100080
+    second: Wing1_R
+  - first:
+      1: 100082
+    second: Wing2_L
+  - first:
+      1: 100084
+    second: Wing2_R
+  - first:
+      1: 100086
+    second: Wings
+  - first:
+      4: 400000
+    second: Antenna1_L
+  - first:
+      4: 400002
+    second: Antenna1_R
+  - first:
+      4: 400004
+    second: Body
+  - first:
+      4: 400006
+    second: bottom
+  - first:
+      4: 400008
+    second: Chest_M
+  - first:
+      4: 400010
+    second: Eye_L
+  - first:
+      4: 400012
+    second: Eye_R
+  - first:
+      4: 400014
+    second: Eyes
+  - first:
+      4: 400016
+    second: Head_M
+  - first:
+      4: 400018
+    second: HeadEnd_M
+  - first:
+      4: 400020
+    second: //RootNode
+  - first:
+      4: 400022
+    second: Jaw
+  - first:
+      4: 400024
+    second: Jaw_L
+  - first:
+      4: 400026
+    second: Jaw_M
+  - first:
+      4: 400028
+    second: Jaw_R
+  - first:
+      4: 400030
+    second: left
+  - first:
+      4: 400032
+    second: LegD1_L
+  - first:
+      4: 400034
+    second: LegD1_R
+  - first:
+      4: 400036
+    second: LegD2_L
+  - first:
+      4: 400038
+    second: LegD2_R
+  - first:
+      4: 400040
+    second: LegD3_L
+  - first:
+      4: 400042
+    second: LegD3_R
+  - first:
+      4: 400044
+    second: LegD4_L
+  - first:
+      4: 400046
+    second: LegD4_R
+  - first:
+      4: 400048
+    second: MiddleLeg1_L
+  - first:
+      4: 400050
+    second: MiddleLeg1_R
+  - first:
+      4: 400052
+    second: MiddleLeg2_L
+  - first:
+      4: 400054
+    second: MiddleLeg2_R
+  - first:
+      4: 400056
+    second: MiddleLeg3_L
+  - first:
+      4: 400058
+    second: MiddleLeg3_R
+  - first:
+      4: 400060
+    second: MiddleLeg4_L
+  - first:
+      4: 400062
+    second: MiddleLeg4_R
+  - first:
+      4: 400064
+    second: Root_M
+  - first:
+      4: 400066
+    second: Spine1_M
+  - first:
+      4: 400068
+    second: Spine2_M
+  - first:
+      4: 400070
+    second: Tail1_M
+  - first:
+      4: 400072
+    second: Tail2_M
+  - first:
+      4: 400074
+    second: Tail3_M
+  - first:
+      4: 400076
+    second: Tail4_M
+  - first:
+      4: 400078
+    second: Wing1_L
+  - first:
+      4: 400080
+    second: Wing1_R
+  - first:
+      4: 400082
+    second: Wing2_L
+  - first:
+      4: 400084
+    second: Wing2_R
+  - first:
+      4: 400086
+    second: Wings
+  - first:
+      20: 2000000
+    second: bottom
+  - first:
+      20: 2000002
+    second: left
+  - first:
+      43: 4300000
+    second: Body
+  - first:
+      43: 4300002
+    second: Eyes
+  - first:
+      43: 4300004
+    second: Jaw
+  - first:
+      43: 4300006
+    second: Wings
+  - first:
+      74: 7400000
+    second: Flying
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: Body
+  - first:
+      137: 13700002
+    second: Eyes
+  - first:
+      137: 13700004
+    second: Jaw
+  - first:
+      137: 13700006
+    second: Wings
+  externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
     resampleCurves: 1
     optimizeGameObjects: 0
+    removeConstantScaleCurves: 0
     motionNodeName: 
     rigImportErrors: 
     rigImportWarnings: 
@@ -121,6 +322,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -128,26 +331,69 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Flying
+      takeName: Take 001
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 40
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 1
   meshes:
     lODScreenPercentages: []
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
     importLights: 1
+    nodeNameCollisionStrategy: 0
+    fileIdsGeneration: 1
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 0
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
@@ -155,10 +401,13 @@ ModelImporter:
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -168,14 +417,18 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 0
+  remapMaterialsIfMaterialImportModeIsNone: 1
   additionalBone: 0
   userData: 
   assetBundleName: 

@@ -892,7 +892,7 @@ MonoBehaviour:
   gold: 100
   _speed: 3
   _attack: 0
-  attackDamage: 10
+  attackDamage: 2
   "\u0130sThief": 0
   "\u0130sWizard": 0
   isFighter: 1
@@ -910,7 +910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f63cf745468eaa4993033c4d1da5fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 200
+  _health: 120
   DieParticle: {fileID: 118250, guid: a79f8048fa75d6c449d730e96bb836fa, type: 3}
   manager: {fileID: 0}
   _healtbar: {fileID: 4679741460885350007}

@@ -81,7 +81,7 @@ public class Melee : Soliders
 
         if (isFighter == true)
         {
-            attackDamage = (level * 5) + attackDamage;
+            attackDamage = (level * 5) + (attackDamage / 5);
         }
 
         if (İsThief == true)
