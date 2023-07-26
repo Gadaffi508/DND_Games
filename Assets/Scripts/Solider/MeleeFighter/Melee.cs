@@ -76,7 +76,7 @@ public class Melee : Soliders
     {
         if (nearestEnemy != null)
         {
-            nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage + (level * 5));
+            nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage + (level * 2) + (DiceNumberText.diceNumber * 5));
         }
 
         if (isFighter == true)

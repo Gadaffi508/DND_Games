@@ -711,7 +711,7 @@ GameObject:
   - component: {fileID: 3649383871895771425}
   - component: {fileID: 3649383871895771424}
   m_Layer: 10
-  m_Name: SpiderUpLevelFour
+  m_Name: "Para\xC7alan"
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

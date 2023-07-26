@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 6954362947520497625}
   - component: {fileID: 6954362947520497624}
   m_Layer: 10
-  m_Name: ReptileUpLevelFour
+  m_Name: Tank2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

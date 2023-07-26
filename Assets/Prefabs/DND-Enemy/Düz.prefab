@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 8599590198647707605}
   - component: {fileID: 8599590198647707604}
   m_Layer: 10
-  m_Name: Creature_Mutant
+  m_Name: "D\xFCz"
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
