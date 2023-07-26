@@ -1812,7 +1812,7 @@ GameObject:
   - component: {fileID: 5817325034177065111}
   - component: {fileID: 5817325034177065110}
   m_Layer: 10
-  m_Name: "Hasar\xC7ok"
+  m_Name: Trol3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

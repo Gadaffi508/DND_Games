@@ -2,14 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
-using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
-
+    public int level;
     public Text earnedGold;
     public int _earnedGold;
 
@@ -20,6 +18,11 @@ public class GameManager : MonoBehaviour
     public List<GameObject> SoliderL;
 
     bool finished = false;
+    bool nextlevel = false;
+
+    [Header("Load Options")]
+    public GameObject LoadScene;
+    public Image LoadingFillImage;
 
     private void Awake()
     {
@@ -37,7 +40,7 @@ public class GameManager : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if (finished == true)
+        if (finished == true && nextlevel == false)
         {
             StartCoroutine(FinishedGame());
         }
@@ -50,7 +53,11 @@ public class GameManager : MonoBehaviour
         if (enemyL.Count <= 0 || SoliderL.Count <= 0)
         {
             yield return new WaitForSeconds(1.2f);
-            LevelPanel.SetActive(true);
+            if (nextlevel == false)
+            {
+                LevelPanel.SetActive(true);
+
+            }
             yield return new WaitForSeconds(1);
             if (SoliderL.Count > 0)
             {
@@ -59,6 +66,7 @@ public class GameManager : MonoBehaviour
                     gold += SoliderL[i].GetComponent<Melee>().gold;
                     SoliderL[i].GetComponent<SoliderHealth>().Die();
                     Debug.Log("Humans Win");
+                    SetLevel();
                 }
             }
             if (enemyL.Count > 0)
@@ -133,6 +141,31 @@ public class GameManager : MonoBehaviour
 
     public void MenuLoad(int Scene›d)
     {
-        SceneManager.LoadScene(Scene›d);
+        nextlevel = true;
+        LevelPanel.SetActive(false);
+        StartCoroutine(LoadSceneAsync(Scene›d));
+    }
+
+    public void SetLevel()
+    {
+        PlayerPrefs.SetInt("level", level);
+    }
+
+    IEnumerator LoadSceneAsync(int SceneId)
+    {
+        LoadScene.SetActive(true);
+
+        yield return new WaitForEndOfFrame();
+
+        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneId);
+
+        while (!operation.isDone)
+        {
+            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
+
+            LoadingFillImage.fillAmount = progressValue;
+
+            yield return null;
+        }
     }
 }

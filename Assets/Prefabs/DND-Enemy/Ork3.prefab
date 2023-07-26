@@ -714,7 +714,7 @@ GameObject:
   - component: {fileID: 7001714927524883850}
   - component: {fileID: 7001714927524883851}
   m_Layer: 10
-  m_Name: "h\u0131zl\u0131"
+  m_Name: Ork3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

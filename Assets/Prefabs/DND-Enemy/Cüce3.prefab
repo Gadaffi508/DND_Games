@@ -1356,7 +1356,7 @@ GameObject:
   - component: {fileID: 6155225780135467861}
   - component: {fileID: 6155225780135467858}
   m_Layer: 10
-  m_Name: Tank
+  m_Name: "C\xFCce3"
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

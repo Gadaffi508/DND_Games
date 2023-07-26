@@ -32,6 +32,8 @@ public class LevelManager : MonoBehaviour
             dices[i].SetActive(false);
         }
         dices[DicesNumber].SetActive(true);
+
+        GetLevel();
     }
 
     private void FixedUpdate()
@@ -47,9 +49,9 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void PlayGame(int levelScene)
+    public void PlayGame()
     {
-        StartCoroutine(LoadSceneAsync(levelScene));
+        StartCoroutine(LoadSceneAsync(level));
     }
 
     public void DiceUpdate()
@@ -79,5 +81,10 @@ public class LevelManager : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    void GetLevel()
+    {
+        level = PlayerPrefs.GetInt("level", 1);
     }
 }
