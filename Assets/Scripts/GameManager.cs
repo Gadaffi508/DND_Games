@@ -24,6 +24,8 @@ public class GameManager : MonoBehaviour
     public GameObject LoadScene;
     public Image LoadingFillImage;
 
+    public int gold;
+
     private void Awake()
     {
         Instance = this;
@@ -33,10 +35,9 @@ public class GameManager : MonoBehaviour
     {
         enemyL = new List<GameObject>();
         _earnedGold = 0;
-
+        GetGold();
     }
 
-    public int gold;
 
     private void FixedUpdate()
     {
@@ -151,6 +152,16 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("level", level);
     }
 
+    void SetGold()
+    {
+        PlayerPrefs.SetInt("gold",gold);
+    }
+
+    void GetGold()
+    {
+        gold = PlayerPrefs.GetInt("gold", gold);
+    }
+
     IEnumerator LoadSceneAsync(int SceneId)
     {
         LoadScene.SetActive(true);
@@ -158,6 +169,8 @@ public class GameManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(SceneId);
+
+        SetGold();
 
         while (!operation.isDone)
         {

@@ -8,6 +8,12 @@ using UnityEngine.UI;
 public class LevelManager : MonoBehaviour
 {
     public int level;
+    [Space]
+    [Header("Gold")]
+    [SerializeField]private int gold;
+    [SerializeField]private int Setgold;
+    [SerializeField] private Text goldText;
+    [SerializeField] private int diceUpdateGold;
 
     [Space]
     [Header("Text")]
@@ -34,10 +40,14 @@ public class LevelManager : MonoBehaviour
         dices[DicesNumber].SetActive(true);
 
         GetLevel();
+        GetGold();
+        GetDice();
     }
 
     private void FixedUpdate()
     {
+        goldText.text = gold.ToString();
+
         CurrentLevel.text = level.ToString();
         NextLevelSecond.text = (level + 1).ToString();
         NextLevelThree.text = (level + 2).ToString();
@@ -56,13 +66,22 @@ public class LevelManager : MonoBehaviour
 
     public void DiceUpdate()
     {
-        DicesNumber++;
-
-        for (int i = 0; i < dices.Length; i++)
+        if (gold >= diceUpdateGold + (DicesNumber * 100))
         {
-            dices[i].SetActive(false);
+            gold -= diceUpdateGold + (DicesNumber * 100);
+            DicesNumber++;
+
+            for (int i = 0; i < dices.Length; i++)
+            {
+                dices[i].SetActive(false);
+            }
+            dices[DicesNumber].SetActive(true);
+            SetDice();
         }
-        dices[DicesNumber].SetActive(true);
+        else
+        {
+            Debug.Log("No money");
+        }
     }
 
     IEnumerator LoadSceneAsync(int SceneId)
@@ -72,6 +91,8 @@ public class LevelManager : MonoBehaviour
         yield return new WaitForEndOfFrame();
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(SceneId);
+
+        SetGold();
 
         while (!operation.isDone)
         {
@@ -86,5 +107,25 @@ public class LevelManager : MonoBehaviour
     void GetLevel()
     {
         level = PlayerPrefs.GetInt("level", 1);
+    }
+
+    void GetGold()
+    {
+        gold = PlayerPrefs.GetInt("gold", Setgold);
+    }
+
+    void SetGold()
+    {
+        PlayerPrefs.SetInt("gold", gold);
+    }
+
+    void SetDice()
+    {
+        PlayerPrefs.SetInt("DicesNumber", DicesNumber);
+    }
+
+    void GetDice()
+    {
+        DicesNumber = PlayerPrefs.GetInt("DicesNumber", DicesNumber);
     }
 }

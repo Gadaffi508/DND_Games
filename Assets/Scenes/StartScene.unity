@@ -10316,6 +10316,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
+  gold: 500
+  Setgold: 500
+  goldText: {fileID: 2099267780}
+  diceUpdateGold: 100
   CurrentLevel: {fileID: 1186182419}
   NextLevelSecond: {fileID: 1104840337}
   NextLevelThree: {fileID: 37346379}
@@ -10839,7 +10843,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 500
 --- !u!222 &2099267781
 CanvasRenderer:
   m_ObjectHideFlags: 0
