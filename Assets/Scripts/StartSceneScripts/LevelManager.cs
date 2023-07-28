@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -10,8 +8,8 @@ public class LevelManager : MonoBehaviour
     public int level;
     [Space]
     [Header("Gold")]
-    [SerializeField]private int gold;
-    [SerializeField]private int Setgold;
+    [SerializeField] private int gold;
+    [SerializeField] private int Setgold;
     [SerializeField] private Text goldText;
     [SerializeField] private int diceUpdateGold;
 
@@ -31,6 +29,15 @@ public class LevelManager : MonoBehaviour
     public GameObject LoadScene;
     public Image LoadingFillImage;
 
+    [Space]
+    [Header("Charecter Level")]
+    [SerializeField] private int fighterLevel;
+    [SerializeField] private int fighterLevelGold;
+    [SerializeField] private int WizardLevel;
+    [SerializeField] private int WizardLevelGold;
+    [SerializeField] private int ThiefLevel;
+    [SerializeField] private int ThiefLevelGold;
+
     private void Start()
     {
         for (int i = 0; i < dices.Length; i++)
@@ -42,6 +49,11 @@ public class LevelManager : MonoBehaviour
         GetLevel();
         GetGold();
         GetDice();
+
+        //charecter set level
+        FighterSetLevel();
+        WizardSetLevel();
+        ThiefSetLevel();
     }
 
     private void FixedUpdate()
@@ -127,5 +139,67 @@ public class LevelManager : MonoBehaviour
     void GetDice()
     {
         DicesNumber = PlayerPrefs.GetInt("DicesNumber", DicesNumber);
+    }
+
+    public void FighterLevelUp()
+    {
+        if (gold >= fighterLevelGold + (fighterLevel * 100))
+        {
+            fighterLevel++;
+            fighterLevel = PlayerPrefs.GetInt("fighterLevel", 1);
+
+            gold -= fighterLevelGold + (fighterLevel * 100);
+
+            Debug.Log(fighterLevel);
+        }
+        else
+        {
+            Debug.Log("No money");
+        }
+    }
+
+    void FighterSetLevel()
+    {
+        PlayerPrefs.SetInt("fighterLevel", fighterLevel);
+    }
+
+    public void WizardLevelUp()
+    {
+        if (gold >= WizardLevelGold + (WizardLevel * 100))
+        {
+            WizardLevel++;
+            WizardLevel = PlayerPrefs.GetInt("WizardLevel", 1);
+
+            gold -= WizardLevelGold + (WizardLevel * 100);  
+        }
+        else
+        {
+            Debug.Log("No money");
+        }
+    }
+
+    void WizardSetLevel()
+    {
+        PlayerPrefs.SetInt("WizardLevel", WizardLevel);
+    }
+
+    public void ThiefLevelUp()
+    {
+        if (gold >= ThiefLevelGold + (ThiefLevel * 100))
+        {
+            ThiefLevel++;
+            ThiefLevel = PlayerPrefs.GetInt("ThiefLevel", 1);
+
+            gold -= ThiefLevelGold + (ThiefLevel * 100);
+        }
+        else
+        {
+            Debug.Log("No money");
+        }
+    }
+
+    void ThiefSetLevel()
+    {
+        PlayerPrefs.SetInt("ThiefLevel", ThiefLevel);
     }
 }

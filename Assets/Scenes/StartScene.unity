@@ -755,7 +755,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 126051115}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2037611169}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: FighterLevelUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &126051115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9222,7 +9234,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1767352117}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2037611169}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: WizardLevelUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1767352117
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10333,6 +10357,12 @@ MonoBehaviour:
   DiceUpdateButton: {fileID: 450961038}
   LoadScene: {fileID: 1500460030}
   LoadingFillImage: {fileID: 745886088}
+  fighterLevel: 1
+  fighterLevelGold: 100
+  WizardLevel: 1
+  WizardLevelGold: 100
+  ThiefLevel: 1
+  ThiefLevelGold: 100
 --- !u!1 &2057643928
 GameObject:
   m_ObjectHideFlags: 0
@@ -10496,7 +10526,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2073756733}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2037611169}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: ThiefLevelUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2073756733
 MonoBehaviour:
   m_ObjectHideFlags: 0
