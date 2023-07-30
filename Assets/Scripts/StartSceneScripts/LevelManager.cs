@@ -31,12 +31,30 @@ public class LevelManager : MonoBehaviour
 
     [Space]
     [Header("Charecter Level")]
-    [SerializeField] private int fighterLevel;
-    [SerializeField] private int fighterLevelGold;
-    [SerializeField] private int WizardLevel;
-    [SerializeField] private int WizardLevelGold;
-    [SerializeField] private int ThiefLevel;
-    [SerializeField] private int ThiefLevelGold;
+    [Space]
+    [Header("Fighter")]
+    [SerializeField] private int m_fighterLevel;
+    [SerializeField] private int m_fighterLevelGold;
+    [SerializeField] private int m_fighterDamage;
+    [SerializeField] private int m_fighterHealth;
+    [SerializeField] private Text[] m_fighterHealthText;
+    [SerializeField] private Text[] m_fighterStrengText;
+    [Space]
+    [Header("Wizard")]
+    [SerializeField] private int m_WizardLevel;
+    [SerializeField] private int m_WizardLevelGold;
+    [SerializeField] private int m_WizardDamage;
+    [SerializeField] private int m_WizardHealth;
+    [SerializeField] private Text[] m_WizardHealthText;
+    [SerializeField] private Text[] m_WizardStrengText;
+    [Space]
+    [Header("Thief")]
+    [SerializeField] private int m_ThiefLevel;
+    [SerializeField] private int m_ThiefLevelGold;
+    [SerializeField] private int m_ThiefDamage;
+    [SerializeField] private int m_ThiefHealth;
+    [SerializeField] private Text[] m_ThiefHealthText;
+    [SerializeField] private Text[] m_ThiefStrengText;
 
     private void Start()
     {
@@ -54,6 +72,9 @@ public class LevelManager : MonoBehaviour
         FighterSetLevel();
         WizardSetLevel();
         ThiefSetLevel();
+
+        //charecters property text
+        GetCharecterText();
     }
 
     private void FixedUpdate()
@@ -143,14 +164,14 @@ public class LevelManager : MonoBehaviour
 
     public void FighterLevelUp()
     {
-        if (gold >= fighterLevelGold + (fighterLevel * 100))
+        if (gold >= (m_fighterLevelGold + (m_fighterLevel * 100)))
         {
-            fighterLevel++;
-            fighterLevel = PlayerPrefs.GetInt("fighterLevel", 1);
+            m_fighterLevel++;
 
-            gold -= fighterLevelGold + (fighterLevel * 100);
+            PlayerPrefs.SetInt("m_fighterLevel", m_fighterLevel);
 
-            Debug.Log(fighterLevel);
+            gold -= m_fighterLevelGold + (m_fighterLevel * 100);
+            GetCharecterText();
         }
         else
         {
@@ -160,17 +181,18 @@ public class LevelManager : MonoBehaviour
 
     void FighterSetLevel()
     {
-        PlayerPrefs.SetInt("fighterLevel", fighterLevel);
+        m_fighterLevel = PlayerPrefs.GetInt("m_fighterLevel", m_fighterLevel);
     }
 
     public void WizardLevelUp()
     {
-        if (gold >= WizardLevelGold + (WizardLevel * 100))
+        if (gold >= (m_WizardLevelGold + (m_WizardLevel * 100)))
         {
-            WizardLevel++;
-            WizardLevel = PlayerPrefs.GetInt("WizardLevel", 1);
+            m_WizardLevel++;
+            PlayerPrefs.SetInt("m_WizardLevel", m_WizardLevel);
 
-            gold -= WizardLevelGold + (WizardLevel * 100);  
+            gold -= m_WizardLevelGold + (m_WizardLevel * 100);  
+            GetCharecterText();
         }
         else
         {
@@ -180,17 +202,18 @@ public class LevelManager : MonoBehaviour
 
     void WizardSetLevel()
     {
-        PlayerPrefs.SetInt("WizardLevel", WizardLevel);
+        m_WizardLevel = PlayerPrefs.GetInt("m_WizardLevel", m_WizardLevel);
     }
 
     public void ThiefLevelUp()
     {
-        if (gold >= ThiefLevelGold + (ThiefLevel * 100))
+        if (gold >= (m_ThiefLevelGold + (m_ThiefLevel * 100)))
         {
-            ThiefLevel++;
-            ThiefLevel = PlayerPrefs.GetInt("ThiefLevel", 1);
+            m_ThiefLevel++;
+            PlayerPrefs.SetInt("m_ThiefLevel", m_ThiefLevel);
 
-            gold -= ThiefLevelGold + (ThiefLevel * 100);
+            gold -= m_ThiefLevelGold + (m_ThiefLevel * 100);
+            GetCharecterText();
         }
         else
         {
@@ -200,6 +223,29 @@ public class LevelManager : MonoBehaviour
 
     void ThiefSetLevel()
     {
-        PlayerPrefs.SetInt("ThiefLevel", ThiefLevel);
+        m_ThiefLevel = PlayerPrefs.GetInt("ThiefLevel", m_ThiefLevel);
+    }
+
+    public void CharactersTextWrite(Text[] charecter_T,int property,string propert_name)
+    {
+        foreach (Text fighter_t in charecter_T)
+        {
+            fighter_t.text = $"{propert_name} : {property}";
+        }
+    }
+
+    public void GetCharecterText()
+    {
+        //-------------------------------------figter--------------------------\\
+        CharactersTextWrite(m_fighterHealthText,m_fighterHealth + (m_fighterLevel * 10),"Health");
+        CharactersTextWrite(m_fighterStrengText, m_fighterDamage + (m_fighterLevel * 10), "Attack Damage");
+
+        //-------------------------------------Wizard--------------------------\\
+        CharactersTextWrite(m_WizardHealthText, m_WizardHealth + (m_WizardLevel * 10), "Health");
+        CharactersTextWrite(m_WizardStrengText, m_WizardDamage + (m_WizardLevel * 10), "Attack Damage");
+
+        //-------------------------------------Thief--------------------------\\
+        CharactersTextWrite(m_ThiefHealthText, m_ThiefHealth + (m_ThiefLevel * 10), "Health");
+        CharactersTextWrite(m_ThiefStrengText, m_ThiefDamage + (m_ThiefLevel * 10), "Attack Damage");
     }
 }
