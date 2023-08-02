@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
 
     public int gold;
 
+    bool finislevel = false;
+
     private void Awake()
     {
         Instance = this;
@@ -36,6 +38,7 @@ public class GameManager : MonoBehaviour
         enemyL = new List<GameObject>();
         _earnedGold = 0;
         GetGold();
+        GetLevel();
     }
 
 
@@ -50,7 +53,6 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(1);
         earnedGold.text =  _earnedGold.ToString();
-
         if (enemyL.Count <= 0 || SoliderL.Count <= 0)
         {
             yield return new WaitForSeconds(1.2f);
@@ -62,6 +64,11 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             if (SoliderL.Count > 0)
             {
+                if (finislevel == false)
+                {
+                    level++;
+                    finished = true;
+                }
                 for (int i = 0; i < SoliderL.Count; i++)
                 {
                     gold += SoliderL[i].GetComponent<Melee>().gold;
@@ -152,6 +159,14 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetInt("level", level);
     }
 
+    void GetLevel()
+    {
+        if (PlayerPrefs.HasKey("level"))
+        {
+            level = PlayerPrefs.GetInt("level");
+        }
+    }
+
     void SetGold()
     {
         PlayerPrefs.SetInt("gold",gold);
@@ -159,7 +174,10 @@ public class GameManager : MonoBehaviour
 
     void GetGold()
     {
-        gold = PlayerPrefs.GetInt("gold", gold);
+        if (PlayerPrefs.HasKey("gold"))
+        {
+            gold = PlayerPrefs.GetInt("gold");
+        }
     }
 
     IEnumerator LoadSceneAsync(int SceneId)

@@ -818,8 +818,8 @@ GameObject:
   - component: {fileID: 4024611376641826969}
   - component: {fileID: 4024611376641826971}
   - component: {fileID: 4024611376641826970}
-  - component: {fileID: -9138169583825254045}
-  - component: {fileID: 7044902942744881911}
+  - component: {fileID: 7553147836541493006}
+  - component: {fileID: 4246632512229734089}
   m_Layer: 8
   m_Name: "Sava\u015Fc\u0131 1"
   m_TagString: Player
@@ -887,8 +887,8 @@ MonoBehaviour:
   nearestEnemy: {fileID: 0}
   random: 0
   anim: {fileID: 4024611376641826969}
-  rb: {fileID: 7044902942744881911}
-  Collider: {fileID: -9138169583825254045}
+  rb: {fileID: 0}
+  Collider: {fileID: 0}
   gold: 100
   _speed: 3
   _attack: 0
@@ -917,7 +917,7 @@ MonoBehaviour:
   maxHealth: 0
   levelUpEffect: {fileID: 1727626132299242, guid: b0bc1b6b391734647b9bb142bafc0819, type: 3}
   LevelTime: 1
---- !u!136 &-9138169583825254045
+--- !u!136 &7553147836541493006
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -925,13 +925,13 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4364438932592212524}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.3776491
-  m_Height: 0.7580558
+  m_Radius: 0.15182829
+  m_Height: 0.7750303
   m_Direction: 1
-  m_Center: {x: 0, y: 0.371275, z: 0}
---- !u!54 &7044902942744881911
+  m_Center: {x: -0.009770989, y: 0.38998166, z: 0.0015523434}
+--- !u!54 &4246632512229734089
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -945,7 +945,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 116
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!1 &4485195166700678664
 GameObject:

@@ -6802,7 +6802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 143fa19375ead1f45aab817ead7f57df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 2
+  level: 1
   earnedGold: {fileID: 282795735}
   _earnedGold: 0
   LevelPanel: {fileID: 1475499654}
@@ -7709,7 +7709,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0, y: 0.92462516}
   m_AnchorMax: {x: 0.3277778, y: 1}
-  m_AnchoredPosition: {x: -0.5, y: 58.450012}
+  m_AnchoredPosition: {x: -0.5, y: 58.44995}
   m_SizeDelta: {x: 2, y: 143.09998}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1665364808
