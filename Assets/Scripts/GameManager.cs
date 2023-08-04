@@ -25,8 +25,7 @@ public class GameManager : MonoBehaviour
     public Image LoadingFillImage;
 
     public int gold;
-
-    bool finislevel = false;
+    bool onelevel = false;
 
     private void Awake()
     {
@@ -39,6 +38,8 @@ public class GameManager : MonoBehaviour
         _earnedGold = 0;
         GetGold();
         GetLevel();
+
+        Debug.Log(level);
     }
 
 
@@ -52,7 +53,7 @@ public class GameManager : MonoBehaviour
     IEnumerator FinishedGame()
     {
         yield return new WaitForSeconds(1);
-        earnedGold.text =  _earnedGold.ToString();
+        earnedGold.text = _earnedGold.ToString();
         if (enemyL.Count <= 0 || SoliderL.Count <= 0)
         {
             yield return new WaitForSeconds(1.2f);
@@ -64,15 +65,11 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             if (SoliderL.Count > 0)
             {
-                if (finislevel == false)
-                {
-                    level++;
-                    finished = true;
-                }
                 for (int i = 0; i < SoliderL.Count; i++)
                 {
                     gold += SoliderL[i].GetComponent<Melee>().gold;
                     SoliderL[i].GetComponent<SoliderHealth>().Die();
+                    onelevel = true;
                     Debug.Log("Humans Win");
                     SetLevel();
                 }
@@ -86,9 +83,6 @@ public class GameManager : MonoBehaviour
                     Debug.Log("Monster Win");
                 }
             }
-
-
-            
         }
     }
 
@@ -156,6 +150,12 @@ public class GameManager : MonoBehaviour
 
     public void SetLevel()
     {
+        if (onelevel)
+        {
+            level++;
+            Debug.Log(level);
+            onelevel = false;
+        }
         PlayerPrefs.SetInt("level", level);
     }
 
@@ -169,7 +169,7 @@ public class GameManager : MonoBehaviour
 
     void SetGold()
     {
-        PlayerPrefs.SetInt("gold",gold);
+        PlayerPrefs.SetInt("gold", gold);
     }
 
     void GetGold()
