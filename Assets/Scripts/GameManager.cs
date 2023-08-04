@@ -65,11 +65,11 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             if (SoliderL.Count > 0)
             {
+                onelevel = true;
                 for (int i = 0; i < SoliderL.Count; i++)
                 {
                     gold += SoliderL[i].GetComponent<Melee>().gold;
                     SoliderL[i].GetComponent<SoliderHealth>().Die();
-                    onelevel = true;
                     Debug.Log("Humans Win");
                     SetLevel();
                 }

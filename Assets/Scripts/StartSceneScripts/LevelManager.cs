@@ -94,7 +94,7 @@ public class LevelManager : MonoBehaviour
 
     public void PlayGame()
     {
-        StartCoroutine(LoadSceneAsync(level));
+        StartCoroutine(LoadSceneAsync(1));
     }
 
     public void DiceUpdate()
