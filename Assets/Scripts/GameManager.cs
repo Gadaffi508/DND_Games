@@ -65,13 +65,13 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1);
             if (SoliderL.Count > 0)
             {
-                onelevel = true;
                 for (int i = 0; i < SoliderL.Count; i++)
                 {
                     gold += SoliderL[i].GetComponent<Melee>().gold;
                     SoliderL[i].GetComponent<SoliderHealth>().Die();
                     Debug.Log("Humans Win");
-                    SetLevel();
+
+                    onelevel = true;
                 }
             }
             if (enemyL.Count > 0)
@@ -150,12 +150,9 @@ public class GameManager : MonoBehaviour
 
     public void SetLevel()
     {
-        if (onelevel)
-        {
-            level++;
-            Debug.Log(level);
-            onelevel = false;
-        }
+        level++;
+        Debug.Log(level);
+        onelevel = false;
         PlayerPrefs.SetInt("level", level);
     }
 
@@ -189,6 +186,11 @@ public class GameManager : MonoBehaviour
         AsyncOperation operation = SceneManager.LoadSceneAsync(SceneId);
 
         SetGold();
+
+        if (onelevel)
+        {
+            SetLevel();
+        }
 
         while (!operation.isDone)
         {
