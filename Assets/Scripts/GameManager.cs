@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     public int gold;
     bool onelevel = false;
 
+    [Header("Design")]
+    [SerializeField] private Material[] skyboxMaterials;
+
     private void Awake()
     {
         Instance = this;
@@ -40,6 +43,8 @@ public class GameManager : MonoBehaviour
         GetLevel();
 
         Debug.Log(level);
+
+        RenderSettings.skybox = skyboxMaterials[level];
     }
 
 
