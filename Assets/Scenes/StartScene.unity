@@ -10374,25 +10374,25 @@ MonoBehaviour:
   m_WizardDamage: 40
   m_WizardHealth: 80
   m_WizardHealthText:
-  - {fileID: 722575349}
-  - {fileID: 1261524074}
-  - {fileID: 2137525270}
+  - {fileID: 1237541476}
+  - {fileID: 1332509432}
+  - {fileID: 2089956286}
   m_WizardStrengText:
-  - {fileID: 884755665}
-  - {fileID: 34845756}
-  - {fileID: 1014932136}
+  - {fileID: 414619983}
+  - {fileID: 1666604611}
+  - {fileID: 1703486451}
   m_ThiefLevel: 1
   m_ThiefLevelGold: 100
   m_ThiefDamage: 50
   m_ThiefHealth: 80
   m_ThiefHealthText:
-  - {fileID: 1237541476}
-  - {fileID: 1332509432}
-  - {fileID: 2089956286}
+  - {fileID: 722575349}
+  - {fileID: 1261524074}
+  - {fileID: 2137525270}
   m_ThiefStrengText:
-  - {fileID: 414619983}
-  - {fileID: 1666604611}
-  - {fileID: 1703486451}
+  - {fileID: 884755665}
+  - {fileID: 34845756}
+  - {fileID: 1014932136}
 --- !u!1 &2057643928
 GameObject:
   m_ObjectHideFlags: 0

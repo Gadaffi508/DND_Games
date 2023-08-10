@@ -30,6 +30,10 @@ public class GameManager : MonoBehaviour
     [Header("Design")]
     [SerializeField] private Material[] skyboxMaterials;
 
+    [Space]
+    [Header("Menu Optýons")]
+    [SerializeField] private GameObject MenuObject;
+
     private void Awake()
     {
         Instance = this;
@@ -205,5 +209,17 @@ public class GameManager : MonoBehaviour
 
             yield return null;
         }
+    }
+
+    public void MenuLoadOptýons(int sceneÝd)
+    {
+        MenuObject.SetActive(false);
+        StartCoroutine(LoadSceneAsync(sceneÝd));
+    }
+
+    public void QuýtGame()
+    {
+        MenuObject.SetActive(false);
+        Application.Quit();
     }
 }

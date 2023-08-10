@@ -58,6 +58,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        GetDice();
+        
         for (int i = 0; i < dices.Length; i++)
         {
             dices[i].SetActive(false);
@@ -66,7 +68,6 @@ public class LevelManager : MonoBehaviour
 
         GetLevel();
         GetGold();
-        GetDice();
 
         //charecter set level
         FighterSetLevel();
@@ -109,7 +110,7 @@ public class LevelManager : MonoBehaviour
                 dices[i].SetActive(false);
             }
             dices[DicesNumber].SetActive(true);
-            SetDice();
+            PlayerPrefs.SetInt("DicesNumber", DicesNumber);
         }
         else
         {
@@ -158,16 +159,11 @@ public class LevelManager : MonoBehaviour
         PlayerPrefs.SetInt("gold", gold);
     }
 
-    void SetDice()
-    {
-        PlayerPrefs.SetInt("DicesNumber", DicesNumber);
-    }
-
     void GetDice()
     {
         if (PlayerPrefs.HasKey("DicesNumber"))
         {
-            DicesNumber = PlayerPrefs.GetInt("DicesNumber", DicesNumber);
+            DicesNumber = PlayerPrefs.GetInt("DicesNumber");
         }
     }
 
