@@ -81,17 +81,17 @@ public class Melee : Soliders
 
         if (isFighter == true)
         {
-            attackDamage = (level * 5) + (attackDamage / 5);
+            attackDamage = (level * 5) + (attackDamage / 5) + (m_fighterLevel * 10);
         }
 
         if (İsThief == true)
         {
-            GameManager.Instance.gold += 10;
-            GameManager.Instance._earnedGold += 10;
+            GameManager.Instance.gold += 10 * (m_ThiefLevel * 10);
+            GameManager.Instance._earnedGold += 10 * (m_ThiefLevel * 10);
         }
         if (İsWizard == true && nearestEnemy != null)
         {
-            nearestEnemy.GetComponent<Animator>().speed = .5f;
+            nearestEnemy.GetComponent<Animator>().speed -= (.2f + (m_WizardLevel/20));
         }
         else if (nearestEnemy != null)
         {
