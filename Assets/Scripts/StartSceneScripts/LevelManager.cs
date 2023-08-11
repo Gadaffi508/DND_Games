@@ -56,6 +56,11 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Text[] m_ThiefHealthText;
     [SerializeField] private Text[] m_ThiefStrengText;
 
+    //Propertys
+    bool open = true;
+    [SerializeField] private GameObject m_backgroundSound;
+    [SerializeField] private GameObject m_closeImage;
+
     private void Start()
     {
         GetDice();
@@ -171,11 +176,11 @@ public class LevelManager : MonoBehaviour
     {
         if (gold >= (m_fighterLevelGold + (m_fighterLevel * 100)))
         {
+            gold -= m_fighterLevelGold + (m_fighterLevel * 100);
+
             m_fighterLevel++;
 
             PlayerPrefs.SetInt("m_fighterLevel", m_fighterLevel);
-
-            gold -= m_fighterLevelGold + (m_fighterLevel * 100);
             GetCharecterText();
         }
         else
@@ -196,10 +201,10 @@ public class LevelManager : MonoBehaviour
     {
         if (gold >= (m_WizardLevelGold + (m_WizardLevel * 100)))
         {
-            m_WizardLevel++;
-            PlayerPrefs.SetInt("m_WizardLevel", m_WizardLevel);
-
             gold -= m_WizardLevelGold + (m_WizardLevel * 100);
+            m_WizardLevel++;
+
+            PlayerPrefs.SetInt("m_WizardLevel", m_WizardLevel);
             GetCharecterText();
         }
         else
@@ -220,10 +225,10 @@ public class LevelManager : MonoBehaviour
     {
         if (gold >= (m_ThiefLevelGold + (m_ThiefLevel * 100)))
         {
+            gold -= m_ThiefLevelGold + (m_ThiefLevel * 100);
+
             m_ThiefLevel++;
             PlayerPrefs.SetInt("m_ThiefLevel", m_ThiefLevel);
-
-            gold -= m_ThiefLevelGold + (m_ThiefLevel * 100);
             GetCharecterText();
         }
         else
@@ -261,5 +266,20 @@ public class LevelManager : MonoBehaviour
         //-------------------------------------Thief--------------------------\\
         CharactersTextWrite(m_ThiefHealthText, m_ThiefHealth + (m_ThiefLevel * 10), "Health");
         CharactersTextWrite(m_ThiefStrengText, m_ThiefDamage + (m_ThiefLevel * 10), "Attack Damage");
+    }
+
+    public void SoundPlay(AudioSource m_buttonClick)
+    {
+        if (m_buttonClick != null)
+        {
+            m_buttonClick.Play();
+        }
+    }
+
+    public void MusýcClose()
+    {
+        open =! open;
+        m_closeImage.SetActive(!open);
+        m_backgroundSound.SetActive(open);
     }
 }

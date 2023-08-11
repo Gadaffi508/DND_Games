@@ -63,7 +63,7 @@ public class Melee : Soliders
         anim.SetBool("Attack", false);
         anim.SetBool("IsWalk", true);
         _speed = 1.5f;
-        //Collider.isTrigger = false;
+        Collider.isTrigger = false;
 
         transform.position = Vector3.MoveTowards(transform.position, EnemyPos(), _speed * Time.deltaTime);
         anim.SetBool("IsWalk", _attack);

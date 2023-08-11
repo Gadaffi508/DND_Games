@@ -890,6 +890,9 @@ MonoBehaviour:
   rb: {fileID: 0}
   Collider: {fileID: 0}
   gold: 100
+  m_fighterLevel: 0
+  m_WizardLevel: 0
+  m_ThiefLevel: 0
   _speed: 3
   _attack: 0
   attackDamage: 2
@@ -925,7 +928,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4364438932592212524}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.15182829
   m_Height: 0.7750303

@@ -1113,6 +1113,9 @@ MonoBehaviour:
   rb: {fileID: 740660411777153354}
   Collider: {fileID: 9097194953655701582}
   gold: 100
+  m_fighterLevel: 0
+  m_WizardLevel: 0
+  m_ThiefLevel: 0
   _speed: 5
   _attack: 0
   attackDamage: 20
