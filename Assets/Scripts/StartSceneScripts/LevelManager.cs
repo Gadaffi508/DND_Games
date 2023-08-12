@@ -58,7 +58,7 @@ public class LevelManager : MonoBehaviour
 
     //Propertys
     bool open = true;
-    [SerializeField] private GameObject m_backgroundSound;
+    [SerializeField] private AudioSource m_backgroundSound;
     [SerializeField] private GameObject m_closeImage;
 
     private void Start()
@@ -280,6 +280,13 @@ public class LevelManager : MonoBehaviour
     {
         open =! open;
         m_closeImage.SetActive(!open);
-        m_backgroundSound.SetActive(open);
+        if (open)
+        {
+            m_backgroundSound.volume = 1;
+        }
+        else
+        {
+            m_backgroundSound.volume = 0;
+        }
     }
 }

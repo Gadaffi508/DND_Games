@@ -11,8 +11,6 @@ public abstract class Health : MonoBehaviour
     public GameManager manager;
 
     public static Health health;
-
-
     [SerializeField] private Image _healtbar;
     [SerializeField] private float maxHealth;
 
@@ -20,7 +18,6 @@ public abstract class Health : MonoBehaviour
     {
         health = this;
         maxHealth = _health;
-
     }
 
     public abstract void Takedamage(int damage);

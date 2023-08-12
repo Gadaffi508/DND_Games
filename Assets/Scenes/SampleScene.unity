@@ -855,7 +855,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5817325034177065110, guid: fa3d0d58e8a89db449262a1227e778b8, type: 3}
       propertyPath: _health
-      value: 5
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5817325034177065111, guid: fa3d0d58e8a89db449262a1227e778b8, type: 3}
+      propertyPath: attackDamage
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa3d0d58e8a89db449262a1227e778b8, type: 3}
@@ -2019,6 +2023,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1482925866}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: MovementClose
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1186500636}
+          m_ObjectArgumentAssemblyTypeName: MovementController, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 1305665695}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -2970,7 +2986,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8599590198647707604, guid: 336d4aa486baa2340bb7a16b487a6ecb, type: 3}
       propertyPath: _health
-      value: 5
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 8599590198647707605, guid: 336d4aa486baa2340bb7a16b487a6ecb, type: 3}
+      propertyPath: attackDamage
+      value: 25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 336d4aa486baa2340bb7a16b487a6ecb, type: 3}
@@ -3155,7 +3175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6850751947390667825, guid: 348a4bff754e3fc4eba4028ecb7dc651, type: 3}
       propertyPath: _health
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 348a4bff754e3fc4eba4028ecb7dc651, type: 3}
@@ -5127,7 +5147,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6954362947520497624, guid: b4906e1d50355cf4fb8e4fcfb8c1b39f, type: 3}
       propertyPath: _health
-      value: 5
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6954362947520497625, guid: b4906e1d50355cf4fb8e4fcfb8c1b39f, type: 3}
+      propertyPath: attackDamage
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 7044090166348096011, guid: b4906e1d50355cf4fb8e4fcfb8c1b39f, type: 3}
       propertyPath: m_RootOrder
@@ -7861,7 +7885,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7001714927524883851, guid: d6c8738e6db16ec468cc305a45817d0e, type: 3}
       propertyPath: _health
-      value: 5
+      value: 75
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6c8738e6db16ec468cc305a45817d0e, type: 3}
@@ -7984,7 +8008,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9099935722964368056, guid: f8570bba27097254da5123998421191f, type: 3}
       propertyPath: _health
-      value: 5
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 9157184488366784269, guid: f8570bba27097254da5123998421191f, type: 3}
       propertyPath: m_RootOrder
@@ -8998,7 +9022,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3649383871895771424, guid: c6df93e3f8ed4b540a8e3852f18e1174, type: 3}
       propertyPath: _health
-      value: 5
+      value: 75
       objectReference: {fileID: 0}
     - target: {fileID: 3743182903500360761, guid: c6df93e3f8ed4b540a8e3852f18e1174, type: 3}
       propertyPath: m_Name
@@ -10131,7 +10155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6155225780135467858, guid: bde107dfa87918744950da4febfd0a26, type: 3}
       propertyPath: _health
-      value: 5
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bde107dfa87918744950da4febfd0a26, type: 3}
@@ -10794,7 +10818,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1688007868016849188, guid: 3c9cf84ed3b061649a9f5ab4ce30705d, type: 3}
       propertyPath: _health
-      value: 5
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1688007868016849191, guid: 3c9cf84ed3b061649a9f5ab4ce30705d, type: 3}
       propertyPath: m_Name

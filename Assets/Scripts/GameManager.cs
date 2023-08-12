@@ -222,4 +222,9 @@ public class GameManager : MonoBehaviour
         MenuObject.SetActive(false);
         Application.Quit();
     }
+
+    public void MovementClose(MovementController movController)
+    {
+        movController.enabled = false;
+    }
 }
