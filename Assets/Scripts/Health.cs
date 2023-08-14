@@ -7,7 +7,7 @@ public abstract class Health : MonoBehaviour
 {
     public float _health;
     public GameObject DieParticle;
-
+    public GameObject m_diedSound;
     public GameManager manager;
 
     public static Health health;

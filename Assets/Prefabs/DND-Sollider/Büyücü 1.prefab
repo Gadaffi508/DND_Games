@@ -1268,6 +1268,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _health: 100
   DieParticle: {fileID: 118250, guid: a79f8048fa75d6c449d730e96bb836fa, type: 3}
+  m_diedSound: {fileID: 4788553583017854470, guid: 8b18c4ee9e9935341b0ab528194bc992, type: 3}
   manager: {fileID: 0}
   _healtbar: {fileID: 4119110771969997259}
   maxHealth: 100

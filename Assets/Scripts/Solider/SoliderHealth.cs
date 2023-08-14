@@ -28,6 +28,8 @@ public class SoliderHealth : Health
     }
     public override void Die()
     {
+        GameObject sound = Instantiate(m_diedSound,transform.position,Quaternion.identity,transform.parent);
+        Destroy(sound,2f);
         manager.SoliderDestroyed(gameObject);
         Instantiate(DieParticle, transform.position, Quaternion.identity);
         Destroy(gameObject);
