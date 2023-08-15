@@ -227,4 +227,12 @@ public class GameManager : MonoBehaviour
     {
         movController.enabled = false;
     }
+
+    public void SoundPlay(AudioSource m_buttonClick)
+    {
+        if (m_buttonClick != null)
+        {
+            m_buttonClick.Play();
+        }
+    }
 }
