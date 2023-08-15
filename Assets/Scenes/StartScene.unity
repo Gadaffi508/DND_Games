@@ -12265,7 +12265,9 @@ MonoBehaviour:
   - {fileID: 884755665}
   - {fileID: 34845756}
   - {fileID: 1014932136}
-  m_backgroundSound: {fileID: 1492412949}
+  allSound:
+  - {fileID: 92615928}
+  - {fileID: 1492412949}
   m_closeImage: {fileID: 151577866}
 --- !u!1 &2057643928
 GameObject:

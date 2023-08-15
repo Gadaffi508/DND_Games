@@ -58,7 +58,7 @@ public class LevelManager : MonoBehaviour
 
     //Propertys
     bool open = true;
-    [SerializeField] private AudioSource m_backgroundSound;
+    [SerializeField] private AudioSource[] allSound;
     [SerializeField] private GameObject m_closeImage;
 
     private void Start()
@@ -282,11 +282,17 @@ public class LevelManager : MonoBehaviour
         m_closeImage.SetActive(!open);
         if (open)
         {
-            m_backgroundSound.volume = 1;
+            foreach (AudioSource sound in allSound)
+            {
+                sound.volume = 1;
+            }
         }
         else
         {
-            m_backgroundSound.volume = 0;
+            foreach (AudioSource sound in allSound)
+            {
+                sound.volume = 0;
+            }
         }
     }
 }
