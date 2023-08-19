@@ -295,4 +295,11 @@ public class LevelManager : MonoBehaviour
             }
         }
     }
+
+    public void GoldAdvert()
+    {
+        //advert for area
+
+        gold += 100;
+    }
 }
