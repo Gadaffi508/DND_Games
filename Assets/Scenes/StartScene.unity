@@ -12465,8 +12465,8 @@ MonoBehaviour:
   LoadingFillImage: {fileID: 745886088}
   m_fighterLevel: 1
   m_fighterLevelGold: 100
-  m_fighterDamage: 50
-  m_fighterHealth: 100
+  m_fighterDamage: 2
+  m_fighterHealth: 120
   m_fighterHealthText:
   - {fileID: 1762159003}
   - {fileID: 1097135002}
@@ -12478,7 +12478,7 @@ MonoBehaviour:
   m_WizardLevel: 1
   m_WizardLevelGold: 100
   m_WizardDamage: 40
-  m_WizardHealth: 80
+  m_WizardHealth: 90
   m_WizardHealthText:
   - {fileID: 1237541476}
   - {fileID: 1332509432}
@@ -12489,7 +12489,7 @@ MonoBehaviour:
   - {fileID: 1703486451}
   m_ThiefLevel: 1
   m_ThiefLevelGold: 100
-  m_ThiefDamage: 50
+  m_ThiefDamage: 20
   m_ThiefHealth: 80
   m_ThiefHealthText:
   - {fileID: 722575349}
