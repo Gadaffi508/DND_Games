@@ -1026,7 +1026,7 @@ MonoBehaviour:
   m_ThiefLevel: 0
   _speed: 3
   _attack: 0
-  attackDamage: 2
+  attackDamage: 6
   "\u0130sThief": 0
   "\u0130sWizard": 0
   isFighter: 1
@@ -1044,7 +1044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f63cf745468eaa4993033c4d1da5fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 120
+  _health: 250
   DieParticle: {fileID: 118250, guid: a79f8048fa75d6c449d730e96bb836fa, type: 3}
   m_diedSound: {fileID: 8532367297333968792, guid: ebae966681b793f47869d13d46fb3084, type: 3}
   manager: {fileID: 0}

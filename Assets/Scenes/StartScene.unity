@@ -8745,7 +8745,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1500460031
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8787,7 +8787,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1510080247
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12465,8 +12465,8 @@ MonoBehaviour:
   LoadingFillImage: {fileID: 745886088}
   m_fighterLevel: 1
   m_fighterLevelGold: 100
-  m_fighterDamage: 2
-  m_fighterHealth: 120
+  m_fighterDamage: 4
+  m_fighterHealth: 250
   m_fighterHealthText:
   - {fileID: 1762159003}
   - {fileID: 1097135002}
@@ -12477,8 +12477,8 @@ MonoBehaviour:
   - {fileID: 1569363996}
   m_WizardLevel: 1
   m_WizardLevelGold: 100
-  m_WizardDamage: 40
-  m_WizardHealth: 90
+  m_WizardDamage: 12
+  m_WizardHealth: 200
   m_WizardHealthText:
   - {fileID: 1237541476}
   - {fileID: 1332509432}
@@ -12490,7 +12490,7 @@ MonoBehaviour:
   m_ThiefLevel: 1
   m_ThiefLevelGold: 100
   m_ThiefDamage: 20
-  m_ThiefHealth: 80
+  m_ThiefHealth: 180
   m_ThiefHealthText:
   - {fileID: 722575349}
   - {fileID: 1261524074}

@@ -22,6 +22,12 @@ public class EnemyController : MonoBehaviour
     public GameObject HealtBG;
     public float rotationSpeed = 5f;
 
+    [Space]
+    [Header("Enemy")]
+    [SerializeField] private bool m_isCüce = false;
+    [SerializeField] private bool m_isOrk = false;
+    [SerializeField] private bool m_isTrol = false;
+
     [SerializeField] private int random;
 
     void Start()
@@ -29,6 +35,8 @@ public class EnemyController : MonoBehaviour
         anim = GetComponent<Animator>();
         PlayerLayer = LayerMask.NameToLayer("Solider");
         HealtBG.SetActive(false);
+
+        anim.speed = m_isCüce ? 1.6f : 1;
     }
 
     private void Update()
@@ -96,7 +104,7 @@ public class EnemyController : MonoBehaviour
     {
         if (nearestPlayer != null)
         {
-            nearestPlayer.GetComponent<SoliderHealth>().Takedamage(attackDamage);
+            nearestPlayer.GetComponent<SoliderHealth>().Takedamage(attackDamage + (GameManager.Instance.level * 5));
         }
     }
 

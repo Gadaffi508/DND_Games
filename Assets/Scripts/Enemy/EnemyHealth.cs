@@ -9,6 +9,7 @@ public class EnemyHealth : Health
     IEnumerator Start()
     {
         manager = FindObjectOfType<GameManager>();
+        _health += GameManager.Instance.level * 2;
         yield return new WaitForSeconds(1);
         manager.AddEnemyToList(gameObject);
     }

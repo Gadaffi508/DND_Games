@@ -1104,9 +1104,12 @@ MonoBehaviour:
   _speed: 0
   nearestPlayer: {fileID: 0}
   anim: {fileID: 1601954307305514157}
-  attackDamage: 30
+  attackDamage: 15
   HealtBG: {fileID: 581585406660060771}
   rotationSpeed: 5
+  "m_isC\xFCce": 0
+  m_isOrk: 0
+  m_isTrol: 0
   random: 0
 --- !u!114 &1688007868016849188
 MonoBehaviour:
@@ -1120,8 +1123,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2a552ab04fc5a4a44816a8efdf4c17e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _health: 120
+  _health: 350
   DieParticle: {fileID: 118250, guid: a79f8048fa75d6c449d730e96bb836fa, type: 3}
+  m_diedSound: {fileID: 0}
   manager: {fileID: 0}
   _healtbar: {fileID: 581585406605949131}
   maxHealth: 0
