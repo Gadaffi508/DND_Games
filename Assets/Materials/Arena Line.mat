@@ -10,6 +10,7 @@ Material:
   m_Name: Arena Line
   m_Shader: {fileID: -6465566751694194690, guid: df5bb027d94a6c44bb32b3c31ec1303f, type: 3}
   m_ValidKeywords:
+  - TCP2_OUTLINE_LIGHTING_ALL
   - TCP2_REFLECTIONS_FRESNEL
   - TCP2_RIM_LIGHTING_LIGHTMASK
   - TCP2_SHADOW_LIGHT_COLOR
@@ -122,7 +123,7 @@ Material:
     - _GlossinessSource: 0
     - _GlossyReflections: 1
     - _IndirectIntensity: 1
-    - _IndirectIntensityOutline: 0
+    - _IndirectIntensityOutline: 1
     - _MatCapMaskChannel: 0
     - _MatCapType: 0
     - _Metallic: 0
@@ -132,7 +133,7 @@ Material:
     - _OcclusionChannel: 0
     - _OcclusionStrength: 1
     - _OutlineLightingType: 0
-    - _OutlineLightingTypeURP: 0
+    - _OutlineLightingTypeURP: 2
     - _OutlineMaxWidth: 1
     - _OutlineMinWidth: 1
     - _OutlinePixelSizeType: 0
@@ -179,7 +180,7 @@ Material:
     - _UseMobileMode: 0
     - _UseNormalMap: 0
     - _UseOcclusion: 0
-    - _UseOutline: 0
+    - _UseOutline: 1
     - _UseReflections: 0
     - _UseRim: 0
     - _UseRimLightMask: 1
@@ -188,7 +189,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - _BaseColor: {r: 0.56537026, g: 0.66199714, b: 0.7264151, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 0.56537026, g: 0.66199714, b: 0.7264151, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _HColor: {r: 1, g: 1, b: 1, a: 1}
