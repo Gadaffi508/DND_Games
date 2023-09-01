@@ -86,8 +86,8 @@ public class Melee : Soliders
 
         if (İsThief == true)
         {
-            GameManager.Instance.gold += 15 * (m_ThiefLevel * 2);
-            GameManager.Instance._earnedGold += 15 * (m_ThiefLevel * 2);
+            GameManager.Instance.gold += 15 + (m_ThiefLevel * 2);
+            GameManager.Instance._earnedGold += 15 + (m_ThiefLevel * 2);
         }
         if (İsWizard == true && nearestEnemy != null)
         {
