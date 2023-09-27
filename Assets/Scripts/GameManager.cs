@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public int level;
     public Text earnedGold;
     public int _earnedGold;
-
+    public Text levelText;
     public GameObject LevelPanel;
 
     public List<GameObject> enemyL;
@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     public Image LoadingFillImage;
 
     public int gold;
-    bool onelevel = false;
+    public bool onelevel = false;
 
     [Header("Design")]
     [SerializeField] private Material[] skyboxMaterials;
@@ -68,6 +68,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(1.2f);
             if (nextlevel == false)
             {
+                levelText.text = "Level : " + level.ToString();
                 LevelPanel.SetActive(true);
 
             }
