@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -63,6 +64,12 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        if (PlayerPrefs.HasKey("open"))
+        {
+            open = Convert.ToBoolean(PlayerPrefs.GetInt("open"));
+            MusicLoad();
+        }
+
         GetDice();
 
         for (int i = 0; i < dices.Length; i++)
@@ -270,16 +277,14 @@ public class LevelManager : MonoBehaviour
 
     public void SoundPlay(AudioSource m_buttonClick)
     {
-        if (m_buttonClick != null)
-        {
-            m_buttonClick.Play();
-        }
+        m_buttonClick?.Play();
     }
 
     public void MusýcClose()
     {
         open = !open;
         m_closeImage.SetActive(!open);
+        PlayerPrefs.SetInt("open",Convert.ToInt32(open));
         if (open)
         {
             foreach (AudioSource sound in allSound)
@@ -301,5 +306,24 @@ public class LevelManager : MonoBehaviour
         //advert for area
 
         gold += 100;
+    }
+
+    void MusicLoad()
+    {
+        m_closeImage.SetActive(!open);
+        if (open)
+        {
+            foreach (AudioSource sound in allSound)
+            {
+                sound.volume = 1;
+            }
+        }
+        else
+        {
+            foreach (AudioSource sound in allSound)
+            {
+                sound.volume = 0;
+            }
+        }
     }
 }
