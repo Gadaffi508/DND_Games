@@ -36,10 +36,11 @@ public class StartSceneManager : MonoBehaviour
     {
         if (currentIndex > 0)
         {
-            menuImages[currentIndex].DOAnchorPosX(800, 1);
+            if (menuImages[currentIndex].gameObject == true) menuImages[currentIndex].gameObject.GetComponent<AiryUIAnimatedElement>().HideElement();
             Circle[currentIndex].SetActive(false);
             currentIndex--;
-            menuImages[currentIndex].DOAnchorPosX(0, 1); // Yeni görüntünün ekrana gelmesini saðlar
+            menuImages[currentIndex].gameObject.SetActive(true); // Yeni görüntünün ekrana gelmesini saðlar
+            menuImages[currentIndex].gameObject.GetComponent<AiryUIAnimatedElement>().ShowElement(); // Yeni görüntünün ekrana gelmesini saðlar
             Circle[currentIndex].SetActive(true);
         }
         StartCoroutine(ChangedBool());
@@ -49,10 +50,11 @@ public class StartSceneManager : MonoBehaviour
     {
         if (currentIndex < menuImages.Length - 1)
         {
-            menuImages[currentIndex].DOAnchorPosX(-800, 1);
+            if (menuImages[currentIndex].gameObject == true) menuImages[currentIndex].gameObject.GetComponent<AiryUIAnimatedElement>().HideElement();
             Circle[currentIndex].SetActive(false);
             currentIndex++;
-            menuImages[currentIndex].DOAnchorPosX(0, 1); // Yeni görüntünün ekrana gelmesini saðlar
+            menuImages[currentIndex].gameObject.SetActive(true); // Yeni görüntünün ekrana gelmesini saðlar
+            menuImages[currentIndex].gameObject.GetComponent<AiryUIAnimatedElement>().ShowElement(); // Yeni görüntünün ekrana gelmesini saðlar
             Circle[currentIndex].SetActive(true);
         }
         StartCoroutine(ChangedBool());
