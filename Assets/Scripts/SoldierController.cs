@@ -9,6 +9,7 @@ public class SoldierController : MonoBehaviour
     CellController cellController;
     public Text NoMoney;
 
+    public int soilderC;
 
     private void Start()
     {
@@ -18,6 +19,8 @@ public class SoldierController : MonoBehaviour
     public void SpawnSoilders(GameObject Soldier) // all soilder spawn
     {
         GameObject soliderPos = Instantiate(Soldier);
+
+        soilderC++;
 
         if (cellController.AddSoldier(soliderPos) && GameManager.Instance.gold >= soliderPos.GetComponent<Melee>().gold)
         {
