@@ -26,13 +26,13 @@ public class SoldierController : MonoBehaviour
         else if (GameManager.Instance.gold < soliderPos.GetComponent<Melee>().gold)
         {
             TextAnim();
-            NoMoney.text = "No Money";
+            NoMoney.text = "Para Yok";
             Destroy(soliderPos);
         }
         else
         {
             TextAnim();
-            NoMoney.text = "Cell is full";
+            NoMoney.text = "Hücreler Dolu";
             Destroy(soliderPos);
         }
     }

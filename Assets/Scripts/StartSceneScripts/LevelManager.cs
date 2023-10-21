@@ -326,4 +326,9 @@ public class LevelManager : MonoBehaviour
             }
         }
     }
+
+    public void QuýtGame()
+    {
+        Application.Quit();
+    }
 }
