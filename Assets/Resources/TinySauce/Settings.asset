@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: faa11ec82e9746928e211e7f096812ca, type: 3}
+  m_Name: Settings
+  m_EditorClassIdentifier: 
+  gameAnalyticsIosGameKey: 
+  gameAnalyticsIosSecretKey: 
+  gameAnalyticsAndroidGameKey: c428c94083fe4f2fe0d64146ea7b8acb
+  gameAnalyticsAndroidSecretKey: 0aa43c930b50aea23f18d00ca176c08aafffab54
+  facebookAppId: 3634882313408171
+  facebookClientToken: c3801119c74d29f7966a613bc75b9b46
+  adjustIOSToken: 
+  adjustAndroidToken: okx0yxfcapkw
+  EditorIdfa: 48864c3f-2a60-4090-83ab-44d2399338af
+  UseRemoteConfig: 0
+  UseVoodooAnalytics: 1
+  companyName: CoditaStudios
+  privacyPolicyURL: https://doc-hosting.flycricket.io/epic-warlord-battles-privacy-policy/fa30aa49-3f83-4611-abd6-adc149b7435e/privacy
+  developerContactEmail: yusuf_zeki1234@hotmail.com
