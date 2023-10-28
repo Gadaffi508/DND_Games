@@ -18323,8 +18323,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   level: 1
-  gold: 500
-  Setgold: 500
+  gold: 1000
+  Setgold: 1000
   goldText: {fileID: 2099267780}
   diceUpdateGold: 100
   CurrentLevel: {fileID: 1186182419}
