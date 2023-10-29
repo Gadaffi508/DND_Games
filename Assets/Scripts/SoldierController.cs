@@ -35,7 +35,7 @@ public class SoldierController : MonoBehaviour
         else
         {
             TextAnim();
-            NoMoney.text = "Hücreler Dolu";
+            NoMoney.text = "Yer Dolu";
             Destroy(soliderPos);
         }
     }

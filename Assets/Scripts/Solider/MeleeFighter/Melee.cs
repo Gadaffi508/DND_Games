@@ -76,12 +76,12 @@ public class Melee : Soliders
     {
         if (nearestEnemy != null)
         {
-            nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage + (level * 2) + (DiceNumberText.diceNumber * 5));
+            nearestEnemy.GetComponent<EnemyHealth>().Takedamage(attackDamage + (level * 10) + (DiceNumberText.diceNumber * 5));
         }
 
         if (isFighter == true)
         {
-            attackDamage = (level * 5) + (attackDamage / 5) + (m_fighterLevel * 10);
+            attackDamage = (level * 15) + (attackDamage / 5) + (m_fighterLevel * 10);
         }
 
         if (İsThief == true)

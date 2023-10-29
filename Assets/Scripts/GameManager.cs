@@ -54,6 +54,8 @@ public class GameManager : MonoBehaviour
         Debug.Log(level);
 
         RenderSettings.skybox = skyboxMaterials[level];
+
+        gold += level * 100;
     }
 
 
