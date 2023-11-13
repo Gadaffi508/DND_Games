@@ -2017,7 +2017,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1482925866}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: "Qu\u0131tGame"
+        m_MethodName: QuitGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4554,7 +4554,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1482925866}
         m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: "MenuLoadOpt\u0131ons"
+        m_MethodName: MenuLoadOptions
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11137,6 +11137,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TinySauce
       objectReference: {fileID: 0}
+    - target: {fileID: 1384633641988006, guid: 0b960778462d34f7283156e4edafb7a2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4464613669252742, guid: 0b960778462d34f7283156e4edafb7a2, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -16549,6 +16553,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1322134138}
         m_TargetAssemblyTypeName: EnviromentManager, Assembly-CSharp
         m_MethodName: NextTerrain
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2063203313}
+        m_TargetAssemblyTypeName: LevelEnemySystem, Assembly-CSharp
+        m_MethodName: NextEnemy
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

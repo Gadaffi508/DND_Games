@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Material[] skyboxMaterials;
 
     [Space]
-    [Header("Menu Optýons")]
+    [Header("Menu Optï¿½ons")]
     [SerializeField] private GameObject MenuObject;
 
     private void Awake()
@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
 
         RenderSettings.skybox = skyboxMaterials[level];
 
-        gold += level * 100;
+        gold += level * 20;
     }
 
 
@@ -160,11 +160,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void MenuLoad(int SceneÝd)
+    public void MenuLoad(int SceneÄ°d)
     {
         nextlevel = true;
         LevelPanel.SetActive(false);
-        StartCoroutine(LoadSceneAsync(SceneÝd));
+        StartCoroutine(LoadSceneAsync(SceneÄ°d));
     }
 
     public void SetLevel()
@@ -221,13 +221,13 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void MenuLoadOptýons(int sceneÝd)
+    public void MenuLoadOptions(int sceneÄ°d)
     {
         MenuObject.SetActive(false);
-        StartCoroutine(LoadSceneAsync(sceneÝd));
+        StartCoroutine(LoadSceneAsync(sceneÄ°d));
     }
 
-    public void QuýtGame()
+    public void QuitGame()
     {
         MenuObject.SetActive(false);
         Application.Quit();

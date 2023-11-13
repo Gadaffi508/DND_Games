@@ -12,6 +12,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private int gold;
     [SerializeField] private int Setgold;
     [SerializeField] private Text goldText;
+    [SerializeField] private Text[] CharecterUpdatePriceText;
     [SerializeField] private int diceUpdateGold;
 
     [Space]
@@ -64,6 +65,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
+        TextWriteChrecter(m_fighterLevelGold,m_fighterLevel);
+        
         if (PlayerPrefs.HasKey("open"))
         {
             open = Convert.ToBoolean(PlayerPrefs.GetInt("open"));
@@ -181,9 +184,9 @@ public class LevelManager : MonoBehaviour
 
     public void FighterLevelUp()
     {
-        if (gold >= (m_fighterLevelGold + (m_fighterLevel * 100)))
+        if (gold >= (m_fighterLevelGold + (m_fighterLevel * 500)))
         {
-            gold -= m_fighterLevelGold + (m_fighterLevel * 100);
+            gold -= m_fighterLevelGold + (m_fighterLevel * 500);
 
             m_fighterLevel++;
 
@@ -206,9 +209,9 @@ public class LevelManager : MonoBehaviour
 
     public void WizardLevelUp()
     {
-        if (gold >= (m_WizardLevelGold + (m_WizardLevel * 100)))
+        if (gold >= (m_WizardLevelGold + (m_WizardLevel * 500)))
         {
-            gold -= m_WizardLevelGold + (m_WizardLevel * 100);
+            gold -= m_WizardLevelGold + (m_WizardLevel * 500);
             m_WizardLevel++;
 
             PlayerPrefs.SetInt("m_WizardLevel", m_WizardLevel);
@@ -230,9 +233,9 @@ public class LevelManager : MonoBehaviour
 
     public void ThiefLevelUp()
     {
-        if (gold >= (m_ThiefLevelGold + (m_ThiefLevel * 100)))
+        if (gold >= (m_ThiefLevelGold + (m_ThiefLevel * 500)))
         {
-            gold -= m_ThiefLevelGold + (m_ThiefLevel * 100);
+            gold -= m_ThiefLevelGold + (m_ThiefLevel * 500);
 
             m_ThiefLevel++;
             PlayerPrefs.SetInt("m_ThiefLevel", m_ThiefLevel);
@@ -280,7 +283,7 @@ public class LevelManager : MonoBehaviour
         m_buttonClick?.Play();
     }
 
-    public void MusýcClose()
+    public void MusicClose()
     {
         open = !open;
         m_closeImage.SetActive(!open);
@@ -327,8 +330,32 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    public void QuýtGame()
+    public void QuitGame()
     {
         Application.Quit();
+    }
+
+    public void WritePriceChrecter(int SelectCharecter)
+    {
+        switch (SelectCharecter)
+        {
+            case 1:
+                TextWriteChrecter(m_ThiefLevelGold,m_ThiefLevel);
+                break;
+            case 2:
+                TextWriteChrecter(m_WizardLevelGold,m_WizardLevel);
+                break;
+            case 3:
+                TextWriteChrecter(m_fighterLevelGold,m_fighterLevel);
+                break;
+        }
+    }
+
+    private void TextWriteChrecter(float Gold,float Level)
+    {
+        foreach (Text charecterUpdate in CharecterUpdatePriceText)
+        {
+            charecterUpdate.text = (Gold + (Level * 500)).ToString();
+        }
     }
 }

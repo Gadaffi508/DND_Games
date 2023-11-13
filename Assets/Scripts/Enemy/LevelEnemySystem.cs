@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LevelEnemySystem : MonoBehaviour
 {
-    [SerializeField] private GameObject[] m_cüce; 
+    [SerializeField] private GameObject[] m_cÃ¼ce; 
     [SerializeField] private GameObject[] m_ork; 
     [SerializeField] private GameObject[] m_Trol;
 
@@ -12,17 +12,24 @@ public class LevelEnemySystem : MonoBehaviour
     [Header("EnemyType")]
     [SerializeField] private GameObject[] m_enemyTypeImage;
 
+    private int e_index = 1;
+
     private void Start()
     {
+        if (PlayerPrefs.HasKey("e_index"))
+        {
+            GetTerrain();
+        }
+        
         EnemyGameLevelActive();
     }
 
     public void EnemyGameLevelActive()
     {
-        switch (GameManager.Instance.level)
+        switch (e_index)
         {
             case 1:
-                GameObjectFor(m_cüce,true);
+                GameObjectFor(m_cÃ¼ce,true);
                 EnemyImageShow(0,1,2);
                 break;
             case 2:
@@ -73,20 +80,41 @@ public class LevelEnemySystem : MonoBehaviour
 
     public void MixGameObjectFor(int a,int b, int c)
     {
-        m_cüce[a].SetActive(true);
+        m_cÃ¼ce[a].SetActive(true);
         m_ork[b].SetActive(true);
         m_Trol[c].SetActive(true);
     }
 
     public void EnemyImageShow(int a, int b, int c)
     {
-        foreach (GameObject ýmageAll in m_enemyTypeImage)
+        foreach (GameObject Ä±mageAll in m_enemyTypeImage)
         {
-            ýmageAll.SetActive(false);
+            Ä±mageAll.SetActive(false);
         }
 
         m_enemyTypeImage[a].SetActive(true);
         m_enemyTypeImage[b].SetActive(true);
         m_enemyTypeImage[c].SetActive(true);
+    }
+    
+    public void NextEnemy()
+    {
+        if (GameManager.Instance.onelevel == true) e_index++;
+        if (e_index == 9) e_index = 1;
+
+        SetTerrain();
+    }
+    
+    void SetTerrain()
+    {
+        PlayerPrefs.SetInt("e_index",e_index);
+    }
+
+    void GetTerrain()
+    {
+        if (PlayerPrefs.HasKey("e_index"))
+        {
+            e_index = PlayerPrefs.GetInt("e_index");
+        }
     }
 }
