@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using GameAnalyticsSDK;
-using Voodoo.Tiny.Sauce;
 
 public class GameManager : MonoBehaviour
 {
@@ -39,13 +37,10 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
-        GameAnalytics.Initialize();
     }
 
     private void Start()
     {
-        TinySauce.OnGameStarted(level);
-
         enemyL = new List<GameObject>();
         _earnedGold = 0;
         GetGold();
@@ -68,8 +63,6 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator FinishedGame()
     {
-        TinySauce.OnGameFinished(level);
-
         yield return new WaitForSeconds(1);
         earnedGold.text = _earnedGold.ToString();
         if (enemyL.Count <= 0 || SoliderL.Count <= 0)
