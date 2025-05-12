@@ -26,7 +26,6 @@ public class EnemyController : MonoBehaviour
     [Header("Enemy")]
     [SerializeField] private bool m_isCüce = false;
     [SerializeField] private bool m_isOrk = false;
-    [SerializeField] private bool m_isTrol = false;
 
     [SerializeField] private int random;
 
