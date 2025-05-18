@@ -25,7 +25,6 @@ public class LevelManager : MonoBehaviour
     [Header("Dice")]
     public GameObject[] dices;
     public int DicesNumber;
-    public GameObject DiceUpdateButton;
 
     [Header("Load Options")]
     public GameObject LoadScene;
@@ -39,24 +38,18 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private int m_fighterLevelGold;
     [SerializeField] private int m_fighterDamage;
     [SerializeField] private int m_fighterHealth;
-    [SerializeField] private Image[] m_fighterHealthImage;
-    [SerializeField] private Image[] m_fighterStrengImage;
     [Space]
     [Header("Wizard")]
     [SerializeField] private int m_WizardLevel;
     [SerializeField] private int m_WizardLevelGold;
     [SerializeField] private int m_WizardDamage;
     [SerializeField] private int m_WizardHealth;
-    [SerializeField] private Image[] m_WizardHealthImage;
-    [SerializeField] private Image[] m_WizardStrengImage;
     [Space]
     [Header("Thief")]
     [SerializeField] private int m_ThiefLevel;
     [SerializeField] private int m_ThiefLevelGold;
     [SerializeField] private int m_ThiefDamage;
     [SerializeField] private int m_ThiefHealth;
-    [SerializeField] private Image[] m_ThiefHealthImage;
-    [SerializeField] private Image[] m_ThiefStrengImage;
 
     //Propertys
     bool open = true;
@@ -77,9 +70,8 @@ public class LevelManager : MonoBehaviour
 
         for (int i = 0; i < dices.Length; i++)
         {
-            dices[i].SetActive(false);
+            
         }
-        dices[DicesNumber].SetActive(true);
 
         GetLevel();
         GetGold();
@@ -104,13 +96,20 @@ public class LevelManager : MonoBehaviour
 
         if (DicesNumber == 4)
         {
-            DiceUpdateButton.SetActive(false);
+            
         }
     }
 
+    bool isLoading = false;
+
     public void PlayGame()
     {
-        StartCoroutine(LoadSceneAsync(2));
+        if (isLoading) return;
+
+        isLoading = true;
+        LoadScene.SetActive(true);
+
+        SceneManager.LoadScene(1);
     }
 
     public void DiceUpdate()
@@ -130,26 +129,6 @@ public class LevelManager : MonoBehaviour
         else
         {
             Debug.Log("No money");
-        }
-    }
-
-    IEnumerator LoadSceneAsync(int SceneId)
-    {
-        LoadScene.SetActive(true);
-
-        yield return new WaitForEndOfFrame();
-
-        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneId);
-
-        SetGold();
-
-        while (!operation.isDone)
-        {
-            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-
-            LoadingFillImage.fillAmount = progressValue;
-
-            yield return null;
         }
     }
 
@@ -265,17 +244,6 @@ public class LevelManager : MonoBehaviour
 
     public void GetCharecterText()
     {
-        //-------------------------------------figter--------------------------\\
-        CharactersTextWrite(m_fighterHealthImage, m_fighterHealth + (m_fighterLevel * 10), 300);
-        CharactersTextWrite(m_fighterStrengImage, m_fighterDamage + (m_fighterLevel * 10), 100);
-
-        //-------------------------------------Wizard--------------------------\\
-        CharactersTextWrite(m_WizardHealthImage, m_WizardHealth + (m_WizardLevel * 10), 300);
-        CharactersTextWrite(m_WizardStrengImage, m_WizardDamage + (m_WizardLevel * 10), 100);
-
-        //-------------------------------------Thief--------------------------\\
-        CharactersTextWrite(m_ThiefHealthImage, m_ThiefHealth + (m_ThiefLevel * 10), 300);
-        CharactersTextWrite(m_ThiefStrengImage, m_ThiefDamage + (m_ThiefLevel * 10), 100);
     }
 
     public void SoundPlay(AudioSource m_buttonClick)
@@ -355,7 +323,7 @@ public class LevelManager : MonoBehaviour
     {
         foreach (Text charecterUpdate in CharecterUpdatePriceText)
         {
-            charecterUpdate.text = (Gold + (Level * 500)).ToString();
+            
         }
     }
 }

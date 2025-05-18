@@ -153,11 +153,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void MenuLoad(int Sceneİd)
+    bool isLoading = false;
+
+    public void MenuLoad(int SceneId)
     {
+        if (isLoading) return;
         nextlevel = true;
+        isLoading = true;
+
         LevelPanel.SetActive(false);
-        StartCoroutine(LoadSceneAsync(Sceneİd));
+
+
+        LoadScene.SetActive(true);
+
+
+        SceneManager.LoadScene(SceneId);
     }
 
     public void SetLevel()
@@ -189,36 +199,17 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    IEnumerator LoadSceneAsync(int SceneId)
+    public void MenuLoadOptions(int sceneId)
     {
+        if (isLoading) return;
+        MenuObject.SetActive(false);
+        isLoading = true;
+
         LoadScene.SetActive(true);
 
-        yield return new WaitForEndOfFrame();
-
-        AsyncOperation operation = SceneManager.LoadSceneAsync(SceneId);
-
-        SetGold();
-
-        if (onelevel)
-        {
-            SetLevel();
-        }
-
-        while (!operation.isDone)
-        {
-            float progressValue = Mathf.Clamp01(operation.progress / 0.9f);
-
-            LoadingFillImage.fillAmount = progressValue;
-
-            yield return null;
-        }
+        SceneManager.LoadScene(sceneId);
     }
 
-    public void MenuLoadOptions(int sceneİd)
-    {
-        MenuObject.SetActive(false);
-        StartCoroutine(LoadSceneAsync(sceneİd));
-    }
 
     public void QuitGame()
     {

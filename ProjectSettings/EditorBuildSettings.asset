@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Tutorial.unity
-    guid: 1c9665a15e9b98f4f99a205650934454
-  - enabled: 1
     path: Assets/Scenes/StartScene.unity
     guid: 7950c29e9c99619458f8e46e10100839
   - enabled: 1
@@ -18,3 +15,4 @@ EditorBuildSettings:
     path: Assets/Scenes/TrolScene.unity
     guid: 03022eddb22ef4449a7383dfeb24b3b4
   m_configObjects: {}
+  m_UseUCBPForAssetBundles: 0

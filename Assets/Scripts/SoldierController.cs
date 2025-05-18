@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using DG.Tweening;
 
 public class SoldierController : MonoBehaviour
 {
@@ -42,10 +39,7 @@ public class SoldierController : MonoBehaviour
 
     public void TextAnim()
     {
-        NoMoney.transform.DOMoveY(60, 1).OnComplete(() =>
-        {
-            NoMoney.transform.DOMoveY(-70, 1);
-        });
+        
     }
 
 }

@@ -1,8 +1,6 @@
 using System.Collections;
 using UnityEngine;
-using DG.Tweening;
 using UnityEngine.UI;
-using Unity.VisualScripting;
 
 public class ButtonController : MonoBehaviour
 {
@@ -23,7 +21,6 @@ public class ButtonController : MonoBehaviour
     public void ButtonActive()
     {
         StartCoroutine(DelayAcitve());
-        _direButton.transform.DOMoveX(-300, 1);
 
         if (_Thierd)
         {
@@ -61,7 +58,6 @@ public class ButtonController : MonoBehaviour
     }
     public void BackRetry()
     {
-        _direRetry.transform.DOMoveX(-300, 1);
         Destroy(dire, 2f);
     }
 
